@@ -1,0 +1,52 @@
+//
+//  Product.pch
+//  Product
+//
+//  Created by apple on 2016/12/26.
+//  Copyright © 2016年 apple. All rights reserved.
+//
+
+#ifndef Product_pch
+#define Product_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+// 头文件  导入的头文件
+#import "Header.h"
+// 网络请求 API
+#import "API.pch"
+
+#pragma mark -  宏定义
+
+//颜色
+#define kRGBColor(r, g, b, a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:a]
+
+//#define kBackgroundColor kRGBColor(250, 250, 250, 0.8)
+
+#define kUserDefaults [NSUserDefaults standardUserDefaults]
+// 屏幕
+#define kScreenWidth [UIScreen mainScreen].bounds.size.width
+#define kScreenHeight [UIScreen mainScreen].bounds.size.height
+// 通知
+#define kNoteCenter [NSNotificationCenter defaultCenter]
+
+// 弱引用
+#define kWeakSelf __weak typeof(self) weakSelf = self
+
+/**Dubug相关*/
+
+#ifdef DEBUG
+#define MyLog(format,...)  NSLog((@"[函数名:%s]\n" "[行号:%d]\n" format),__FUNCTION__,__LINE__,##__VA_ARGS__)
+#else
+#define MyLog(...)
+#endif
+
+#ifdef DEBUG
+#define NSLog(...) NSLog(__VA_ARGS__)
+#else
+#define NSLog(...)
+#endif
+
+
+#endif /* Product_pch */

@@ -1,0 +1,27 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'Product' do
+  
+pod 'YPTabBarController', '~> 2.2.3'
+
+pod 'AFNetworking', '~> 3.1.0'
+
+pod 'MBProgressHUD', '~> 1.0.0'
+
+pod 'SDWebImage', '~> 4.0.0'
+
+pod 'IQKeyboardManager', '~> 4.0.9'
+
+pod 'MJRefresh', '~> 3.1.12'
+
+pod 'MJExtension', '~> 3.0.13'
+
+pod 'KLCPopup', '~> 1.0'
+
+#分页
+# pod 'WMPageController', '~> 2.2.1'
+#抽屉
+# pod 'MMDrawerController', '~> 0.6.0'
+
+end
