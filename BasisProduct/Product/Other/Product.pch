@@ -34,6 +34,21 @@
 // 弱引用
 #define kWeakSelf __weak typeof(self) weakSelf = self
 
+// 添加圆角
+#define kViewRadius(View, Radius)\
+\
+[View.layer setCornerRadius:(Radius)];\
+[View.layer setMasksToBounds:YES]
+
+// 添加边框和圆角
+#define kViewBorderRadius(View, Radius, Width, Color)\
+\
+[View.layer setCornerRadius:(Radius)];\
+[View.layer setMasksToBounds:YES];\
+[View.layer setBorderWidth:(Width)];\
+[View.layer setBorderColor:[Color CGColor]]
+
+
 /**Dubug相关*/
 
 #ifdef DEBUG
