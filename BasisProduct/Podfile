@@ -19,6 +19,8 @@ pod 'MJExtension', '~> 3.0.13'
 
 pod 'KLCPopup', '~> 1.0'
 
+pod 'TZImagePickerController', '~> 1.7.9'
+
 #分页
 # pod 'WMPageController', '~> 2.2.1'
 #抽屉

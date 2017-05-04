@@ -51,5 +51,7 @@
 
 #import "PTXDatePickerView.h"  
 
+#import "TZImagePickerController.h"
+
 
 #endif /* Header_h */

@@ -44,6 +44,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>TZImagePickerController.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>YPTabBarController.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -57,17 +62,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>14A53925B9A0CFF64D0081B000F22EDC</key>
+		<key>17307C610FEBE7F783E38960E813663F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>4207193B61D0A5FCCCF55BC3A532B814</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>52D5954AE77A3E8A048B9FBF8F7D5142</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>586F2DFA9BDCC6675C2546793A69E5CC</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>6783E33500D6B22F0C7380945FC7A65E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -92,7 +102,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>EC688FF73711D0B6251E995F5DCC7D9E</key>
+		<key>C3B70F6DCA4A43238EB907E8D6435FE7</key>
 		<dict>
 			<key>primary</key>
 			<true/>
