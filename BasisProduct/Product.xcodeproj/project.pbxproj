@@ -16,6 +16,8 @@
 		18AEFC141E10C3CE00AFAF16 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18AEFC111E10C3CE00AFAF16 /* Main.storyboard */; };
 		18AEFC791E11012F00AFAF16 /* NavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18AEFC781E11012F00AFAF16 /* NavigationController.m */; };
 		18AEFC821E11062700AFAF16 /* RootTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18AEFC811E11062700AFAF16 /* RootTabBarController.m */; };
+		545585551EBAFE730031436C /* XXViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 545585531EBAFE730031436C /* XXViewController.m */; };
+		545585561EBAFE730031436C /* XXViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 545585541EBAFE730031436C /* XXViewController.xib */; };
 		549D49C51EB981050016A62E /* Root_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 549D49C41EB981050016A62E /* Root_ViewController.m */; };
 		549D49CC1EB993C50016A62E /* CFFlowButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = 549D49C81EB993C50016A62E /* CFFlowButtonView.m */; };
 		549D49CD1EB993C50016A62E /* PTXDatePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 549D49CB1EB993C50016A62E /* PTXDatePickerView.m */; };
@@ -71,6 +73,9 @@
 		18AEFC801E11062700AFAF16 /* RootTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootTabBarController.h; sourceTree = "<group>"; };
 		18AEFC811E11062700AFAF16 /* RootTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootTabBarController.m; sourceTree = "<group>"; };
 		2D7588D42A2359605113B65F /* libPods-Product.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Product.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		545585521EBAFE730031436C /* XXViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XXViewController.h; sourceTree = "<group>"; };
+		545585531EBAFE730031436C /* XXViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XXViewController.m; sourceTree = "<group>"; };
+		545585541EBAFE730031436C /* XXViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XXViewController.xib; sourceTree = "<group>"; };
 		549D49C31EB981050016A62E /* Root_ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Root_ViewController.h; sourceTree = "<group>"; };
 		549D49C41EB981050016A62E /* Root_ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Root_ViewController.m; sourceTree = "<group>"; };
 		549D49C71EB993C50016A62E /* CFFlowButtonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFFlowButtonView.h; sourceTree = "<group>"; };
@@ -219,6 +224,9 @@
 				18AEFC811E11062700AFAF16 /* RootTabBarController.m */,
 				549D49C31EB981050016A62E /* Root_ViewController.h */,
 				549D49C41EB981050016A62E /* Root_ViewController.m */,
+				545585521EBAFE730031436C /* XXViewController.h */,
+				545585531EBAFE730031436C /* XXViewController.m */,
+				545585541EBAFE730031436C /* XXViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -361,7 +369,7 @@
 				TargetAttributes = {
 					18AEFBD01E10C36400AFAF16 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = QNG7EEVK56;
+						DevelopmentTeam = 57MDVZ56MH;
 						ProvisioningStyle = Automatic;
 					};
 					18AEFBEF1E10C36400AFAF16 = {
@@ -404,6 +412,7 @@
 				18AEFC141E10C3CE00AFAF16 /* Main.storyboard in Resources */,
 				18AEFBE71E10C36400AFAF16 /* Assets.xcassets in Resources */,
 				549D49E71EB999880016A62E /* XXProgressHUD.bundle in Resources */,
+				545585561EBAFE730031436C /* XXViewController.xib in Resources */,
 				18AEFC131E10C3CE00AFAF16 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -489,6 +498,7 @@
 				549D49EB1EB99A4E0016A62E /* NetWorkManager.m in Sources */,
 				18AEFBD61E10C36400AFAF16 /* main.m in Sources */,
 				549D49E61EB999880016A62E /* UIViewController+HUD.m in Sources */,
+				545585551EBAFE730031436C /* XXViewController.m in Sources */,
 				549D49E21EB999880016A62E /* UIImage+Extension.m in Sources */,
 				18AEFC791E11012F00AFAF16 /* NavigationController.m in Sources */,
 				549D49C51EB981050016A62E /* Root_ViewController.m in Sources */,
@@ -622,13 +632,13 @@
 			baseConfigurationReference = 6923A30AEE9690ABE86FAB57 /* Pods-Product.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = QNG7EEVK56;
+				DEVELOPMENT_TEAM = 57MDVZ56MH;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/Product/Other/Product.pch";
 				INFOPLIST_FILE = Product/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = DD.Product;
+				PRODUCT_BUNDLE_IDENTIFIER = XXXXX.Product;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -638,13 +648,13 @@
 			baseConfigurationReference = B9F44DC4A0A59370117E8EE3 /* Pods-Product.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = QNG7EEVK56;
+				DEVELOPMENT_TEAM = 57MDVZ56MH;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/Product/Other/Product.pch";
 				INFOPLIST_FILE = Product/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = DD.Product;
+				PRODUCT_BUNDLE_IDENTIFIER = XXXXX.Product;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

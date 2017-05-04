@@ -59,6 +59,12 @@
      */
     [IQKeyboardManager sharedManager].enableAutoToolbar = true;
 
+//    [[IQKeyboardManager sharedManager] setToolbarDoneBarButtonItemText:@"确定"];
+    /**
+     输入框距离键盘的距离
+     */
+    [[IQKeyboardManager sharedManager] setKeyboardDistanceFromTextField:8];
+    
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

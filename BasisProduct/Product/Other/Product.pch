@@ -22,7 +22,7 @@
 //颜色
 #define kRGBColor(r, g, b, a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:a]
 
-//#define kBackgroundColor kRGBColor(250, 250, 250, 0.8)
+
 
 #define kUserDefaults [NSUserDefaults standardUserDefaults]
 // 屏幕

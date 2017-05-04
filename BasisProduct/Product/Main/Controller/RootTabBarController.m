@@ -10,6 +10,7 @@
 
 #import "NavigationController.h"
 
+#import "XXViewController.h"
 @interface RootTabBarController () 
 
 @property (nonatomic ,copy) NSMutableArray *itemArr;
@@ -81,7 +82,7 @@
 - (void)setUpAllChildViewController
 {
 
-    UIViewController *controller1 = [[UIViewController alloc] init];
+    XXViewController *controller1 = [[XXViewController alloc] init];
 
     controller1.yp_tabItemTitle = @"第一";
     controller1.yp_tabItemImage = [UIImage imageNamed:@"tabbar_home"];
