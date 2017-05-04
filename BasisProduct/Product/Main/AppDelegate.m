@@ -59,11 +59,16 @@
      */
     [IQKeyboardManager sharedManager].enableAutoToolbar = true;
 
-//    [[IQKeyboardManager sharedManager] setToolbarDoneBarButtonItemText:@"确定"];
+    [[IQKeyboardManager sharedManager] setToolbarDoneBarButtonItemText:@"完成"];
+    
+    [[IQKeyboardManager sharedManager] setShouldToolbarUsesTextFieldTintColor:false];
+    
+    [[IQKeyboardManager sharedManager] setToolbarTintColor:[UIColor redColor]];
+  
     /**
      输入框距离键盘的距离
      */
-    [[IQKeyboardManager sharedManager] setKeyboardDistanceFromTextField:8];
+    [[IQKeyboardManager sharedManager] setKeyboardDistanceFromTextField:10.f];
     
 }
 
