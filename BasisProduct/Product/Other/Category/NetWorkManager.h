@@ -36,6 +36,7 @@ typedef enum{
 // MARK:  =========  设置请求超时时长  =========
 
 #define kTime 7
+
 @interface NetWorkManager : AFHTTPSessionManager
 
 + (instancetype)sharedManager;

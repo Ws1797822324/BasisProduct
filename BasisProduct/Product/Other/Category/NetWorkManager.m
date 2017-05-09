@@ -47,8 +47,9 @@
         
         self.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/plain", @"text/javascript", @"text/json", @"text/html", nil];
 
-        AFJSONResponseSerializer * response = [AFJSONResponseSerializer serializer];
         
+        AFJSONResponseSerializer * response = [AFJSONResponseSerializer serializer];
+        response.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/plain", @"text/javascript", @"text/json", @"text/html", nil];
         response.removesKeysWithNullValues = YES;
         
         self.responseSerializer = response;
@@ -105,10 +106,14 @@
             [[NetWorkManager sharedManager] GET:urlStr parameters:params progress:^(NSProgress * _Nonnull downloadProgress) {
                 
             } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-                success(responseObject);
+                
 
+                NSLog(@"请求成功 URLStr \n\n --- %@\n\n",task.response.URL);
+                success(responseObject);
+                [XXProgressHUD hideHUD];
                 
             } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+                NSLog(@"请求失败 URLStr \n\n --- %@\n\n",task.response.URL);
                 failuer(error);
 
                     [XXProgressHUD showWaiting:@"服务器连接超时稍后重试"];
@@ -123,12 +128,16 @@
         {
             [[NetWorkManager sharedManager] POST:urlStr parameters:params progress:^(NSProgress * _Nonnull uploadProgress) {
                             } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+                                
+                                NSLog(@"请求成功 URLStr \n\n --- %@\n\n",task.response.URL);
+
                                 success(responseObject);
                                 
                                 [XXProgressHUD hideHUD];
 
                             } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-                                
+                                NSLog(@"请求失败 URLStr \n\n --- %@\n\n",task.response.URL);
+
                                 failuer(error);
                                 
                                 [XXProgressHUD showWaiting:@"服务器连接超时稍后重试"];

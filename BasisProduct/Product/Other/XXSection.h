@@ -47,7 +47,6 @@
 
 /**
  图片转成base64编码
-
  @param imageName 传入图片名
  @return 返回base64格式Str
  */
