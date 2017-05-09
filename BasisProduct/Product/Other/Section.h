@@ -8,9 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-@interface XXSection : NSObject
+@interface Section : NSObject
 
-+ (XXSection *)shareInstance;
++ (Section *)shareInstance;
 
 
 

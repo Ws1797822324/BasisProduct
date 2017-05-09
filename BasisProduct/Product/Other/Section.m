@@ -6,16 +6,16 @@
 //  Copyright © 2017年 apple. All rights reserved.
 //
 
-#import "XXSection.h"
+#import "Section.h"
 
-static XXSection *sectionInstance;
+static Section *sectionInstance;
 
-@interface XXSection ()
+@interface Section ()
 
 
 @end
 
-@implementation XXSection
+@implementation Section
 
 
 
@@ -28,7 +28,7 @@ static XXSection *sectionInstance;
     });
     return sectionInstance;
 }
-+ (XXSection *)shareInstance {
++ (Section *)shareInstance {
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         sectionInstance = [[self alloc] init];
