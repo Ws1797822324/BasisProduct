@@ -6,13 +6,13 @@
 //  Copyright © 2017年 apple. All rights reserved.
 //
 
-#import "Root_ViewController.h"
+#import "RootViewController.h"
 
-@interface Root_ViewController ()
+@interface RootViewController ()
 
 @end
 
-@implementation Root_ViewController
+@implementation RootViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
