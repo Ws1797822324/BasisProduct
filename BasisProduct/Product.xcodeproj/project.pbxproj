@@ -31,6 +31,7 @@
 		549D49E71EB999880016A62E /* XXProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 549D49DE1EB999880016A62E /* XXProgressHUD.bundle */; };
 		549D49E81EB999880016A62E /* XXProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 549D49E01EB999880016A62E /* XXProgressHUD.m */; };
 		549D49EB1EB99A4E0016A62E /* NetWorkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 549D49EA1EB99A4E0016A62E /* NetWorkManager.m */; };
+		54C21EAF1EC2B22000D63166 /* infoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 54C21EB11EC2B22000D63166 /* infoPlist.strings */; };
 		78414B0BEFFBFCF30DDC872A /* libPods-Product.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D7588D42A2359605113B65F /* libPods-Product.a */; };
 /* End PBXBuildFile section */
 
@@ -103,6 +104,8 @@
 		549D49E01EB999880016A62E /* XXProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XXProgressHUD.m; sourceTree = "<group>"; };
 		549D49E91EB99A4E0016A62E /* NetWorkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetWorkManager.h; sourceTree = "<group>"; };
 		549D49EA1EB99A4E0016A62E /* NetWorkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetWorkManager.m; sourceTree = "<group>"; };
+		54C21EB01EC2B22000D63166 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/infoPlist.strings; sourceTree = "<group>"; };
+		54C21EB21EC2B22900D63166 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/infoPlist.strings"; sourceTree = "<group>"; };
 		6923A30AEE9690ABE86FAB57 /* Pods-Product.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Product.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Product/Pods-Product.debug.xcconfig"; sourceTree = "<group>"; };
 		B9F44DC4A0A59370117E8EE3 /* Pods-Product.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Product.release.xcconfig"; path = "Pods/Target Support Files/Pods-Product/Pods-Product.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -162,6 +165,7 @@
 				18AEFC151E10C48900AFAF16 /* Other */,
 				18AEFBE61E10C36400AFAF16 /* Assets.xcassets */,
 				18AEFBEB1E10C36400AFAF16 /* Info.plist */,
+				54C21EB11EC2B22000D63166 /* infoPlist.strings */,
 				18AEFBD41E10C36400AFAF16 /* Supporting Files */,
 			);
 			path = Product;
@@ -396,6 +400,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = 18AEFBC81E10C36400AFAF16;
 			productRefGroup = 18AEFBD21E10C36400AFAF16 /* Products */;
@@ -419,6 +424,7 @@
 				549D49E71EB999880016A62E /* XXProgressHUD.bundle in Resources */,
 				545585561EBAFE730031436C /* XXViewController.xib in Resources */,
 				18AEFC131E10C3CE00AFAF16 /* LaunchScreen.storyboard in Resources */,
+				54C21EAF1EC2B22000D63166 /* infoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -542,11 +548,24 @@
 		};
 /* End PBXTargetDependency section */
 
+/* Begin PBXVariantGroup section */
+		54C21EB11EC2B22000D63166 /* infoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				54C21EB01EC2B22000D63166 /* en */,
+				54C21EB21EC2B22900D63166 /* zh-Hans */,
+			);
+			name = infoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
 		18AEFC021E10C36400AFAF16 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -595,6 +614,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
