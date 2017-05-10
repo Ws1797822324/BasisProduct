@@ -18,20 +18,21 @@ typedef void(^uploadProgress)(float progress);
 
 
 // 请求类型
-typedef enum {
+
+
+typedef NS_ENUM(NSUInteger, HTTPMethod) {
     GET = 1,
     POST
-}HTTPMethod;
+};
 
 
-typedef enum{
-    
+typedef NS_ENUM(NSUInteger, NetworkStatus) {
     StatusUnknown           = -1, //未知网络
     StatusNotReachable      = 0,    //没有网络
     StatusReachableViaWWAN  = 1,    //手机自带网络
     StatusReachableViaWiFi  = 2     //wifi
-    
-}NetworkStatus;
+
+};
 
 // MARK:  =========  设置请求超时时长  =========
 

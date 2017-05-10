@@ -10,6 +10,11 @@
 
 @interface UIImageView (Extension)
 
+/**
+ 加载圆形头像
+
+ @param url 头像url
+ */
 - (void)setHeader:(NSString *)url;
 
 

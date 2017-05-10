@@ -3,9 +3,8 @@
 //  PTXDatePickerView
 //
 //  Created by pantianxiang on 17/1/12.
-//  Copyright © 2017年 pantianxiang. All rights reserved.
-//  我的CSDN博客地址：http://blog.csdn.net/mrtianxiang
-//
+
+
 
 #import "PTXDatePickerView.h"
 
@@ -97,7 +96,7 @@
     UIBarButtonItem *blankButton = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
     UIBarButtonItem *completionButton = [[UIBarButtonItem alloc]initWithTitle:@"完成" style:UIBarButtonItemStyleDone target:self action:@selector(completion)];
     [completionButton setTitleTextAttributes:@{NSForegroundColorAttributeName : kRGBColor(109, 109, 109, 1)} forState:UIControlStateNormal];
-
+    
     [toolbar setItems:@[cancelButton,blankButton,completionButton]];
     [self addSubview:toolbar];
     
@@ -117,8 +116,8 @@
     NSArray *titleArray = nil;
     switch (_datePickerViewShowModel) {
         case PTXDatePickerViewShowModelDefalut:
-//            [datePickerView selectRow:selectedHourRow inComponent:3 animated:NO];
-//            [datePickerView selectRow:selectedMinuteRow inComponent:4 animated:NO];
+            //            [datePickerView selectRow:selectedHourRow inComponent:3 animated:NO];
+            //            [datePickerView selectRow:selectedMinuteRow inComponent:4 animated:NO];
             totalTitleLabel = 5;
             titleArray = @[@"年",@"月",@"日",@"时",@"分"];
             break;
@@ -129,12 +128,12 @@
         case PTXDatePickerViewShowModelYearMonthDayHour:
             totalTitleLabel = 4;
             titleArray = @[@"年",@"月",@"日",@"时"];
-//            [datePickerView selectRow:selectedHourRow inComponent:3 animated:NO];
+            //            [datePickerView selectRow:selectedHourRow inComponent:3 animated:NO];
             break;
         case PTXDatePickerViewShowModelYearMonth:
             totalTitleLabel = 2;
             titleArray = @[@"年",@"月"];
-
+            
             break;
     }
     
@@ -263,17 +262,17 @@
          *  下面两个步骤，可以根据自己需要自选一个。
          *  步骤1:限定最大年份，如果超出大值则终止。
          *  步骤2:如果超出最大年份，则更新最大年份值继续显示。
-         *  
+         *
          *  PS:这里选择步骤2.
          */
         
         /*
          
-        //步骤1.
-        NSAssert(_maxYear > year, @"年份超出最大范围，如有需要请更新最大年份范围！");
+         //步骤1.
+         NSAssert(_maxYear > year, @"年份超出最大范围，如有需要请更新最大年份范围！");
          
          */
-
+        
         //步骤2。
         if (year > _maxYear) {
             _maxYear = year;
@@ -288,15 +287,25 @@
     [self resetMinuteArrayWithYear:year month:month day:day hour:hour];
     [datePickerView reloadAllComponents];
     
-    [datePickerView selectRow:[yearArray indexOfObject:[NSString stringWithFormat:@"%ld",year]] inComponent:0 animated:YES];
-    [datePickerView selectRow:[monthArray indexOfObject:[NSString stringWithFormat:@"%ld",month]] inComponent:1 animated:YES];
-    [datePickerView selectRow:[dayArray indexOfObject:[NSString stringWithFormat:@"%ld",day]] inComponent:2 animated:YES];
     
-    if (_datePickerViewShowModel == PTXDatePickerViewShowModelDefalut) {
+    if (_datePickerViewShowModel == PTXDatePickerViewShowModelDefalut) {// 年月日时分
+        [datePickerView selectRow:[yearArray indexOfObject:[NSString stringWithFormat:@"%ld",year]] inComponent:0 animated:YES];
+        [datePickerView selectRow:[monthArray indexOfObject:[NSString stringWithFormat:@"%ld",month]] inComponent:1 animated:YES];
+        [datePickerView selectRow:[dayArray indexOfObject:[NSString stringWithFormat:@"%ld",day]] inComponent:2 animated:YES];
         [datePickerView selectRow:[hourArray indexOfObject:[NSString stringWithFormat:@"%ld",hour]] inComponent:3 animated:YES];
         [datePickerView selectRow:[minuteArray indexOfObject:[NSString stringWithFormat:@"%ld",minute]] inComponent:4 animated:YES];
-    }else if (_datePickerViewShowModel == PTXDatePickerViewShowModelYearMonthDayHour) {
+    }else if (_datePickerViewShowModel == PTXDatePickerViewShowModelYearMonthDayHour) { // 年月日时
+        [datePickerView selectRow:[yearArray indexOfObject:[NSString stringWithFormat:@"%ld",year]] inComponent:0 animated:YES];
+        [datePickerView selectRow:[monthArray indexOfObject:[NSString stringWithFormat:@"%ld",month]] inComponent:1 animated:YES];
+        [datePickerView selectRow:[dayArray indexOfObject:[NSString stringWithFormat:@"%ld",day]] inComponent:2 animated:YES];
         [datePickerView selectRow:[hourArray indexOfObject:[NSString stringWithFormat:@"%ld",hour]] inComponent:3 animated:YES];
+    } else if (_datePickerViewShowModel == PTXDatePickerViewShowModelYearMonthDay) { // 年月日
+        [datePickerView selectRow:[yearArray indexOfObject:[NSString stringWithFormat:@"%ld",year]] inComponent:0 animated:YES];
+        [datePickerView selectRow:[monthArray indexOfObject:[NSString stringWithFormat:@"%ld",month]] inComponent:1 animated:YES];
+        [datePickerView selectRow:[dayArray indexOfObject:[NSString stringWithFormat:@"%ld",day]] inComponent:2 animated:YES];
+    } else if (_datePickerViewShowModel == PTXDatePickerViewShowModelYearMonth) { // 年月
+        [datePickerView selectRow:[yearArray indexOfObject:[NSString stringWithFormat:@"%ld",year]] inComponent:0 animated:YES];
+        [datePickerView selectRow:[monthArray indexOfObject:[NSString stringWithFormat:@"%ld",month]] inComponent:1 animated:YES];
     }
 }
 
@@ -456,22 +465,22 @@
     [dateComponents setMonth:[[monthArray objectAtIndex:[datePickerView selectedRowInComponent:1]] integerValue]];
     
     if (_datePickerViewShowModel == PTXDatePickerViewShowModelYearMonthDay) {
-       
+        
         [dateComponents setDay:[[dayArray objectAtIndex:[datePickerView selectedRowInComponent:2]] integerValue]];
-
+        
         
     } else if (_datePickerViewShowModel == PTXDatePickerViewShowModelDefalut) {
-       
+        
         [dateComponents setHour:[[hourArray objectAtIndex:[datePickerView selectedRowInComponent:3]] integerValue]];
-      
+        
         [dateComponents setDay:[[dayArray objectAtIndex:[datePickerView selectedRowInComponent:2]] integerValue]];
-
+        
         [dateComponents setHour:[[hourArray objectAtIndex:[datePickerView selectedRowInComponent:3]] integerValue]];
         [dateComponents setMinute:[[minuteArray objectAtIndex:[datePickerView selectedRowInComponent:4]] integerValue]];
     }else if (_datePickerViewShowModel == PTXDatePickerViewShowModelYearMonthDayHour) {
         [dateComponents setHour:[[hourArray objectAtIndex:[datePickerView selectedRowInComponent:3]] integerValue]];
         [dateComponents setDay:[[dayArray objectAtIndex:[datePickerView selectedRowInComponent:2]] integerValue]];
-
+        
     }
     
     NSCalendar *calendar = [[NSCalendar alloc]initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
@@ -544,7 +553,7 @@
         case PTXDatePickerViewShowModelYearMonthDayHour:
             return 4;
             break;
-            case PTXDatePickerViewShowModelYearMonth:
+        case PTXDatePickerViewShowModelYearMonth:
             return 2;
             break;
     }
