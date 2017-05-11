@@ -30,7 +30,7 @@
 		549D49E61EB999880016A62E /* UIViewController+HUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 549D49DD1EB999880016A62E /* UIViewController+HUD.m */; };
 		549D49E71EB999880016A62E /* XXProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 549D49DE1EB999880016A62E /* XXProgressHUD.bundle */; };
 		549D49E81EB999880016A62E /* XXProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 549D49E01EB999880016A62E /* XXProgressHUD.m */; };
-		549D49EB1EB99A4E0016A62E /* NetWorkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 549D49EA1EB99A4E0016A62E /* NetWorkManager.m */; };
+		549D49EB1EB99A4E0016A62E /* XXNetWorkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 549D49EA1EB99A4E0016A62E /* XXNetWorkManager.m */; };
 		54C21EAF1EC2B22000D63166 /* infoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 54C21EB11EC2B22000D63166 /* infoPlist.strings */; };
 		78414B0BEFFBFCF30DDC872A /* libPods-Product.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D7588D42A2359605113B65F /* libPods-Product.a */; };
 /* End PBXBuildFile section */
@@ -102,8 +102,8 @@
 		549D49DE1EB999880016A62E /* XXProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = XXProgressHUD.bundle; sourceTree = "<group>"; };
 		549D49DF1EB999880016A62E /* XXProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XXProgressHUD.h; sourceTree = "<group>"; };
 		549D49E01EB999880016A62E /* XXProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XXProgressHUD.m; sourceTree = "<group>"; };
-		549D49E91EB99A4E0016A62E /* NetWorkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetWorkManager.h; sourceTree = "<group>"; };
-		549D49EA1EB99A4E0016A62E /* NetWorkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetWorkManager.m; sourceTree = "<group>"; };
+		549D49E91EB99A4E0016A62E /* XXNetWorkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XXNetWorkManager.h; sourceTree = "<group>"; };
+		549D49EA1EB99A4E0016A62E /* XXNetWorkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XXNetWorkManager.m; sourceTree = "<group>"; };
 		54C21EB01EC2B22000D63166 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/infoPlist.strings; sourceTree = "<group>"; };
 		54C21EB21EC2B22900D63166 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/infoPlist.strings"; sourceTree = "<group>"; };
 		6923A30AEE9690ABE86FAB57 /* Pods-Product.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Product.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Product/Pods-Product.debug.xcconfig"; sourceTree = "<group>"; };
@@ -243,8 +243,8 @@
 		18AEFC191E10C67300AFAF16 /* Category */ = {
 			isa = PBXGroup;
 			children = (
-				549D49E91EB99A4E0016A62E /* NetWorkManager.h */,
-				549D49EA1EB99A4E0016A62E /* NetWorkManager.m */,
+				549D49E91EB99A4E0016A62E /* XXNetWorkManager.h */,
+				549D49EA1EB99A4E0016A62E /* XXNetWorkManager.m */,
 				549D49D21EB999880016A62E /* UIBarButtonItem+Item.h */,
 				549D49D31EB999880016A62E /* UIBarButtonItem+Item.m */,
 				549D49D41EB999880016A62E /* UIImage+Extension.h */,
@@ -506,7 +506,7 @@
 				18AEFC821E11062700AFAF16 /* RootTabBarController.m in Sources */,
 				549D49E31EB999880016A62E /* UIImageView+Extension.m in Sources */,
 				549D49CC1EB993C50016A62E /* CFFlowButtonView.m in Sources */,
-				549D49EB1EB99A4E0016A62E /* NetWorkManager.m in Sources */,
+				549D49EB1EB99A4E0016A62E /* XXNetWorkManager.m in Sources */,
 				18AEFBD61E10C36400AFAF16 /* main.m in Sources */,
 				548015611EC186AB009F539A /* XXSection.m in Sources */,
 				548015641EC186F5009F539A /* RootViewController.m in Sources */,

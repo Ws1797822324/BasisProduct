@@ -26,7 +26,7 @@
 
 #import "UIImage+Extension.h"
 
-#import "NetWorkManager.h"
+#import "XXNetWorkManager.h"
 
 #import "RootViewController.h"  
 

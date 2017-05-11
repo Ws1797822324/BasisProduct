@@ -17,8 +17,6 @@
 }
 
 
-
-
 @property (nonatomic, strong) UIImagePickerController *imagePickerVc;
 
 @property (nonatomic ,assign) NSInteger maxCount;
@@ -69,7 +67,7 @@
     params[@"maxResult"] = @"20";
 
     
-    [NetWorkManager requestWithMethod:GET withParams:params withHud:YES withUrlString:@"http://route.showapi.com/341-3" withSuccessBlock:^(id objc) {
+    [XXNetWorkManager requestWithMethod:GET withParams:params withHud:YES withUrlString:@"http://route.showapi.com/341-3" withSuccessBlock:^(id objc) {
         NSLog(@"成功 -- %@",objc);
     } withFailuerBlock:^(id error) {
         NSLog(@"失败 -- %@",error);

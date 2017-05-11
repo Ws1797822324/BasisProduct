@@ -1,23 +1,23 @@
 //
-//  NetWorkManager.m
+//  XXNetWorkManager.m
 //  Demo
 //
 //  Created by Sen wang on 2017/4/27.
 //  Copyright © 2017年 Sen wang. All rights reserved.
 //
 
-#import "NetWorkManager.h"
+#import "XXNetWorkManager.h"
 
 #import "XXProgressHUD.h"
 
 #include "UIViewController+HUD.h"
 
 
-@implementation NetWorkManager
+@implementation XXNetWorkManager
 
 + (instancetype)sharedManager {
     
-    static  NetWorkManager *manager = nil;
+    static  XXNetWorkManager *manager = nil;
 
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
@@ -73,21 +73,21 @@
         {
             case AFNetworkReachabilityStatusUnknown: // 未知网络
                 NSLog(@"未知网络");
-                [NetWorkManager sharedManager].networkStats =  StatusUnknown;
+                [XXNetWorkManager sharedManager].networkStats =  StatusUnknown;
                 
                 break;
             case AFNetworkReachabilityStatusNotReachable: // 没有网络(断网)
                 NSLog(@"没有网络");
-                [NetWorkManager sharedManager].networkStats=StatusNotReachable;
+                [XXNetWorkManager sharedManager].networkStats=StatusNotReachable;
                 break;
             case AFNetworkReachabilityStatusReachableViaWWAN: // 手机自带网络
                 NSLog(@"手机自带网络");
-                [NetWorkManager sharedManager].networkStats=StatusReachableViaWWAN;
+                [XXNetWorkManager sharedManager].networkStats=StatusReachableViaWWAN;
                 break;
             case AFNetworkReachabilityStatusReachableViaWiFi: // WIFI
                 
-                [NetWorkManager sharedManager].networkStats=StatusReachableViaWiFi;
-                NSLog(@"WIFI--%lu",(unsigned long)[NetWorkManager sharedManager].networkStats);
+                [XXNetWorkManager sharedManager].networkStats=StatusReachableViaWiFi;
+                NSLog(@"WIFI--%lu",[XXNetWorkManager sharedManager].networkStats);
                 break;
         }
     }];
@@ -103,7 +103,7 @@
     switch (method) {
         case GET:
         {
-            [[NetWorkManager sharedManager] GET:urlStr parameters:params progress:^(NSProgress * _Nonnull downloadProgress) {
+            [[XXNetWorkManager sharedManager] GET:urlStr parameters:params progress:^(NSProgress * _Nonnull downloadProgress) {
                 
             } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
                 
@@ -126,7 +126,7 @@
         }
         case POST:
         {
-            [[NetWorkManager sharedManager] POST:urlStr parameters:params progress:^(NSProgress * _Nonnull uploadProgress) {
+            [[XXNetWorkManager sharedManager] POST:urlStr parameters:params progress:^(NSProgress * _Nonnull uploadProgress) {
                             } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
                                 
                                 NSLog(@"请求成功 URLStr \n\n --- %@\n\n",task.response.URL);
@@ -257,7 +257,7 @@
  
 +(void)requestCancle {
     
-    [[NetWorkManager sharedManager].tasks makeObjectsPerformSelector:@selector(cancel)];
+    [[XXNetWorkManager sharedManager].tasks makeObjectsPerformSelector:@selector(cancel)];
 }
 
 #pragma mark -   取消指定的url请求/
@@ -275,10 +275,10 @@
     
     /**根据请求的类型 以及 请求的url创建一个NSMutableURLRequest---通过该url去匹配请求队列中是否有该url,如果有的话 那么就取消该请求*/
     
-    NSString * urlToPeCanced = [[[[NetWorkManager sharedManager].requestSerializer requestWithMethod:requestType URLString:string parameters:nil error:&error] URL] path];
+    NSString * urlToPeCanced = [[[[XXNetWorkManager sharedManager].requestSerializer requestWithMethod:requestType URLString:string parameters:nil error:&error] URL] path];
     
     
-    for (NSOperation * operation in [NetWorkManager sharedManager].operationQueue.operations) {
+    for (NSOperation * operation in [XXNetWorkManager sharedManager].operationQueue.operations) {
         
         //如果是请求队列
         if ([operation isKindOfClass:[NSURLSessionTask class]]) {

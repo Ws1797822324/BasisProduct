@@ -38,7 +38,7 @@ typedef NS_ENUM(NSUInteger, NetworkStatus) {
 
 #define kTime 7
 
-@interface NetWorkManager : AFHTTPSessionManager
+@interface XXNetWorkManager : AFHTTPSessionManager
 
 + (instancetype)sharedManager;
 
