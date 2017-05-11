@@ -109,7 +109,7 @@
             } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
                 
                 
-                NSLog(@"请求成功 URLStr \n\n --- %@\n\n",task.response.URL);
+                NSLog(@"请求成功 URLStr \n\n --- %@\n\n",task.currentRequest.URL);
                 success(responseObject);
                 [XXProgressHUD hideHUD];
                 
@@ -120,7 +120,7 @@
                 
                 
             } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-                NSLog(@"请求失败 URLStr \n\n --- %@\n\n",task.response.URL);
+                NSLog(@"请求失败 URLStr \n\n --- %@\n\n",task.currentRequest.URL);
                 failuer(error);
                 
                 [XXProgressHUD showWaiting:@"服务器连接超时稍后重试"];
@@ -140,7 +140,8 @@
             [[XXNetWorkManager sharedManager] POST:urlStr parameters:params progress:^(NSProgress * _Nonnull uploadProgress) {
             } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
                 
-                NSLog(@"请求成功 URLStr \n\n --- %@\n\n",task.response.URL);
+                
+                NSLog(@"请求成功 URLStr \n\n --- %@\n\n",task.currentRequest.URL);
                 
                 success(responseObject);
                 
@@ -151,7 +152,7 @@
                 }
                 
             } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-                NSLog(@"请求失败 URLStr \n\n --- %@\n\n",task.response.URL);
+                NSLog(@"请求失败 URLStr \n\n --- %@\n\n",task.currentRequest.URL);
                 
                 failuer(error);
                 
