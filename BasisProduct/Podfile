@@ -25,5 +25,7 @@ pod 'TZImagePickerController', '~> 1.7.9'
 # pod 'WMPageController', '~> 2.2.1'
 #抽屉
 # pod 'MMDrawerController', '~> 0.6.0'
+#折线图饼状图
+#pod 'JHChart', '~> 1.1.0'
 
 end

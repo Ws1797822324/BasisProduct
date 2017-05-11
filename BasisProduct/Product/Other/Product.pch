@@ -22,6 +22,8 @@
 //颜色
 #define kRGBColor(r, g, b, a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:a]
 
+#define kRandColor kRGBColor(arc4random_uniform(255), arc4random_uniform(255), arc4random_uniform(255),1)
+
 
 #define kUserDefaults [NSUserDefaults standardUserDefaults]
 // 屏幕

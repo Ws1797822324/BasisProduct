@@ -87,7 +87,7 @@
             case AFNetworkReachabilityStatusReachableViaWiFi: // WIFI
                 
                 [NetWorkManager sharedManager].networkStats=StatusReachableViaWiFi;
-                NSLog(@"WIFI--%d",[NetWorkManager sharedManager].networkStats);
+                NSLog(@"WIFI--%lu",(unsigned long)[NetWorkManager sharedManager].networkStats);
                 break;
         }
     }];
