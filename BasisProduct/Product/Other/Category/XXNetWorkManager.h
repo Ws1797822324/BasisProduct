@@ -59,12 +59,13 @@ typedef NS_ENUM(NSUInteger, NetworkStatus) {
  @param method 请求方式
  @param params 参数
  @param hud 是否要HUD
+ @param print 是否打印请求结果
  @param urlStr 请求链接
  @param success 成功返回
  @param failuer 失败数据
  */
-+ (void) requestWithMethod:(HTTPMethod)method withParams:(id)params withHud:(BOOL)hud withUrlString:(NSString *)urlStr withSuccessBlock:(successBlock)success withFailuerBlock:(failuerBlock)failuer;
 
++ (void) requestWithMethod:(HTTPMethod)method withParams:(id)params withHud:(BOOL)hud withPrint:(BOOL)print withUrlString:(NSString *)urlStr withSuccessBlock:(successBlock)success withFailuerBlock:(failuerBlock)failuer;
 
 /**
  *  上传图片

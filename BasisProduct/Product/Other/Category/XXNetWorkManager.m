@@ -18,7 +18,7 @@
 + (instancetype)sharedManager {
     
     static  XXNetWorkManager *manager = nil;
-
+    
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         manager = [[self alloc]initWithBaseURL:[NSURL URLWithString:@"http://httpbin.org/"]];
@@ -28,7 +28,7 @@
 
 
 -(instancetype)initWithBaseURL:(NSURL *)url {
-
+    
     self = [super initWithBaseURL:url];
     
     if (self) {
@@ -38,7 +38,7 @@
         self.requestSerializer.timeoutInterval = kTime;
         
         /**设置相应的缓存策略*/
-
+        
         self.requestSerializer.cachePolicy = NSURLRequestReloadIgnoringLocalCacheData;
         
         [self.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Accept"];
@@ -46,7 +46,7 @@
         [self.requestSerializer setValue:url.absoluteString forHTTPHeaderField:@"Referer"];
         
         self.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/plain", @"text/javascript", @"text/json", @"text/html", nil];
-
+        
         
         AFJSONResponseSerializer * response = [AFJSONResponseSerializer serializer];
         response.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/plain", @"text/javascript", @"text/json", @"text/html", nil];
@@ -56,7 +56,7 @@
         
         // 是否信任 非法证书
         self.securityPolicy.allowInvalidCertificates = YES;
-
+        
     }
     return self;
 }
@@ -94,7 +94,8 @@
     [mgr startMonitoring];
 }
 
-+(void)requestWithMethod:(HTTPMethod)method withParams:(id)params withHud:(BOOL)hud withUrlString:(NSString *)urlStr withSuccessBlock:(successBlock)success withFailuerBlock:(failuerBlock)failuer {
++ (void) requestWithMethod:(HTTPMethod)method withParams:(id)params withHud:(BOOL)hud withPrint:(BOOL)print withUrlString:(NSString *)urlStr withSuccessBlock:(successBlock)success withFailuerBlock:(failuerBlock)failuer {
+    
     
     if (hud) {
         [XXProgressHUD showLoading:@"请稍后..."];
@@ -107,19 +108,29 @@
                 
             } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
                 
-
+                
                 NSLog(@"请求成功 URLStr \n\n --- %@\n\n",task.response.URL);
                 success(responseObject);
                 [XXProgressHUD hideHUD];
                 
+                if(print) {
+                    
+                    NSLog(@"\n successPrint = \n %@\n\n",responseObject);
+                }
+                
+                
             } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
                 NSLog(@"请求失败 URLStr \n\n --- %@\n\n",task.response.URL);
                 failuer(error);
-
-                    [XXProgressHUD showWaiting:@"服务器连接超时稍后重试"];
-                    [self requestCancle];
-                    [XXProgressHUD hideHUD];
-
+                
+                [XXProgressHUD showWaiting:@"服务器连接超时稍后重试"];
+                [self requestCancle];
+                [XXProgressHUD hideHUD];
+                if(print) {
+                    
+                    NSLog(@"\n failuerPrint = \n %@\n\n",error);
+                }
+                
             }];
             
             break;
@@ -127,25 +138,32 @@
         case POST:
         {
             [[XXNetWorkManager sharedManager] POST:urlStr parameters:params progress:^(NSProgress * _Nonnull uploadProgress) {
-                            } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-                                
-                                NSLog(@"请求成功 URLStr \n\n --- %@\n\n",task.response.URL);
-
-                                success(responseObject);
-                                
-                                [XXProgressHUD hideHUD];
-
-                            } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-                                NSLog(@"请求失败 URLStr \n\n --- %@\n\n",task.response.URL);
-
-                                failuer(error);
-                                
-                                [XXProgressHUD showWaiting:@"服务器连接超时稍后重试"];
-
-                                    [self requestCancle];
-                                
-                                
-                            }];
+            } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+                
+                NSLog(@"请求成功 URLStr \n\n --- %@\n\n",task.response.URL);
+                
+                success(responseObject);
+                
+                [XXProgressHUD hideHUD];
+                if(print) {
+                    
+                    NSLog(@"\n successPrint = \n %@\n\n",responseObject);
+                }
+                
+            } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+                NSLog(@"请求失败 URLStr \n\n --- %@\n\n",task.response.URL);
+                
+                failuer(error);
+                
+                [XXProgressHUD showWaiting:@"服务器连接超时稍后重试"];
+                
+                [self requestCancle];
+                if(print) {
+                    
+                    NSLog(@"\n failuerPrint = \n%@\n\n",error);
+                }
+                
+            }];
             
             break;
         }
@@ -254,7 +272,7 @@
 
 
 // MARK:  =========  取消全部的网络请求  =========
- 
+
 +(void)requestCancle {
     
     [[XXNetWorkManager sharedManager].tasks makeObjectsPerformSelector:@selector(cancel)];
