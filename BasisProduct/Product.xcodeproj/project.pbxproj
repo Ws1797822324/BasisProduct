@@ -27,7 +27,6 @@
 		549D49E31EB999880016A62E /* UIImageView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 549D49D71EB999880016A62E /* UIImageView+Extension.m */; };
 		549D49E41EB999880016A62E /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 549D49D91EB999880016A62E /* UIView+Extension.m */; };
 		549D49E51EB999880016A62E /* UIViewController+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 549D49DB1EB999880016A62E /* UIViewController+Extension.m */; };
-		549D49E61EB999880016A62E /* UIViewController+HUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 549D49DD1EB999880016A62E /* UIViewController+HUD.m */; };
 		549D49E71EB999880016A62E /* XXProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 549D49DE1EB999880016A62E /* XXProgressHUD.bundle */; };
 		549D49E81EB999880016A62E /* XXProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 549D49E01EB999880016A62E /* XXProgressHUD.m */; };
 		549D49EB1EB99A4E0016A62E /* XXNetWorkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 549D49EA1EB99A4E0016A62E /* XXNetWorkManager.m */; };
@@ -97,8 +96,6 @@
 		549D49D91EB999880016A62E /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
 		549D49DA1EB999880016A62E /* UIViewController+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Extension.h"; sourceTree = "<group>"; };
 		549D49DB1EB999880016A62E /* UIViewController+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Extension.m"; sourceTree = "<group>"; };
-		549D49DC1EB999880016A62E /* UIViewController+HUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+HUD.h"; sourceTree = "<group>"; };
-		549D49DD1EB999880016A62E /* UIViewController+HUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+HUD.m"; sourceTree = "<group>"; };
 		549D49DE1EB999880016A62E /* XXProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = XXProgressHUD.bundle; sourceTree = "<group>"; };
 		549D49DF1EB999880016A62E /* XXProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XXProgressHUD.h; sourceTree = "<group>"; };
 		549D49E01EB999880016A62E /* XXProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XXProgressHUD.m; sourceTree = "<group>"; };
@@ -255,11 +252,9 @@
 				549D49D91EB999880016A62E /* UIView+Extension.m */,
 				549D49DA1EB999880016A62E /* UIViewController+Extension.h */,
 				549D49DB1EB999880016A62E /* UIViewController+Extension.m */,
-				549D49DC1EB999880016A62E /* UIViewController+HUD.h */,
-				549D49DD1EB999880016A62E /* UIViewController+HUD.m */,
-				549D49DE1EB999880016A62E /* XXProgressHUD.bundle */,
 				549D49DF1EB999880016A62E /* XXProgressHUD.h */,
 				549D49E01EB999880016A62E /* XXProgressHUD.m */,
+				549D49DE1EB999880016A62E /* XXProgressHUD.bundle */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -510,7 +505,6 @@
 				18AEFBD61E10C36400AFAF16 /* main.m in Sources */,
 				548015611EC186AB009F539A /* XXSection.m in Sources */,
 				548015641EC186F5009F539A /* RootViewController.m in Sources */,
-				549D49E61EB999880016A62E /* UIViewController+HUD.m in Sources */,
 				545585551EBAFE730031436C /* XXViewController.m in Sources */,
 				549D49E21EB999880016A62E /* UIImage+Extension.m in Sources */,
 				18AEFC791E11012F00AFAF16 /* NavigationController.m in Sources */,

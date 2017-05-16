@@ -30,7 +30,7 @@ typedef NS_ENUM(NSInteger, XXProgressHUDStatus) {
 /**
  *  是否正在显示
  */
-@property (nonatomic, assign, getter=isShowNow) BOOL showNow;
+@property (nonatomic, assign, getter = isShowNow) BOOL showNow;
 
 /** 返回一个 HUD 的单例 */
 + (instancetype)sharedHUD;
@@ -45,7 +45,7 @@ typedef NS_ENUM(NSInteger, XXProgressHUDStatus) {
 /** 在 window 上添加一个只显示文字的 HUD */
 + (void)showMessage:(NSString *)text;
 
-/** 在 window 上添加一个提示`信息`的 HUD */
+/** 在 window 上添加一个提示`警告`的 HUD */
 + (void)showWaiting:(NSString *)text;
 
 /** 在 window 上添加一个提示`失败`的 HUD */

@@ -120,6 +120,7 @@
 
 + (void)showMessage:(NSString *)text {
     
+    [self hideHUD];
     XXProgressHUD *HUD = [XXProgressHUD sharedHUD];
     HUD.bezelView.color = [UIColor blackColor];
     [HUD showAnimated:YES];
