@@ -1,12 +1,13 @@
 //
 
-// MARK:  =========  <#注释#>  =========
 
-/*
+
  
- 该工程里的一些三方库使用  示例 
+#pragma mark - 该工程里的一些三方库使用  示例
  
- // MARK:  ========= KLCPopup  弹出View =========
+
+
+#pragma mark  KLCPopup  弹出View 
 
   
  
@@ -17,9 +18,11 @@
  [popView showWithLayout:popLayout];
 
  
- // MARK:  ========= PTXDatePickerView 时间选择器  =========
+#pragma mark -  PTXDatePickerView 时间选择器  
 
- 设置代理 PTXDatePickerViewDelegate 
+
+ 设置代理 <PTXDatePickerViewDelegate >
+
  @property (nonatomic, strong) PTXDatePickerView *datePickerView;
  
  @property (nonatomic, strong) NSDate *selectedDate; //代表dateButton上显示的时间。
@@ -33,6 +36,7 @@
  _datePickerView.datePickerViewShowModel = PTXDatePickerViewShowModelYearMonth;
  
  #pragma mark - PTXDatePickerViewDelegate 代理方法
+
  - (void)datePickerView:(PTXDatePickerView *)datePickerView didSelectDate:(NSDate *)date {
  
  self.selectedDate = date;
