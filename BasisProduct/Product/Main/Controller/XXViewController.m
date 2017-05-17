@@ -67,8 +67,12 @@
     params[@"maxResult"] = @"20";
 
     
-    [XXNetWorkManager requestWithMethod:GET withParams:params withHud:YES withUrlString:@"http://route.showapi.com/341-3" withSuccessBlock:^(id objc) {
+    [XXNetWorkManager requestWithMethod:GET withParams:params withHud:YES withPrint:YES  withUrlString:@"http://route.showapi.com/341-3" withSuccessBlock:^(id objc) {
         NSLog(@"成功 -- %@",objc);
+        
+        [XXProgressHUD showError:@"比你好"];
+        
+
     } withFailuerBlock:^(id error) {
         NSLog(@"失败 -- %@",error);
     }];

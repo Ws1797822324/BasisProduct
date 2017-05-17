@@ -10,7 +10,6 @@
 
 #import "XXProgressHUD.h"
 
-#include "UIViewController+HUD.h"
 
 
 @implementation XXNetWorkManager
@@ -120,8 +119,8 @@
             } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
                 NSLog(@"请求失败 URLStr \n\n --- %@\n\n",task.currentRequest.URL);
                 failuer(error);
-                [XXProgressHUD hideHUD];
 
+                
                 [XXProgressHUD showWaiting:@"网络请求失败稍后重试"];
                 [self requestCancle];
                 if(print) {
@@ -130,7 +129,6 @@
                 }
                 
             }];
-            
             break;
         }
         case POST:
@@ -141,6 +139,7 @@
                 NSLog(@"请求成功 URLStr \n\n --- %@\n\n",task.currentRequest.URL);
                 
                 success(responseObject);
+
                 
                 if(print) {
                     
@@ -161,7 +160,7 @@
                 }
                 
             }];
-            
+
             break;
         }
             
