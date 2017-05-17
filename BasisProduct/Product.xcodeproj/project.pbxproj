@@ -16,6 +16,7 @@
 		18AEFC141E10C3CE00AFAF16 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18AEFC111E10C3CE00AFAF16 /* Main.storyboard */; };
 		18AEFC791E11012F00AFAF16 /* NavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18AEFC781E11012F00AFAF16 /* NavigationController.m */; };
 		18AEFC821E11062700AFAF16 /* RootTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18AEFC811E11062700AFAF16 /* RootTabBarController.m */; };
+		543E3F1E1ECC0F13006388CA /* XXHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 543E3F1D1ECC0F13006388CA /* XXHelper.m */; };
 		545585551EBAFE730031436C /* XXViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 545585531EBAFE730031436C /* XXViewController.m */; };
 		545585561EBAFE730031436C /* XXViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 545585541EBAFE730031436C /* XXViewController.xib */; };
 		548015611EC186AB009F539A /* XXSection.m in Sources */ = {isa = PBXBuildFile; fileRef = 548015601EC186AB009F539A /* XXSection.m */; };
@@ -74,6 +75,8 @@
 		18AEFC801E11062700AFAF16 /* RootTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootTabBarController.h; sourceTree = "<group>"; };
 		18AEFC811E11062700AFAF16 /* RootTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootTabBarController.m; sourceTree = "<group>"; };
 		2D7588D42A2359605113B65F /* libPods-Product.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Product.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		543E3F1C1ECC0F13006388CA /* XXHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XXHelper.h; sourceTree = "<group>"; };
+		543E3F1D1ECC0F13006388CA /* XXHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XXHelper.m; sourceTree = "<group>"; };
 		545585521EBAFE730031436C /* XXViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XXViewController.h; sourceTree = "<group>"; };
 		545585531EBAFE730031436C /* XXViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XXViewController.m; sourceTree = "<group>"; };
 		545585541EBAFE730031436C /* XXViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XXViewController.xib; sourceTree = "<group>"; };
@@ -240,6 +243,8 @@
 		18AEFC191E10C67300AFAF16 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				543E3F1C1ECC0F13006388CA /* XXHelper.h */,
+				543E3F1D1ECC0F13006388CA /* XXHelper.m */,
 				549D49E91EB99A4E0016A62E /* XXNetWorkManager.h */,
 				549D49EA1EB99A4E0016A62E /* XXNetWorkManager.m */,
 				549D49D21EB999880016A62E /* UIBarButtonItem+Item.h */,
@@ -500,6 +505,7 @@
 				549D49CD1EB993C50016A62E /* PTXDatePickerView.m in Sources */,
 				18AEFC821E11062700AFAF16 /* RootTabBarController.m in Sources */,
 				549D49E31EB999880016A62E /* UIImageView+Extension.m in Sources */,
+				543E3F1E1ECC0F13006388CA /* XXHelper.m in Sources */,
 				549D49CC1EB993C50016A62E /* CFFlowButtonView.m in Sources */,
 				549D49EB1EB99A4E0016A62E /* XXNetWorkManager.m in Sources */,
 				18AEFBD61E10C36400AFAF16 /* main.m in Sources */,

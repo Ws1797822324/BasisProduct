@@ -18,7 +18,7 @@
 
 #import "UIImageView+Extension.h"
 
-#import "UIViewController+HUD.h"
+#import "XXHelper.h"
 
 #import "XXProgressHUD.h"
 
@@ -30,7 +30,7 @@
 
 #import "RootViewController.h"  
 
-#import "XXSection.h"
+#import "XXSection.h"  
 
 
 #pragma mark - Third Lib
