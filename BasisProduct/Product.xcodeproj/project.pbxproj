@@ -247,6 +247,9 @@
 				543E3F1D1ECC0F13006388CA /* XXHelper.m */,
 				549D49E91EB99A4E0016A62E /* XXNetWorkManager.h */,
 				549D49EA1EB99A4E0016A62E /* XXNetWorkManager.m */,
+				549D49DF1EB999880016A62E /* XXProgressHUD.h */,
+				549D49E01EB999880016A62E /* XXProgressHUD.m */,
+				549D49DE1EB999880016A62E /* XXProgressHUD.bundle */,
 				549D49D21EB999880016A62E /* UIBarButtonItem+Item.h */,
 				549D49D31EB999880016A62E /* UIBarButtonItem+Item.m */,
 				549D49D41EB999880016A62E /* UIImage+Extension.h */,
@@ -257,9 +260,6 @@
 				549D49D91EB999880016A62E /* UIView+Extension.m */,
 				549D49DA1EB999880016A62E /* UIViewController+Extension.h */,
 				549D49DB1EB999880016A62E /* UIViewController+Extension.m */,
-				549D49DF1EB999880016A62E /* XXProgressHUD.h */,
-				549D49E01EB999880016A62E /* XXProgressHUD.m */,
-				549D49DE1EB999880016A62E /* XXProgressHUD.bundle */,
 			);
 			path = Category;
 			sourceTree = "<group>";
