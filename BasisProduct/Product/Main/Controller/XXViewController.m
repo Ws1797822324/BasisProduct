@@ -56,6 +56,9 @@
 
 
 - (void)viewDidLoad {
+    
+    
+    [XXProgressHUD showSuccess:@"这是个测试 VC"];
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     _maxCount = 1;
@@ -70,7 +73,7 @@
     [XXNetWorkManager requestWithMethod:GET withParams:params withHud:YES withPrint:YES  withUrlString:@"http://route.showapi.com/341-3" withSuccessBlock:^(id objc) {
         NSLog(@"成功 -- %@",objc);
         
-        [XXProgressHUD showError:@"比你好"];
+      
         
 
     } withFailuerBlock:^(id error) {
