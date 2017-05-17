@@ -88,7 +88,7 @@
 		549D49C81EB993C50016A62E /* CFFlowButtonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFFlowButtonView.m; sourceTree = "<group>"; };
 		549D49CA1EB993C50016A62E /* PTXDatePickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTXDatePickerView.h; sourceTree = "<group>"; };
 		549D49CB1EB993C50016A62E /* PTXDatePickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTXDatePickerView.m; sourceTree = "<group>"; };
-		549D49D11EB9952A0016A62E /* DemoClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoClass.h; sourceTree = "<group>"; };
+		549D49D11EB9952A0016A62E /*  SampleClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = " SampleClass.h"; sourceTree = "<group>"; };
 		549D49D21EB999880016A62E /* UIBarButtonItem+Item.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+Item.h"; sourceTree = "<group>"; };
 		549D49D31EB999880016A62E /* UIBarButtonItem+Item.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+Item.m"; sourceTree = "<group>"; };
 		549D49D41EB999880016A62E /* UIImage+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Extension.h"; sourceTree = "<group>"; };
@@ -200,7 +200,7 @@
 		18AEFC0D1E10C3CE00AFAF16 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				549D49D11EB9952A0016A62E /* DemoClass.h */,
+				549D49D11EB9952A0016A62E /*  SampleClass.h */,
 				18AEFC0E1E10C3CE00AFAF16 /* AppDelegate.h */,
 				18AEFC0F1E10C3CE00AFAF16 /* AppDelegate.m */,
 				18AEFC111E10C3CE00AFAF16 /* Main.storyboard */,
