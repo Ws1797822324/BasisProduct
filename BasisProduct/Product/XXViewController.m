@@ -68,22 +68,7 @@
     _maxCount = 1;
     _allowCrop = YES;
     
-    // 请求参数
-    NSMutableDictionary *params = [NSMutableDictionary dictionary];
-    params[@"page"] = @"1";
-    params[@"maxResult"] = @"20";
-
-    
-    [XXNetWorkManager requestWithMethod:GET withParams:params withHud:NO withPrint:YES  withUrlString:@"http://route.showapi.com/341-3" withSuccessBlock:^(id objc) {
-        NSLog(@"成功 -- %@",objc);
-        
-      
-        
-
-    } withFailuerBlock:^(id error) {
-        NSLog(@"失败 -- %@",error);
-    }];
-}
+   }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

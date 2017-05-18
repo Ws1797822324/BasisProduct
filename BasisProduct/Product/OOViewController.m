@@ -16,8 +16,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.fd_prefersNavigationBarHidden = YES;
-    self.fd_interactivePopMaxAllowedInitialDistanceToLeftEdge = 300;
+
+
     
     // Do any additional setup after loading the view from its nib.
 }
