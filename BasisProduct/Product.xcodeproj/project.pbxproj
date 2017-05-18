@@ -22,6 +22,7 @@
 		545AC87A1ECD352D00FCB342 /* XXViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 545AC8761ECD352D00FCB342 /* XXViewController.m */; };
 		545AC87B1ECD352D00FCB342 /* XXViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 545AC8771ECD352D00FCB342 /* XXViewController.xib */; };
 		545AC87E1ECD355800FCB342 /* UINavigationController+FDFullscreenPopGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 545AC87D1ECD355800FCB342 /* UINavigationController+FDFullscreenPopGesture.m */; };
+		545AC8861ECD7B5B00FCB342 /* Foundation+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 545AC8851ECD7B5B00FCB342 /* Foundation+Log.m */; };
 		548015611EC186AB009F539A /* XXSection.m in Sources */ = {isa = PBXBuildFile; fileRef = 548015601EC186AB009F539A /* XXSection.m */; };
 		548015641EC186F5009F539A /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 548015631EC186F5009F539A /* RootViewController.m */; };
 		549D49CC1EB993C50016A62E /* CFFlowButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = 549D49C81EB993C50016A62E /* CFFlowButtonView.m */; };
@@ -88,6 +89,7 @@
 		545AC8771ECD352D00FCB342 /* XXViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = XXViewController.xib; path = Product/XXViewController.xib; sourceTree = SOURCE_ROOT; };
 		545AC87C1ECD355800FCB342 /* UINavigationController+FDFullscreenPopGesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+FDFullscreenPopGesture.h"; sourceTree = "<group>"; };
 		545AC87D1ECD355800FCB342 /* UINavigationController+FDFullscreenPopGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+FDFullscreenPopGesture.m"; sourceTree = "<group>"; };
+		545AC8851ECD7B5B00FCB342 /* Foundation+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Foundation+Log.m"; sourceTree = "<group>"; };
 		5480155F1EC186AB009F539A /* XXSection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XXSection.h; sourceTree = "<group>"; };
 		548015601EC186AB009F539A /* XXSection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XXSection.m; sourceTree = "<group>"; };
 		548015621EC186F5009F539A /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
@@ -254,6 +256,7 @@
 		18AEFC191E10C67300AFAF16 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				545AC8851ECD7B5B00FCB342 /* Foundation+Log.m */,
 				543E3F1C1ECC0F13006388CA /* XXHelper.h */,
 				543E3F1D1ECC0F13006388CA /* XXHelper.m */,
 				549D49E91EB99A4E0016A62E /* XXNetWorkManager.h */,
@@ -522,6 +525,7 @@
 				549D49E31EB999880016A62E /* UIImageView+Extension.m in Sources */,
 				543E3F1E1ECC0F13006388CA /* XXHelper.m in Sources */,
 				545AC8781ECD352D00FCB342 /* OOViewController.m in Sources */,
+				545AC8861ECD7B5B00FCB342 /* Foundation+Log.m in Sources */,
 				549D49CC1EB993C50016A62E /* CFFlowButtonView.m in Sources */,
 				545AC87A1ECD352D00FCB342 /* XXViewController.m in Sources */,
 				549D49EB1EB99A4E0016A62E /* XXNetWorkManager.m in Sources */,
