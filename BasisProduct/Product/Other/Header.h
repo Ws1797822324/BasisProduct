@@ -32,6 +32,8 @@
 
 #import "XXSection.h"  
 
+#import "UINavigationController+FDFullscreenPopGesture.h"
+
 
 #pragma mark - Third Lib
 

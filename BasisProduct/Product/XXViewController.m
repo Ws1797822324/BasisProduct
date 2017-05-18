@@ -8,7 +8,7 @@
 
 #import "XXViewController.h"
 
-
+#import "OOViewController.h"
 
 @interface XXViewController () <UIImagePickerControllerDelegate,TZImagePickerControllerDelegate,UIAlertViewDelegate,UIActionSheetDelegate,UINavigationControllerDelegate> {
 
@@ -54,6 +54,10 @@
     return _imagePickerVc;
 }
 
+- (IBAction)pushAction:(UIButton *)sender {
+    
+    [self.navigationController pushViewController:[OOViewController new] animated:YES];
+}
 
 - (void)viewDidLoad {
     
@@ -70,7 +74,7 @@
     params[@"maxResult"] = @"20";
 
     
-    [XXNetWorkManager requestWithMethod:GET withParams:params withHud:YES withPrint:YES  withUrlString:@"http://route.showapi.com/341-3" withSuccessBlock:^(id objc) {
+    [XXNetWorkManager requestWithMethod:GET withParams:params withHud:NO withPrint:YES  withUrlString:@"http://route.showapi.com/341-3" withSuccessBlock:^(id objc) {
         NSLog(@"成功 -- %@",objc);
         
       

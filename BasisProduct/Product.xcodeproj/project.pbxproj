@@ -17,8 +17,11 @@
 		18AEFC791E11012F00AFAF16 /* NavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18AEFC781E11012F00AFAF16 /* NavigationController.m */; };
 		18AEFC821E11062700AFAF16 /* RootTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18AEFC811E11062700AFAF16 /* RootTabBarController.m */; };
 		543E3F1E1ECC0F13006388CA /* XXHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 543E3F1D1ECC0F13006388CA /* XXHelper.m */; };
-		545585551EBAFE730031436C /* XXViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 545585531EBAFE730031436C /* XXViewController.m */; };
-		545585561EBAFE730031436C /* XXViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 545585541EBAFE730031436C /* XXViewController.xib */; };
+		545AC8781ECD352D00FCB342 /* OOViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 545AC8731ECD352D00FCB342 /* OOViewController.m */; };
+		545AC8791ECD352D00FCB342 /* OOViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 545AC8741ECD352D00FCB342 /* OOViewController.xib */; };
+		545AC87A1ECD352D00FCB342 /* XXViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 545AC8761ECD352D00FCB342 /* XXViewController.m */; };
+		545AC87B1ECD352D00FCB342 /* XXViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 545AC8771ECD352D00FCB342 /* XXViewController.xib */; };
+		545AC87E1ECD355800FCB342 /* UINavigationController+FDFullscreenPopGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 545AC87D1ECD355800FCB342 /* UINavigationController+FDFullscreenPopGesture.m */; };
 		548015611EC186AB009F539A /* XXSection.m in Sources */ = {isa = PBXBuildFile; fileRef = 548015601EC186AB009F539A /* XXSection.m */; };
 		548015641EC186F5009F539A /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 548015631EC186F5009F539A /* RootViewController.m */; };
 		549D49CC1EB993C50016A62E /* CFFlowButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = 549D49C81EB993C50016A62E /* CFFlowButtonView.m */; };
@@ -77,9 +80,14 @@
 		2D7588D42A2359605113B65F /* libPods-Product.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Product.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		543E3F1C1ECC0F13006388CA /* XXHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XXHelper.h; sourceTree = "<group>"; };
 		543E3F1D1ECC0F13006388CA /* XXHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XXHelper.m; sourceTree = "<group>"; };
-		545585521EBAFE730031436C /* XXViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XXViewController.h; sourceTree = "<group>"; };
-		545585531EBAFE730031436C /* XXViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XXViewController.m; sourceTree = "<group>"; };
-		545585541EBAFE730031436C /* XXViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XXViewController.xib; sourceTree = "<group>"; };
+		545AC8721ECD352D00FCB342 /* OOViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OOViewController.h; path = Product/OOViewController.h; sourceTree = SOURCE_ROOT; };
+		545AC8731ECD352D00FCB342 /* OOViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OOViewController.m; path = Product/OOViewController.m; sourceTree = SOURCE_ROOT; };
+		545AC8741ECD352D00FCB342 /* OOViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = OOViewController.xib; path = Product/OOViewController.xib; sourceTree = SOURCE_ROOT; };
+		545AC8751ECD352D00FCB342 /* XXViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XXViewController.h; path = Product/XXViewController.h; sourceTree = SOURCE_ROOT; };
+		545AC8761ECD352D00FCB342 /* XXViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XXViewController.m; path = Product/XXViewController.m; sourceTree = SOURCE_ROOT; };
+		545AC8771ECD352D00FCB342 /* XXViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = XXViewController.xib; path = Product/XXViewController.xib; sourceTree = SOURCE_ROOT; };
+		545AC87C1ECD355800FCB342 /* UINavigationController+FDFullscreenPopGesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+FDFullscreenPopGesture.h"; sourceTree = "<group>"; };
+		545AC87D1ECD355800FCB342 /* UINavigationController+FDFullscreenPopGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+FDFullscreenPopGesture.m"; sourceTree = "<group>"; };
 		5480155F1EC186AB009F539A /* XXSection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XXSection.h; sourceTree = "<group>"; };
 		548015601EC186AB009F539A /* XXSection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XXSection.m; sourceTree = "<group>"; };
 		548015621EC186F5009F539A /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
@@ -200,6 +208,12 @@
 		18AEFC0D1E10C3CE00AFAF16 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				545AC8721ECD352D00FCB342 /* OOViewController.h */,
+				545AC8731ECD352D00FCB342 /* OOViewController.m */,
+				545AC8741ECD352D00FCB342 /* OOViewController.xib */,
+				545AC8751ECD352D00FCB342 /* XXViewController.h */,
+				545AC8761ECD352D00FCB342 /* XXViewController.m */,
+				545AC8771ECD352D00FCB342 /* XXViewController.xib */,
 				549D49D11EB9952A0016A62E /*  SampleClass.h */,
 				18AEFC0E1E10C3CE00AFAF16 /* AppDelegate.h */,
 				18AEFC0F1E10C3CE00AFAF16 /* AppDelegate.m */,
@@ -233,9 +247,6 @@
 				18AEFC811E11062700AFAF16 /* RootTabBarController.m */,
 				548015621EC186F5009F539A /* RootViewController.h */,
 				548015631EC186F5009F539A /* RootViewController.m */,
-				545585521EBAFE730031436C /* XXViewController.h */,
-				545585531EBAFE730031436C /* XXViewController.m */,
-				545585541EBAFE730031436C /* XXViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -260,6 +271,8 @@
 				549D49D91EB999880016A62E /* UIView+Extension.m */,
 				549D49DA1EB999880016A62E /* UIViewController+Extension.h */,
 				549D49DB1EB999880016A62E /* UIViewController+Extension.m */,
+				545AC87C1ECD355800FCB342 /* UINavigationController+FDFullscreenPopGesture.h */,
+				545AC87D1ECD355800FCB342 /* UINavigationController+FDFullscreenPopGesture.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -421,9 +434,10 @@
 			files = (
 				18AEFC141E10C3CE00AFAF16 /* Main.storyboard in Resources */,
 				18AEFBE71E10C36400AFAF16 /* Assets.xcassets in Resources */,
+				545AC8791ECD352D00FCB342 /* OOViewController.xib in Resources */,
 				549D49E71EB999880016A62E /* XXProgressHUD.bundle in Resources */,
-				545585561EBAFE730031436C /* XXViewController.xib in Resources */,
 				18AEFC131E10C3CE00AFAF16 /* LaunchScreen.storyboard in Resources */,
+				545AC87B1ECD352D00FCB342 /* XXViewController.xib in Resources */,
 				54C21EAF1EC2B22000D63166 /* infoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -498,6 +512,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				549D49E51EB999880016A62E /* UIViewController+Extension.m in Sources */,
+				545AC87E1ECD355800FCB342 /* UINavigationController+FDFullscreenPopGesture.m in Sources */,
 				18AEFC121E10C3CE00AFAF16 /* AppDelegate.m in Sources */,
 				549D49E81EB999880016A62E /* XXProgressHUD.m in Sources */,
 				549D49E11EB999880016A62E /* UIBarButtonItem+Item.m in Sources */,
@@ -506,12 +521,13 @@
 				18AEFC821E11062700AFAF16 /* RootTabBarController.m in Sources */,
 				549D49E31EB999880016A62E /* UIImageView+Extension.m in Sources */,
 				543E3F1E1ECC0F13006388CA /* XXHelper.m in Sources */,
+				545AC8781ECD352D00FCB342 /* OOViewController.m in Sources */,
 				549D49CC1EB993C50016A62E /* CFFlowButtonView.m in Sources */,
+				545AC87A1ECD352D00FCB342 /* XXViewController.m in Sources */,
 				549D49EB1EB99A4E0016A62E /* XXNetWorkManager.m in Sources */,
 				18AEFBD61E10C36400AFAF16 /* main.m in Sources */,
 				548015611EC186AB009F539A /* XXSection.m in Sources */,
 				548015641EC186F5009F539A /* RootViewController.m in Sources */,
-				545585551EBAFE730031436C /* XXViewController.m in Sources */,
 				549D49E21EB999880016A62E /* UIImage+Extension.m in Sources */,
 				18AEFC791E11012F00AFAF16 /* NavigationController.m in Sources */,
 			);
