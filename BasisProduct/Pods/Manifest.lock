@@ -14,7 +14,12 @@ PODS:
   - AFNetworking/Serialization (3.1.0)
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
+  - FMDB (2.6.2):
+    - FMDB/standard (= 2.6.2)
+  - FMDB/standard (2.6.2)
   - IQKeyboardManager (4.0.9)
+  - JQFMDB (1.1.4):
+    - FMDB
   - KLCPopup (1.0)
   - MBProgressHUD (1.0.0)
   - MJExtension (3.0.13)
@@ -28,6 +33,7 @@ PODS:
 DEPENDENCIES:
   - AFNetworking (~> 3.1.0)
   - IQKeyboardManager (~> 4.0.9)
+  - JQFMDB (~> 1.1.4)
   - KLCPopup (~> 1.0)
   - MBProgressHUD (~> 1.0.0)
   - MJExtension (~> 3.0.13)
@@ -38,7 +44,9 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
   IQKeyboardManager: 322c7405df3eb5f7e50dede32ea937bf3d4364e0
+  JQFMDB: dd62d2cafd075e6c9f952d0caaeffd6c18c8b16c
   KLCPopup: 76c5a19227977f1e53d85236f9ef42257c168d98
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
   MJExtension: 5932755f451458eefa24239358817f8d291240c7
@@ -47,6 +55,6 @@ SPEC CHECKSUMS:
   TZImagePickerController: 0a8ff228d287ebdd7d485e8c42a2a932894f1fba
   YPTabBarController: 2e0e97b2d9d4b28b722ecb57700b7cd4d1b38a47
 
-PODFILE CHECKSUM: 06becc7cc6c02aeb8f7779343b3a24d6f8624842
+PODFILE CHECKSUM: 45a0f3b8433df991ac3f4acf58e1c2139ed169c6
 
 COCOAPODS: 1.2.0
