@@ -986,4 +986,34 @@ static void addRoundedRectToPath(CGContextRef context, CGRect rect, float ovalWi
     return grouping ? MyArr : allNewDataArr;
 }
 
+#pragma mark -  获取rootViewController
++ (UIViewController *)rootViewController {
+    UIWindow* window = [UIApplication sharedApplication].keyWindow;
+    return window.rootViewController;
+}
+
+#pragma mark - 获取Window当前显示的ViewController
++ (UIViewController*)currentViewController {
+    UIViewController* vc = [UIApplication sharedApplication].keyWindow.rootViewController;
+    
+    while (1) {
+        if ([vc isKindOfClass:[UITabBarController class]]) {
+            vc = ((UITabBarController*)vc).selectedViewController;
+        }
+        
+        if ([vc isKindOfClass:[UINavigationController class]]) {
+            vc = ((UINavigationController*)vc).visibleViewController;
+        }
+        
+        if (vc.presentedViewController) {
+            vc = vc.presentedViewController;
+        }else{
+            break;
+        }
+        
+    }
+    
+    return vc;
+}
+
 @end

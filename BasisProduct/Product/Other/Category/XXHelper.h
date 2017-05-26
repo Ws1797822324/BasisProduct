@@ -12,9 +12,16 @@
 
 @interface XXHelper : NSObject
 
+#pragma mark -  获取rootViewController
+
++ (UIViewController *)rootViewController;
+
+#pragma mark - 获取Window当前显示的ViewController
++ (UIViewController*)currentViewController;
+
 #pragma mark - 将字符串转化成试图控制器
 /**
- *  将字符串转化成试图控制器
+ *  将字符串转化成视图 控制器
  */
 + (UIViewController *)StringIntoViewController:(NSString *)classString;
 
