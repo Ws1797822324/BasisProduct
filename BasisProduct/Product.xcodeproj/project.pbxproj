@@ -19,7 +19,6 @@
 		543E3F1E1ECC0F13006388CA /* XXHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 543E3F1D1ECC0F13006388CA /* XXHelper.m */; };
 		545AC87A1ECD352D00FCB342 /* XXViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 545AC8761ECD352D00FCB342 /* XXViewController.m */; };
 		545AC87B1ECD352D00FCB342 /* XXViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 545AC8771ECD352D00FCB342 /* XXViewController.xib */; };
-		545AC8861ECD7B5B00FCB342 /* Foundation+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 545AC8851ECD7B5B00FCB342 /* Foundation+Log.m */; };
 		5469A6811ED7C9240033AEA1 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5469A67E1ED7C9240033AEA1 /* UIView+Extension.m */; };
 		5469A6821ED7C9240033AEA1 /* UIViewController+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5469A6801ED7C9240033AEA1 /* UIViewController+Extension.m */; };
 		5469A6881ED7C9510033AEA1 /* UIBarButtonItem+Item.m in Sources */ = {isa = PBXBuildFile; fileRef = 5469A6851ED7C9510033AEA1 /* UIBarButtonItem+Item.m */; };
@@ -35,6 +34,7 @@
 		549D49CC1EB993C50016A62E /* CFFlowButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = 549D49C81EB993C50016A62E /* CFFlowButtonView.m */; };
 		549D49CD1EB993C50016A62E /* PTXDatePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 549D49CB1EB993C50016A62E /* PTXDatePickerView.m */; };
 		549D49EB1EB99A4E0016A62E /* XXNetWorkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 549D49EA1EB99A4E0016A62E /* XXNetWorkManager.m */; };
+		54AFE8D81ED7D66800258F58 /* Foundation+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 54AFE8D71ED7D66800258F58 /* Foundation+Log.m */; };
 		54C21EAF1EC2B22000D63166 /* infoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 54C21EB11EC2B22000D63166 /* infoPlist.strings */; };
 		78414B0BEFFBFCF30DDC872A /* libPods-Product.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D7588D42A2359605113B65F /* libPods-Product.a */; };
 /* End PBXBuildFile section */
@@ -57,7 +57,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		181AFC551E121AF2008CA439 /* API.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = API.pch; sourceTree = "<group>"; };
 		18AEFBD11E10C36400AFAF16 /* Product.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Product.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18AEFBD51E10C36400AFAF16 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		18AEFBE61E10C36400AFAF16 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -72,8 +71,6 @@
 		18AEFC0F1E10C3CE00AFAF16 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		18AEFC101E10C3CE00AFAF16 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		18AEFC111E10C3CE00AFAF16 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		18AEFC161E10C49C00AFAF16 /* Product.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Product.pch; sourceTree = "<group>"; };
-		18AEFC6A1E10ECB500AFAF16 /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
 		18AEFC771E11012F00AFAF16 /* NavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationController.h; sourceTree = "<group>"; };
 		18AEFC781E11012F00AFAF16 /* NavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationController.m; sourceTree = "<group>"; };
 		18AEFC801E11062700AFAF16 /* RootTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootTabBarController.h; sourceTree = "<group>"; };
@@ -84,7 +81,6 @@
 		545AC8751ECD352D00FCB342 /* XXViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XXViewController.h; path = Product/XXViewController.h; sourceTree = SOURCE_ROOT; };
 		545AC8761ECD352D00FCB342 /* XXViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XXViewController.m; path = Product/XXViewController.m; sourceTree = SOURCE_ROOT; };
 		545AC8771ECD352D00FCB342 /* XXViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = XXViewController.xib; path = Product/XXViewController.xib; sourceTree = SOURCE_ROOT; };
-		545AC8851ECD7B5B00FCB342 /* Foundation+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Foundation+Log.m"; sourceTree = "<group>"; };
 		5469A67D1ED7C9240033AEA1 /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
 		5469A67E1ED7C9240033AEA1 /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
 		5469A67F1ED7C9240033AEA1 /* UIViewController+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Extension.h"; sourceTree = "<group>"; };
@@ -115,6 +111,11 @@
 		549D49D11EB9952A0016A62E /*  SampleClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = " SampleClass.h"; sourceTree = "<group>"; };
 		549D49E91EB99A4E0016A62E /* XXNetWorkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XXNetWorkManager.h; sourceTree = "<group>"; };
 		549D49EA1EB99A4E0016A62E /* XXNetWorkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XXNetWorkManager.m; sourceTree = "<group>"; };
+		54AFE8D21ED7D66800258F58 /* API.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = API.pch; sourceTree = "<group>"; };
+		54AFE8D31ED7D66800258F58 /* Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
+		54AFE8D41ED7D66800258F58 /* Product.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Product.pch; sourceTree = "<group>"; };
+		54AFE8D61ED7D66800258F58 /* Foundation+Log.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Foundation+Log.h"; sourceTree = "<group>"; };
+		54AFE8D71ED7D66800258F58 /* Foundation+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Foundation+Log.m"; sourceTree = "<group>"; };
 		54C21EB01EC2B22000D63166 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/infoPlist.strings; sourceTree = "<group>"; };
 		54C21EB21EC2B22900D63166 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/infoPlist.strings"; sourceTree = "<group>"; };
 		6923A30AEE9690ABE86FAB57 /* Pods-Product.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Product.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Product/Pods-Product.debug.xcconfig"; sourceTree = "<group>"; };
@@ -227,13 +228,12 @@
 		18AEFC151E10C48900AFAF16 /* Other */ = {
 			isa = PBXGroup;
 			children = (
-				18AEFC191E10C67300AFAF16 /* Category */,
-				18AEFC1A1E10C67300AFAF16 /* Third Lib */,
 				5480155F1EC186AB009F539A /* XXSection.h */,
 				548015601EC186AB009F539A /* XXSection.m */,
-				18AEFC161E10C49C00AFAF16 /* Product.pch */,
-				18AEFC6A1E10ECB500AFAF16 /* Header.h */,
-				181AFC551E121AF2008CA439 /* API.pch */,
+				54AFE8D11ED7D66800258F58 /* PCH */,
+				18AEFC191E10C67300AFAF16 /* Category */,
+				54AFE8D51ED7D66800258F58 /* utf-8ToChinese */,
+				18AEFC1A1E10C67300AFAF16 /* Third Lib */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -258,7 +258,6 @@
 				543E3F1D1ECC0F13006388CA /* XXHelper.m */,
 				549D49E91EB99A4E0016A62E /* XXNetWorkManager.h */,
 				549D49EA1EB99A4E0016A62E /* XXNetWorkManager.m */,
-				545AC8851ECD7B5B00FCB342 /* Foundation+Log.m */,
 				5469A6961ED7C9B60033AEA1 /* img+imgV */,
 				5469A68A1ED7C9610033AEA1 /* HUD */,
 				5469A6831ED7C9510033AEA1 /* Nav */,
@@ -339,6 +338,25 @@
 				549D49CB1EB993C50016A62E /* PTXDatePickerView.m */,
 			);
 			path = PTXDatePickerView;
+			sourceTree = "<group>";
+		};
+		54AFE8D11ED7D66800258F58 /* PCH */ = {
+			isa = PBXGroup;
+			children = (
+				54AFE8D21ED7D66800258F58 /* API.pch */,
+				54AFE8D31ED7D66800258F58 /* Header.h */,
+				54AFE8D41ED7D66800258F58 /* Product.pch */,
+			);
+			path = PCH;
+			sourceTree = "<group>";
+		};
+		54AFE8D51ED7D66800258F58 /* utf-8ToChinese */ = {
+			isa = PBXGroup;
+			children = (
+				54AFE8D61ED7D66800258F58 /* Foundation+Log.h */,
+				54AFE8D71ED7D66800258F58 /* Foundation+Log.m */,
+			);
+			path = "utf-8ToChinese";
 			sourceTree = "<group>";
 		};
 		91B815BE6EF90558BA5C2CA0 /* Frameworks */ = {
@@ -555,10 +573,10 @@
 				18AEFC121E10C3CE00AFAF16 /* AppDelegate.m in Sources */,
 				5469A6951ED7C9610033AEA1 /* XXProgressHUD.m in Sources */,
 				549D49CD1EB993C50016A62E /* PTXDatePickerView.m in Sources */,
+				54AFE8D81ED7D66800258F58 /* Foundation+Log.m in Sources */,
 				5469A69B1ED7C9B60033AEA1 /* UIImage+Extension.m in Sources */,
 				18AEFC821E11062700AFAF16 /* RootTabBarController.m in Sources */,
 				543E3F1E1ECC0F13006388CA /* XXHelper.m in Sources */,
-				545AC8861ECD7B5B00FCB342 /* Foundation+Log.m in Sources */,
 				5469A6921ED7C9610033AEA1 /* XXPaymentLoadingHUD.m in Sources */,
 				549D49CC1EB993C50016A62E /* CFFlowButtonView.m in Sources */,
 				5469A6931ED7C9610033AEA1 /* XXPaymentSuccessHUD.m in Sources */,
