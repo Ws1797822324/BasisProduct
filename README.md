@@ -19,3 +19,5 @@
          5. 启动图结束后 显示一段动画或者动图(类似 新浪微博)
             
             https: // github.com/12207480/TYLaunchAnimation
+
+        6.  给 imageView 添加毛玻璃效果 https://github.com/lukabernardi/LBBlurredImage
