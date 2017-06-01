@@ -23,7 +23,7 @@ static CGFloat checkDuration = 0.2f;
 //显示
 +(XXPaymentSuccessHUD*)showSuccessIn:(UIView*)view{
     [self hideSuccessIn:view];
-    XXPaymentSuccessHUD *hud = [[XLPaymentSuccessHUD alloc] initWithFrame:view.bounds];
+    XXPaymentSuccessHUD *hud = [[XXPaymentSuccessHUD alloc] initWithFrame:view.bounds];
     [hud successStart];
     [view addSubview:hud];
     return hud;
@@ -32,7 +32,7 @@ static CGFloat checkDuration = 0.2f;
 +(XXPaymentSuccessHUD *)hideSuccessIn:(UIView *)view{
     XXPaymentSuccessHUD *hud = nil;
     for (XXPaymentSuccessHUD *subView in view.subviews) {
-        if ([subView isKindOfClass:[XLPaymentSuccessHUD class]]) {
+        if ([subView isKindOfClass:[XXPaymentSuccessHUD class]]) {
             [subView successHide];
             [subView removeFromSuperview];
             hud = subView;

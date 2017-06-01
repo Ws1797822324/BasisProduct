@@ -23,7 +23,7 @@ static CGFloat lineWidth = 4.0f;
 
 +(XXPaymentLoadingHUD*)showLoadingIn:(UIView*)view{
     [self hideLoadingIn:view];
-    XXPaymentLoadingHUD *hud = [[XLPaymentLoadingHUD alloc] initWithFrame:view.bounds];
+    XXPaymentLoadingHUD *hud = [[XXPaymentLoadingHUD alloc] initWithFrame:view.bounds];
     [hud lodingStart];
     [view addSubview:hud];
     return hud;
@@ -32,7 +32,7 @@ static CGFloat lineWidth = 4.0f;
 +(XXPaymentLoadingHUD *)hideLoadingIn:(UIView *)view{
     XXPaymentLoadingHUD *hud = nil;
     for (XXPaymentLoadingHUD *subView in view.subviews) {
-        if ([subView isKindOfClass:[XLPaymentLoadingHUD class]]) {
+        if ([subView isKindOfClass:[XXPaymentLoadingHUD class]]) {
             [subView lodingHide];
             [subView removeFromSuperview];
             hud = subView;

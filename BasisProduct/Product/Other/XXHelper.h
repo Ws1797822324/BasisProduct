@@ -11,6 +11,8 @@
 
 
 @interface XXHelper : NSObject
+#pragma mark - 单例
++ (XXHelper *)shareInstance;
 
 #pragma mark -  获取rootViewController
 

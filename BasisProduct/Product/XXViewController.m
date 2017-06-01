@@ -66,9 +66,6 @@
     [XXProgressHUD showSuccess:@"这是个测试 VC"];
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    _maxCount = 1;
-    _allowCrop = YES;
-    
    }
 
 - (void)didReceiveMemoryWarning {
@@ -85,7 +82,7 @@
 - (void)pushImagePickerController {
     
     // 最多选1   一排方4个  可以改
-    TZImagePickerController *imagePickerVc = [[TZImagePickerController alloc] initWithMaxImagesCount:_maxCount columnNumber:4 delegate:self pushPhotoPickerVc:YES];
+    TZImagePickerController *imagePickerVc = [[TZImagePickerController alloc] initWithMaxImagesCount:1 columnNumber:4 delegate:self pushPhotoPickerVc:YES];
     
     
     // 四类个性化设置，这些参数都可以不传，此时会走默认设置

@@ -38,9 +38,15 @@
  *
  *  @return 被压缩的图片
  */
-+(UIImage *)imgCompressed:(UIImage *)sourceImg targetWidth:(CGFloat)defineWidth;
+- (UIImage *)imgCompressed:(UIImage *)sourceImg targetWidth:(CGFloat)defineWidth;
 
+#pragma mark - 不让从相册或者相机里取出的图片方向错位
+- (UIImage *)fixOrientation:(UIImage *)aImage;
 
+#pragma mark - 压缩 Data 数据
+- (NSData *)compressedData;
 
+#pragma mark - 压缩 Data 数据  参数区间(0...1)
+- (NSData *)compressedData:(CGFloat)compressionQuality;
 
 @end

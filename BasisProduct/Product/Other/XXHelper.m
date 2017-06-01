@@ -21,11 +21,30 @@
 #import <MobileCoreServices/UTCoreTypes.h>
 #import <AVFoundation/AVFoundation.h>
 #import <AssetsLibrary/AssetsLibrary.h>
-
-
 #import <SystemConfiguration/SystemConfiguration.h>
+
+static XXHelper *sectionInstance;
+
+
 @implementation XXHelper
 
+
+#pragma mark - Init
+
++ (id)allocWithZone:(struct _NSZone *)zone {
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        sectionInstance = [super allocWithZone:zone];
+    });
+    return sectionInstance;
+}
++ (XXHelper *)shareInstance {
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        sectionInstance = [[self alloc] init];
+    });
+    return sectionInstance;
+}
 #pragma mark - 将字符串转化成试图控制器
 + (UIViewController *)StringIntoViewController:(NSString *)classString
 {

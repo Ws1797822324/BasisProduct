@@ -18,7 +18,7 @@
 
 #import "UIImageView+Extension.h"
 
-#import "XXHelper.h"
+#import "XXHelper.h"  //单例类
 
 #import "XXProgressHUD.h"
 
@@ -29,8 +29,6 @@
 #import "XXNetWorkManager.h"
 
 #import "RootViewController.h"  
-
-#import "XXSection.h"  
 
 #import "UINavigationController+FDFullscreenPopGesture.h"
 
