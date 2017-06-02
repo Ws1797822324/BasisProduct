@@ -25,9 +25,8 @@
     
     RootTabBarController *tabBarVc = [[RootTabBarController alloc] init];
 
-    NavigationController *NavTabBarVc = [[NavigationController alloc]initWithRootViewController:tabBarVc];
     
-    self.window.rootViewController = NavTabBarVc;
+    self.window.rootViewController = tabBarVc;
     
     
     [self settingIQKeyboard];

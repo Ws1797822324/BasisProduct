@@ -8,8 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-#import "YPTabBarController.h"
+#import "XXTabBarController.h"
 
-@interface RootTabBarController : YPTabBarController
+@interface RootTabBarController : XXTabBarController
 
 @end

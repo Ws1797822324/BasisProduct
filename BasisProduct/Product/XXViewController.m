@@ -61,12 +61,27 @@
 - (void)viewDidLoad {
     
 
+self.tabBarItem.badgeValue = @"98";
     
-
     [XXProgressHUD showSuccess:@"这是个测试 VC"];
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-   }
+    // 监听tabbar点击的通知
+    [kNoteCenter addObserver:self selector:@selector(tabBarSelect) name:@"XXTabBarDidSelectNotification" object:nil];
+}
+
+/**
+ *  点击tabBar
+ */
+- (void)tabBarSelect
+{
+
+    if ( self.view.isShowingOnKeyWindow) {
+        
+        NSLog(@"你点击了当前的 tabBarItem");
+    }
+    
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -138,5 +153,11 @@
 
 
 
+- (IBAction)push:(UIButton *)sender {
+    UIViewController *vc = [UIViewController new];
+    vc.view.backgroundColor = kRandomColor;
+    
+    [self.navigationController pushViewController: vc animated:YES];
+}
 
 @end

@@ -8,7 +8,6 @@
 
 #import "NavigationController.h"
 
-#import "YPTabbar.h"
 
 @interface NavigationController () <UINavigationControllerDelegate>
 
@@ -23,12 +22,11 @@
 {
     // 获取当前类下面的UIBarButtonItem
     UIBarButtonItem *item = [UIBarButtonItem appearanceWhenContainedIn:self, nil];
-//    self.navigationController.navigationBar.barTintColor = [UIColor yellowColor];
 
 
     // 设置导航条按钮的文字颜色
     NSMutableDictionary *titleAttr = [NSMutableDictionary dictionary];
-    titleAttr[NSForegroundColorAttributeName] = [UIColor orangeColor];
+    titleAttr[NSForegroundColorAttributeName] = [UIColor blueColor];
     [item setTitleTextAttributes:titleAttr forState:UIControlStateNormal];
     
     
@@ -39,7 +37,7 @@
     // Do any additional setup after loading the view.
     _popDelegate = self.interactivePopGestureRecognizer.delegate;
     self.delegate = self;
-    self.navigationBar.barTintColor = [UIColor cyanColor];
+    self.navigationBar.barTintColor = [UIColor orangeColor];
 
 
 }

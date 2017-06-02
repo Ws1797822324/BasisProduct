@@ -28,7 +28,6 @@ PODS:
     - SDWebImage/Core (= 4.0.0)
   - SDWebImage/Core (4.0.0)
   - TZImagePickerController (1.7.9)
-  - YPTabBarController (2.2.3)
 
 DEPENDENCIES:
   - AFNetworking (~> 3.1.0)
@@ -40,7 +39,6 @@ DEPENDENCIES:
   - MJRefresh (~> 3.1.12)
   - SDWebImage (~> 4.0.0)
   - TZImagePickerController (~> 1.7.9)
-  - YPTabBarController (~> 2.2.3)
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
@@ -53,8 +51,7 @@ SPEC CHECKSUMS:
   MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
   SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
   TZImagePickerController: 0a8ff228d287ebdd7d485e8c42a2a932894f1fba
-  YPTabBarController: 2e0e97b2d9d4b28b722ecb57700b7cd4d1b38a47
 
-PODFILE CHECKSUM: 45a0f3b8433df991ac3f4acf58e1c2139ed169c6
+PODFILE CHECKSUM: d112b83bbb39d99196f3c2d661f06e73b96e2144
 
 COCOAPODS: 1.2.0

@@ -11,6 +11,8 @@
 #import "NavigationController.h"
 
 #import "XXViewController.h"
+
+
 @interface RootTabBarController () 
 
 @property (nonatomic ,copy) NSMutableArray *itemArr;
@@ -33,43 +35,14 @@
     self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
     
     self.tabBar.backgroundColor = kRGBColor(250, 250, 250, 0.8);
-
-    self.tabBar.itemTitleColor = [UIColor blueColor];
-    // 选中时的字体颜色
-    self.tabBar.itemTitleSelectedColor = [UIColor orangeColor];
+// 选中时的字体颜色
+    self.selectedItemTitleColor = [UIColor redColor];
+    
+    self.itemTitleColor = [UIColor orangeColor];
     // 添加所有子控制器
     [self setUpAllChildViewController];
     
-    // 自定义tabBar
-    [self setUpTabBar];
-
-    
     }
-#pragma mark - 设置tabBar
-- (void)setUpTabBar
-{
-
-    
-    // 设置数字样式的badge的位置和大小
-    [self.tabBar setNumberBadgeMarginTop:2
-                       centerMarginRight:20
-                     titleHorizonalSpace:8
-                      titleVerticalSpace:2];
-    // 设置小圆点样式的badge的位置和大小
-    [self.tabBar setDotBadgeMarginTop:5
-                    centerMarginRight:15
-                           sideLength:10];
-    
-    UIViewController *controller1 = self.viewControllers[0];
-    UIViewController *controller2 = self.viewControllers[1];
-    UIViewController *controller3 = self.viewControllers[2];
-    UIViewController *controller4 = self.viewControllers[3];
-    controller1.yp_tabItem.badge = 8;
-    controller2.yp_tabItem.badge = 88;
-    controller3.yp_tabItem.badge = 120;
-    controller4.yp_tabItem.badgeStyle = YPTabItemBadgeStyleNumber;
-
-}
 
 
 
@@ -84,50 +57,39 @@
 
     XXViewController *controller1 = [[XXViewController alloc] init];
 
-    controller1.yp_tabItemTitle = @"第一";
-    controller1.yp_tabItemImage = [UIImage imageNamed:@"tabbar_home"];
-    controller1.yp_tabItemSelectedImage = [UIImage imageNamed:@"tabbar_home_selected"];
-
-    
+    controller1.title = @"第一";
+    controller1.tabBarItem.image = [UIImage imageNamed:@"tabbar_home"];
+    controller1.tabBarItem.selectedImage = [UIImage imageNamed:@"tabbar_home_selected"];
+    NavigationController *NaVC1 = [[NavigationController alloc]initWithRootViewController:controller1];
     
     UIViewController *controller2 = [[UIViewController alloc] init];
-    controller2.yp_tabItemTitle = @"第二";
-    controller2.yp_tabItemImage = [UIImage imageNamed:@"tabbar_message_center"];
-    controller2.yp_tabItemSelectedImage = [UIImage imageNamed:@"tabbar_message_center_selected"];
-   
+    controller2.view.backgroundColor = kRandomColor;
+    controller2.title = @"第二";
+    controller2.tabBarItem.image = [UIImage imageNamed:@"tabbar_message_center"];
+    controller2.tabBarItem.selectedImage = [UIImage imageNamed:@"tabbar_message_center_selected"];
+    NavigationController *NaVC2 = [[NavigationController alloc]initWithRootViewController:controller2];
     
     UIViewController *controller3 = [[UIViewController alloc] init];
-    controller3.yp_tabItemTitle = @"第三";
-    controller3.yp_tabItemImage = [UIImage imageNamed:@"tabbar_discover"];
-    controller3.yp_tabItemSelectedImage = [UIImage imageNamed:@"tabbar_discover_selected"]; UIViewController *
+    controller3.view.backgroundColor = kRandomColor;
+    controller3.title = @"第三";
+    controller3.tabBarItem.image = [UIImage imageNamed:@"tabbar_discover"];
+    controller3.tabBarItem.selectedImage = [UIImage imageNamed:@"tabbar_discover_selected"];
+    controller3.tabBarItem.badgeValue = @"88";
+    NavigationController *NaVC3 = [[NavigationController alloc]initWithRootViewController:controller3];
+
+    UIViewController *controller4 = [[UIViewController alloc] init];
+    controller4.view.backgroundColor = kRandomColor;
+    controller4.title = @"第四";
+    controller4.tabBarItem.image = [UIImage imageNamed:@"tabbar_profile"];
+    controller4.tabBarItem.selectedImage = [UIImage imageNamed:@"tabbar_profile_selected"];
     
-    
-    controller4 = [[UIViewController alloc] init];
-    controller4.yp_tabItemTitle = @"第四";
-    controller4.yp_tabItemImage = [UIImage imageNamed:@"tabbar_profile"];
-    controller4.yp_tabItemSelectedImage = [UIImage imageNamed:@"tabbar_profile_selected"];
-   
-    self.viewControllers = [NSMutableArray arrayWithObjects:controller1, controller2, controller3, controller4, nil];
+    NavigationController *NaVC4 = [[NavigationController alloc]initWithRootViewController:controller4];
+
+    self.viewControllers = [NSMutableArray arrayWithObjects:NaVC1, NaVC2, NaVC3, NaVC4, nil];
 
     
-    // 生成一个居中显示的YPTabItem对象，即“+”号按钮
-//    YPTabItem *item = [YPTabItem buttonWithType:UIButtonTypeCustom];
-//    item.title = @"+";
-//    item.titleColor = [UIColor yellowColor];
-//    item.backgroundColor = [UIColor darkGrayColor];
-//    item.titleFont = [UIFont boldSystemFontOfSize:20];
-//    
-//////     设置其size，如果不设置，则默认为与其他item一样
-//     item.size = CGSizeMake(80, 60);
-////     高度大于tabBar，所以需要将此属性设置为NO
-//    self.tabBar.clipsToBounds = NO;
-//    
-//    [self.tabBar setSpecialItem:item
-//             afterItemWithIndex:1
-//                     tapHandler:^(YPTabItem *item) {
-//                         NSLog(@"item--->%ld", (long)item.index);
-//                     }];
 
+    
 }
 
 

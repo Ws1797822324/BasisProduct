@@ -33,6 +33,11 @@
 		549D49CD1EB993C50016A62E /* PTXDatePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 549D49CB1EB993C50016A62E /* PTXDatePickerView.m */; };
 		549D49EB1EB99A4E0016A62E /* XXNetWorkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 549D49EA1EB99A4E0016A62E /* XXNetWorkManager.m */; };
 		54AFE8D81ED7D66800258F58 /* Foundation+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 54AFE8D71ED7D66800258F58 /* Foundation+Log.m */; };
+		54B3DD4A1EE162DC001A48A9 /* XXTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 54B3DD421EE162DC001A48A9 /* XXTabBar.m */; };
+		54B3DD4B1EE162DC001A48A9 /* XXTabBarBadge.m in Sources */ = {isa = PBXBuildFile; fileRef = 54B3DD441EE162DC001A48A9 /* XXTabBarBadge.m */; };
+		54B3DD4C1EE162DC001A48A9 /* XXTabBarController.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 54B3DD451EE162DC001A48A9 /* XXTabBarController.bundle */; };
+		54B3DD4D1EE162DC001A48A9 /* XXTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54B3DD471EE162DC001A48A9 /* XXTabBarController.m */; };
+		54B3DD4E1EE162DC001A48A9 /* XXTabBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 54B3DD491EE162DC001A48A9 /* XXTabBarItem.m */; };
 		54C21EAF1EC2B22000D63166 /* infoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 54C21EB11EC2B22000D63166 /* infoPlist.strings */; };
 		54C3ABBA1EE0152E00AC9375 /* XXHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 54C3ABB91EE0152E00AC9375 /* XXHelper.m */; };
 		78414B0BEFFBFCF30DDC872A /* libPods-Product.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D7588D42A2359605113B65F /* libPods-Product.a */; };
@@ -111,6 +116,15 @@
 		54AFE8D41ED7D66800258F58 /* Product.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Product.pch; sourceTree = "<group>"; };
 		54AFE8D61ED7D66800258F58 /* Foundation+Log.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Foundation+Log.h"; sourceTree = "<group>"; };
 		54AFE8D71ED7D66800258F58 /* Foundation+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Foundation+Log.m"; sourceTree = "<group>"; };
+		54B3DD411EE162DC001A48A9 /* XXTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XXTabBar.h; sourceTree = "<group>"; };
+		54B3DD421EE162DC001A48A9 /* XXTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XXTabBar.m; sourceTree = "<group>"; };
+		54B3DD431EE162DC001A48A9 /* XXTabBarBadge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XXTabBarBadge.h; sourceTree = "<group>"; };
+		54B3DD441EE162DC001A48A9 /* XXTabBarBadge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XXTabBarBadge.m; sourceTree = "<group>"; };
+		54B3DD451EE162DC001A48A9 /* XXTabBarController.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = XXTabBarController.bundle; sourceTree = "<group>"; };
+		54B3DD461EE162DC001A48A9 /* XXTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XXTabBarController.h; sourceTree = "<group>"; };
+		54B3DD471EE162DC001A48A9 /* XXTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XXTabBarController.m; sourceTree = "<group>"; };
+		54B3DD481EE162DC001A48A9 /* XXTabBarItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XXTabBarItem.h; sourceTree = "<group>"; };
+		54B3DD491EE162DC001A48A9 /* XXTabBarItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XXTabBarItem.m; sourceTree = "<group>"; };
 		54C21EB01EC2B22000D63166 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/infoPlist.strings; sourceTree = "<group>"; };
 		54C21EB21EC2B22900D63166 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/infoPlist.strings"; sourceTree = "<group>"; };
 		54C3ABB81EE0152E00AC9375 /* XXHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XXHelper.h; sourceTree = "<group>"; };
@@ -264,6 +278,7 @@
 		18AEFC1A1E10C67300AFAF16 /* Third Lib */ = {
 			isa = PBXGroup;
 			children = (
+				54B3DD401EE162DC001A48A9 /* XXTabBarController */,
 				549D49C61EB993C50016A62E /* CFFlowButtonView */,
 				549D49C91EB993C50016A62E /* PTXDatePickerView */,
 			);
@@ -352,6 +367,22 @@
 				54AFE8D71ED7D66800258F58 /* Foundation+Log.m */,
 			);
 			path = "utf-8ToChinese";
+			sourceTree = "<group>";
+		};
+		54B3DD401EE162DC001A48A9 /* XXTabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				54B3DD411EE162DC001A48A9 /* XXTabBar.h */,
+				54B3DD421EE162DC001A48A9 /* XXTabBar.m */,
+				54B3DD431EE162DC001A48A9 /* XXTabBarBadge.h */,
+				54B3DD441EE162DC001A48A9 /* XXTabBarBadge.m */,
+				54B3DD451EE162DC001A48A9 /* XXTabBarController.bundle */,
+				54B3DD461EE162DC001A48A9 /* XXTabBarController.h */,
+				54B3DD471EE162DC001A48A9 /* XXTabBarController.m */,
+				54B3DD481EE162DC001A48A9 /* XXTabBarItem.h */,
+				54B3DD491EE162DC001A48A9 /* XXTabBarItem.m */,
+			);
+			path = XXTabBarController;
 			sourceTree = "<group>";
 		};
 		91B815BE6EF90558BA5C2CA0 /* Frameworks */ = {
@@ -483,6 +514,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				18AEFC141E10C3CE00AFAF16 /* Main.storyboard in Resources */,
+				54B3DD4C1EE162DC001A48A9 /* XXTabBarController.bundle in Resources */,
 				18AEFBE71E10C36400AFAF16 /* Assets.xcassets in Resources */,
 				18AEFC131E10C3CE00AFAF16 /* LaunchScreen.storyboard in Resources */,
 				545AC87B1ECD352D00FCB342 /* XXViewController.xib in Resources */,
@@ -567,13 +599,17 @@
 				5469A6891ED7C9510033AEA1 /* UINavigationController+FDFullscreenPopGesture.m in Sources */,
 				54C3ABBA1EE0152E00AC9375 /* XXHelper.m in Sources */,
 				18AEFC121E10C3CE00AFAF16 /* AppDelegate.m in Sources */,
+				54B3DD4D1EE162DC001A48A9 /* XXTabBarController.m in Sources */,
 				5469A6951ED7C9610033AEA1 /* XXProgressHUD.m in Sources */,
 				549D49CD1EB993C50016A62E /* PTXDatePickerView.m in Sources */,
 				54AFE8D81ED7D66800258F58 /* Foundation+Log.m in Sources */,
+				54B3DD4A1EE162DC001A48A9 /* XXTabBar.m in Sources */,
+				54B3DD4E1EE162DC001A48A9 /* XXTabBarItem.m in Sources */,
 				5469A69B1ED7C9B60033AEA1 /* UIImage+Extension.m in Sources */,
 				18AEFC821E11062700AFAF16 /* RootTabBarController.m in Sources */,
 				5469A6921ED7C9610033AEA1 /* XXPaymentLoadingHUD.m in Sources */,
 				549D49CC1EB993C50016A62E /* CFFlowButtonView.m in Sources */,
+				54B3DD4B1EE162DC001A48A9 /* XXTabBarBadge.m in Sources */,
 				5469A6931ED7C9610033AEA1 /* XXPaymentSuccessHUD.m in Sources */,
 				545AC87A1ECD352D00FCB342 /* XXViewController.m in Sources */,
 				549D49EB1EB99A4E0016A62E /* XXNetWorkManager.m in Sources */,
@@ -730,7 +766,7 @@
 				INFOPLIST_FILE = Product/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = XXXXX.Product;
+				PRODUCT_BUNDLE_IDENTIFIER = XXXXCXX.Product;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -746,7 +782,7 @@
 				INFOPLIST_FILE = Product/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = XXXXX.Product;
+				PRODUCT_BUNDLE_IDENTIFIER = XXXXCXX.Product;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
