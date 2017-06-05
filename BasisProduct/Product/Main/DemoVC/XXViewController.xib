@@ -37,11 +37,10 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qyy-x9-Prc">
-                    <rect key="frame" x="177" y="341" width="85" height="27"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qyy-x9-Prc">
+                    <rect key="frame" x="139.5" y="303" width="96" height="30"/>
                     <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                    <state key="normal" title="push">
+                    <state key="normal" title="第三方的用法 ">
                         <color key="titleColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
                     <connections>
@@ -51,9 +50,11 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="qyy-x9-Prc" firstAttribute="top" secondItem="XbM-T9-XeK" secondAttribute="bottom" constant="57" id="B9J-jj-C48"/>
                 <constraint firstItem="GWp-wf-TQM" firstAttribute="centerX" secondItem="XbM-T9-XeK" secondAttribute="centerX" id="Jta-x9-8QT"/>
                 <constraint firstItem="XbM-T9-XeK" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="96" id="MMI-AP-xPc"/>
                 <constraint firstItem="XbM-T9-XeK" firstAttribute="centerY" secondItem="GWp-wf-TQM" secondAttribute="centerY" id="RON-LF-gmk"/>
+                <constraint firstItem="qyy-x9-Prc" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="WgI-bD-ZJg"/>
                 <constraint firstItem="XbM-T9-XeK" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="tdu-eB-xL6"/>
             </constraints>
             <point key="canvasLocation" x="25.5" y="51.5"/>

@@ -14,10 +14,13 @@
 		18AEFC121E10C3CE00AFAF16 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18AEFC0F1E10C3CE00AFAF16 /* AppDelegate.m */; };
 		18AEFC131E10C3CE00AFAF16 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18AEFC101E10C3CE00AFAF16 /* LaunchScreen.storyboard */; };
 		18AEFC141E10C3CE00AFAF16 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18AEFC111E10C3CE00AFAF16 /* Main.storyboard */; };
-		18AEFC791E11012F00AFAF16 /* NavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18AEFC781E11012F00AFAF16 /* NavigationController.m */; };
-		18AEFC821E11062700AFAF16 /* RootTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18AEFC811E11062700AFAF16 /* RootTabBarController.m */; };
-		545AC87A1ECD352D00FCB342 /* XXViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 545AC8761ECD352D00FCB342 /* XXViewController.m */; };
-		545AC87B1ECD352D00FCB342 /* XXViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 545AC8771ECD352D00FCB342 /* XXViewController.xib */; };
+		54522FCA1EE529F9009C5E68 /* XXViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54522FC81EE529F9009C5E68 /* XXViewController.m */; };
+		54522FCB1EE529F9009C5E68 /* XXViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54522FC91EE529F9009C5E68 /* XXViewController.xib */; };
+		54522FCF1EE52A27009C5E68 /* MMPopupViewDemoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 54522FCD1EE52A27009C5E68 /* MMPopupViewDemoVC.m */; };
+		54522FD01EE52A27009C5E68 /* MMPopupViewDemoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54522FCE1EE52A27009C5E68 /* MMPopupViewDemoVC.xib */; };
+		54522FD81EE52C0E009C5E68 /* NavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54522FD31EE52C0E009C5E68 /* NavigationController.m */; };
+		54522FD91EE52C0E009C5E68 /* RootTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54522FD51EE52C0E009C5E68 /* RootTabBarController.m */; };
+		54522FDA1EE52C0E009C5E68 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54522FD71EE52C0E009C5E68 /* RootViewController.m */; };
 		5469A6811ED7C9240033AEA1 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5469A67E1ED7C9240033AEA1 /* UIView+Extension.m */; };
 		5469A6821ED7C9240033AEA1 /* UIViewController+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5469A6801ED7C9240033AEA1 /* UIViewController+Extension.m */; };
 		5469A6881ED7C9510033AEA1 /* UIBarButtonItem+Item.m in Sources */ = {isa = PBXBuildFile; fileRef = 5469A6851ED7C9510033AEA1 /* UIBarButtonItem+Item.m */; };
@@ -28,7 +31,6 @@
 		5469A6951ED7C9610033AEA1 /* XXProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 5469A6911ED7C9610033AEA1 /* XXProgressHUD.m */; };
 		5469A69B1ED7C9B60033AEA1 /* UIImage+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5469A6981ED7C9B60033AEA1 /* UIImage+Extension.m */; };
 		5469A69C1ED7C9B60033AEA1 /* UIImageView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5469A69A1ED7C9B60033AEA1 /* UIImageView+Extension.m */; };
-		548015641EC186F5009F539A /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 548015631EC186F5009F539A /* RootViewController.m */; };
 		549D49CC1EB993C50016A62E /* CFFlowButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = 549D49C81EB993C50016A62E /* CFFlowButtonView.m */; };
 		549D49CD1EB993C50016A62E /* PTXDatePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 549D49CB1EB993C50016A62E /* PTXDatePickerView.m */; };
 		549D49EB1EB99A4E0016A62E /* XXNetWorkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 549D49EA1EB99A4E0016A62E /* XXNetWorkManager.m */; };
@@ -75,14 +77,20 @@
 		18AEFC0F1E10C3CE00AFAF16 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		18AEFC101E10C3CE00AFAF16 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		18AEFC111E10C3CE00AFAF16 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		18AEFC771E11012F00AFAF16 /* NavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationController.h; sourceTree = "<group>"; };
-		18AEFC781E11012F00AFAF16 /* NavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationController.m; sourceTree = "<group>"; };
-		18AEFC801E11062700AFAF16 /* RootTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootTabBarController.h; sourceTree = "<group>"; };
-		18AEFC811E11062700AFAF16 /* RootTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootTabBarController.m; sourceTree = "<group>"; };
 		2D7588D42A2359605113B65F /* libPods-Product.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Product.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		545AC8751ECD352D00FCB342 /* XXViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XXViewController.h; path = Product/XXViewController.h; sourceTree = SOURCE_ROOT; };
-		545AC8761ECD352D00FCB342 /* XXViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XXViewController.m; path = Product/XXViewController.m; sourceTree = SOURCE_ROOT; };
-		545AC8771ECD352D00FCB342 /* XXViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = XXViewController.xib; path = Product/XXViewController.xib; sourceTree = SOURCE_ROOT; };
+		54522FC61EE529F9009C5E68 /*  SampleClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = " SampleClass.h"; sourceTree = "<group>"; };
+		54522FC71EE529F9009C5E68 /* XXViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XXViewController.h; sourceTree = "<group>"; };
+		54522FC81EE529F9009C5E68 /* XXViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XXViewController.m; sourceTree = "<group>"; };
+		54522FC91EE529F9009C5E68 /* XXViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XXViewController.xib; sourceTree = "<group>"; };
+		54522FCC1EE52A27009C5E68 /* MMPopupViewDemoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMPopupViewDemoVC.h; sourceTree = "<group>"; };
+		54522FCD1EE52A27009C5E68 /* MMPopupViewDemoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMPopupViewDemoVC.m; sourceTree = "<group>"; };
+		54522FCE1EE52A27009C5E68 /* MMPopupViewDemoVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MMPopupViewDemoVC.xib; sourceTree = "<group>"; };
+		54522FD21EE52C0E009C5E68 /* NavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationController.h; sourceTree = "<group>"; };
+		54522FD31EE52C0E009C5E68 /* NavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationController.m; sourceTree = "<group>"; };
+		54522FD41EE52C0E009C5E68 /* RootTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootTabBarController.h; sourceTree = "<group>"; };
+		54522FD51EE52C0E009C5E68 /* RootTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootTabBarController.m; sourceTree = "<group>"; };
+		54522FD61EE52C0E009C5E68 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		54522FD71EE52C0E009C5E68 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		5469A67D1ED7C9240033AEA1 /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
 		5469A67E1ED7C9240033AEA1 /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
 		5469A67F1ED7C9240033AEA1 /* UIViewController+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Extension.h"; sourceTree = "<group>"; };
@@ -102,13 +110,10 @@
 		5469A6981ED7C9B60033AEA1 /* UIImage+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Extension.m"; sourceTree = "<group>"; };
 		5469A6991ED7C9B60033AEA1 /* UIImageView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+Extension.h"; sourceTree = "<group>"; };
 		5469A69A1ED7C9B60033AEA1 /* UIImageView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+Extension.m"; sourceTree = "<group>"; };
-		548015621EC186F5009F539A /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
-		548015631EC186F5009F539A /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		549D49C71EB993C50016A62E /* CFFlowButtonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFFlowButtonView.h; sourceTree = "<group>"; };
 		549D49C81EB993C50016A62E /* CFFlowButtonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFFlowButtonView.m; sourceTree = "<group>"; };
 		549D49CA1EB993C50016A62E /* PTXDatePickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTXDatePickerView.h; sourceTree = "<group>"; };
 		549D49CB1EB993C50016A62E /* PTXDatePickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTXDatePickerView.m; sourceTree = "<group>"; };
-		549D49D11EB9952A0016A62E /*  SampleClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = " SampleClass.h"; sourceTree = "<group>"; };
 		549D49E91EB99A4E0016A62E /* XXNetWorkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XXNetWorkManager.h; sourceTree = "<group>"; };
 		549D49EA1EB99A4E0016A62E /* XXNetWorkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XXNetWorkManager.m; sourceTree = "<group>"; };
 		54AFE8D21ED7D66800258F58 /* API.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = API.pch; sourceTree = "<group>"; };
@@ -223,15 +228,12 @@
 		18AEFC0D1E10C3CE00AFAF16 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				545AC8751ECD352D00FCB342 /* XXViewController.h */,
-				545AC8761ECD352D00FCB342 /* XXViewController.m */,
-				545AC8771ECD352D00FCB342 /* XXViewController.xib */,
-				549D49D11EB9952A0016A62E /*  SampleClass.h */,
+				54522FC51EE529C7009C5E68 /* DemoVC */,
 				18AEFC0E1E10C3CE00AFAF16 /* AppDelegate.h */,
 				18AEFC0F1E10C3CE00AFAF16 /* AppDelegate.m */,
 				18AEFC111E10C3CE00AFAF16 /* Main.storyboard */,
 				18AEFC101E10C3CE00AFAF16 /* LaunchScreen.storyboard */,
-				18AEFC171E10C54B00AFAF16 /* Controller */,
+				54522FD11EE52C0E009C5E68 /* RootControllers */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -247,19 +249,6 @@
 				18AEFC1A1E10C67300AFAF16 /* Third Lib */,
 			);
 			path = Other;
-			sourceTree = "<group>";
-		};
-		18AEFC171E10C54B00AFAF16 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				18AEFC771E11012F00AFAF16 /* NavigationController.h */,
-				18AEFC781E11012F00AFAF16 /* NavigationController.m */,
-				18AEFC801E11062700AFAF16 /* RootTabBarController.h */,
-				18AEFC811E11062700AFAF16 /* RootTabBarController.m */,
-				548015621EC186F5009F539A /* RootViewController.h */,
-				548015631EC186F5009F539A /* RootViewController.m */,
-			);
-			path = Controller;
 			sourceTree = "<group>";
 		};
 		18AEFC191E10C67300AFAF16 /* Category */ = {
@@ -283,6 +272,33 @@
 				549D49C91EB993C50016A62E /* PTXDatePickerView */,
 			);
 			path = "Third Lib";
+			sourceTree = "<group>";
+		};
+		54522FC51EE529C7009C5E68 /* DemoVC */ = {
+			isa = PBXGroup;
+			children = (
+				54522FC61EE529F9009C5E68 /*  SampleClass.h */,
+				54522FC71EE529F9009C5E68 /* XXViewController.h */,
+				54522FC81EE529F9009C5E68 /* XXViewController.m */,
+				54522FC91EE529F9009C5E68 /* XXViewController.xib */,
+				54522FCC1EE52A27009C5E68 /* MMPopupViewDemoVC.h */,
+				54522FCD1EE52A27009C5E68 /* MMPopupViewDemoVC.m */,
+				54522FCE1EE52A27009C5E68 /* MMPopupViewDemoVC.xib */,
+			);
+			path = DemoVC;
+			sourceTree = "<group>";
+		};
+		54522FD11EE52C0E009C5E68 /* RootControllers */ = {
+			isa = PBXGroup;
+			children = (
+				54522FD21EE52C0E009C5E68 /* NavigationController.h */,
+				54522FD31EE52C0E009C5E68 /* NavigationController.m */,
+				54522FD41EE52C0E009C5E68 /* RootTabBarController.h */,
+				54522FD51EE52C0E009C5E68 /* RootTabBarController.m */,
+				54522FD61EE52C0E009C5E68 /* RootViewController.h */,
+				54522FD71EE52C0E009C5E68 /* RootViewController.m */,
+			);
+			path = RootControllers;
 			sourceTree = "<group>";
 		};
 		5469A67C1ED7C9240033AEA1 /* V+VC */ = {
@@ -517,7 +533,8 @@
 				54B3DD4C1EE162DC001A48A9 /* XXTabBarController.bundle in Resources */,
 				18AEFBE71E10C36400AFAF16 /* Assets.xcassets in Resources */,
 				18AEFC131E10C3CE00AFAF16 /* LaunchScreen.storyboard in Resources */,
-				545AC87B1ECD352D00FCB342 /* XXViewController.xib in Resources */,
+				54522FCB1EE529F9009C5E68 /* XXViewController.xib in Resources */,
+				54522FD01EE52A27009C5E68 /* MMPopupViewDemoVC.xib in Resources */,
 				5469A6941ED7C9610033AEA1 /* XXProgressHUD.bundle in Resources */,
 				54C21EAF1EC2B22000D63166 /* infoPlist.strings in Resources */,
 			);
@@ -595,6 +612,8 @@
 				5469A6881ED7C9510033AEA1 /* UIBarButtonItem+Item.m in Sources */,
 				5469A6821ED7C9240033AEA1 /* UIViewController+Extension.m in Sources */,
 				5469A6811ED7C9240033AEA1 /* UIView+Extension.m in Sources */,
+				54522FD91EE52C0E009C5E68 /* RootTabBarController.m in Sources */,
+				54522FD81EE52C0E009C5E68 /* NavigationController.m in Sources */,
 				5469A69C1ED7C9B60033AEA1 /* UIImageView+Extension.m in Sources */,
 				5469A6891ED7C9510033AEA1 /* UINavigationController+FDFullscreenPopGesture.m in Sources */,
 				54C3ABBA1EE0152E00AC9375 /* XXHelper.m in Sources */,
@@ -604,18 +623,17 @@
 				549D49CD1EB993C50016A62E /* PTXDatePickerView.m in Sources */,
 				54AFE8D81ED7D66800258F58 /* Foundation+Log.m in Sources */,
 				54B3DD4A1EE162DC001A48A9 /* XXTabBar.m in Sources */,
+				54522FCA1EE529F9009C5E68 /* XXViewController.m in Sources */,
 				54B3DD4E1EE162DC001A48A9 /* XXTabBarItem.m in Sources */,
 				5469A69B1ED7C9B60033AEA1 /* UIImage+Extension.m in Sources */,
-				18AEFC821E11062700AFAF16 /* RootTabBarController.m in Sources */,
+				54522FCF1EE52A27009C5E68 /* MMPopupViewDemoVC.m in Sources */,
 				5469A6921ED7C9610033AEA1 /* XXPaymentLoadingHUD.m in Sources */,
 				549D49CC1EB993C50016A62E /* CFFlowButtonView.m in Sources */,
 				54B3DD4B1EE162DC001A48A9 /* XXTabBarBadge.m in Sources */,
+				54522FDA1EE52C0E009C5E68 /* RootViewController.m in Sources */,
 				5469A6931ED7C9610033AEA1 /* XXPaymentSuccessHUD.m in Sources */,
-				545AC87A1ECD352D00FCB342 /* XXViewController.m in Sources */,
 				549D49EB1EB99A4E0016A62E /* XXNetWorkManager.m in Sources */,
 				18AEFBD61E10C36400AFAF16 /* main.m in Sources */,
-				548015641EC186F5009F539A /* RootViewController.m in Sources */,
-				18AEFC791E11012F00AFAF16 /* NavigationController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

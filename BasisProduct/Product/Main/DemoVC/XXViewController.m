@@ -7,7 +7,7 @@
 //
 
 #import "XXViewController.h"
-
+#import "MMPopupViewDemoVC.h"
 
 @interface XXViewController () <UIImagePickerControllerDelegate,TZImagePickerControllerDelegate,UIAlertViewDelegate,UIActionSheetDelegate,UINavigationControllerDelegate> {
 
@@ -63,7 +63,7 @@
 
 self.tabBarItem.badgeValue = @"98";
     
-    [XXProgressHUD showSuccess:@"这是个测试 VC"];
+//    [XXProgressHUD showSuccess:@"这是个测试 VC"];
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     // 监听tabbar点击的通知
@@ -154,8 +154,8 @@ self.tabBarItem.badgeValue = @"98";
 
 
 - (IBAction)push:(UIButton *)sender {
-    UIViewController *vc = [UIViewController new];
-    vc.view.backgroundColor = kRandomColor;
+    MMPopupViewDemoVC *vc = [MMPopupViewDemoVC new];
+    vc.view.backgroundColor = [UIColor whiteColor];
     
     [self.navigationController pushViewController: vc animated:YES];
 }

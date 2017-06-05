@@ -44,6 +44,16 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>MMPopupView.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Masonry.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-Product.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -67,7 +77,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>13E3A37B1EFFCF68AC8059AAADAF3AF9</key>
+		<key>0AE01D8C7B8E8D51F62DA12F6E90AD87</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>1B5EA1044474F22E75E330487B764E66</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -87,7 +102,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9C24894ADC1D687F644377A579B9B4C8</key>
+		<key>9DC8D9E02903E93BD0B2FEC9D846EA20</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -107,12 +122,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>B3ED6768E44F1D4F5C50777D099F1A84</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>BC730AEEC63209209D4BF5D7BF4B8BF4</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F87EAA43DE1671544CB4B5DE43BC0326</key>
+		<key>C3957B81BB9B100F9A25E358DB3CC5A3</key>
 		<dict>
 			<key>primary</key>
 			<true/>

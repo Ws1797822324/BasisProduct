@@ -21,6 +21,7 @@ pod 'TZImagePickerController', '~> 1.7.9'
 
 pod 'JQFMDB', '~> 1.1.4'
 
+pod 'MMPopupView', '~> 1.7.2'
 #---------------------------------------#
 #分页
 # pod 'WMPageController', '~> 2.2.1'

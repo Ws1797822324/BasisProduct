@@ -21,9 +21,12 @@ PODS:
   - JQFMDB (1.1.4):
     - FMDB
   - KLCPopup (1.0)
+  - Masonry (1.0.2)
   - MBProgressHUD (1.0.0)
   - MJExtension (3.0.13)
   - MJRefresh (3.1.12)
+  - MMPopupView (1.7.2):
+    - Masonry
   - SDWebImage (4.0.0):
     - SDWebImage/Core (= 4.0.0)
   - SDWebImage/Core (4.0.0)
@@ -37,6 +40,7 @@ DEPENDENCIES:
   - MBProgressHUD (~> 1.0.0)
   - MJExtension (~> 3.0.13)
   - MJRefresh (~> 3.1.12)
+  - MMPopupView (~> 1.7.2)
   - SDWebImage (~> 4.0.0)
   - TZImagePickerController (~> 1.7.9)
 
@@ -46,12 +50,14 @@ SPEC CHECKSUMS:
   IQKeyboardManager: 322c7405df3eb5f7e50dede32ea937bf3d4364e0
   JQFMDB: dd62d2cafd075e6c9f952d0caaeffd6c18c8b16c
   KLCPopup: 76c5a19227977f1e53d85236f9ef42257c168d98
+  Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
   MJExtension: 5932755f451458eefa24239358817f8d291240c7
   MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
+  MMPopupView: fe1dd010824029dfb632fdf1a531db5dd5386020
   SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
   TZImagePickerController: 0a8ff228d287ebdd7d485e8c42a2a932894f1fba
 
-PODFILE CHECKSUM: d112b83bbb39d99196f3c2d661f06e73b96e2144
+PODFILE CHECKSUM: ab2d78dbfeddd55788308b0ac46c8df40058f4b7
 
 COCOAPODS: 1.2.0

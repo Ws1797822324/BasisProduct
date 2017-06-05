@@ -239,7 +239,7 @@
          *  PS:这里比较时间之所以不用earlierDate:或laterDate:方法，是因为这里没有比较秒数。
          */
         BOOL isEarly = NO;
-        if (year == _maxYear && month == maxMonth && day == maxDay && hour == maxHour && minute && maxMinute) {
+        if (year == _maxYear && month == maxMonth && day == maxDay && hour == maxHour && minute == maxMinute) {
             //相等情况。
             isEarly = YES;
         }else {
