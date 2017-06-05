@@ -22,6 +22,8 @@ https: // github.com/12207480/TYLaunchAnimation
 
 6.  给 imageView 添加毛玻璃效果 https://github.com/lukabernardi/LBBlurredImage
 
+7. TTAVPlayer 有手势的视频播放器 https://github.com/tangdiforx/TTAVPlayer
+
 如果你下载项目  项目里Pods文件是爆红的没有  那么你可以
 
 1、打开终端，运行sudo gem install cocoapods-deintegrate安装快速解除项目cocopods依赖的库
