@@ -21,3 +21,9 @@ SampleClass 类里面有一些三方的 方法调用示例
 https: // github.com/12207480/TYLaunchAnimation
 
 6.  给 imageView 添加毛玻璃效果 https://github.com/lukabernardi/LBBlurredImage
+
+如果你下载项目  项目里Pods文件是爆红的没有  那么你可以
+
+1、打开终端，运行sudo gem install cocoapods-deintegrate安装快速解除项目cocopods依赖的库
+2、安装成功后，cd到你项目的更目录运行pod deintegrate解除项目cocopods依赖
+3、运行pod install,重新安装cocopods
