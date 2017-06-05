@@ -98,10 +98,10 @@
     _datePickerView.datePickerViewShowModel = PTXDatePickerViewShowModelYearMonthDay;
     
 #pragma mark -   设置时间范围 年限范围
-//    //先更新成PTXDatePickerViewDateRangeModelCustom，再设置maxYear。
-//    _datePickerView.datePickerViewDateRangeModel = PTXDatePickerViewDateRangeModelCustom;
-//    _datePickerView.minYear = 2000;
-//    _datePickerView.maxYear = 2050;
+    //先更新成PTXDatePickerViewDateRangeModelCustom，再设置maxYear。
+    _datePickerView.datePickerViewDateRangeModel = PTXDatePickerViewDateRangeModelCustom;
+    _datePickerView.minYear = 1949;
+    _datePickerView.maxYear = 2049;
     
 
 }
