@@ -13,7 +13,7 @@ SampleClass 类里面有一些三方的 方法调用示例
 3. https: // github.com/netyouli/WHC_DataModelFactory   
 根据 json 或者 XML 数据自动  生成 model 的一个工具
 
-4. 加密 Demo https : // github.com/mokey1422/GBEncodeTool  
+4. 加密 Demo https://github.com/mokey1422/GBEncodeTool  
 需要加密功能的小伙伴可以去下载
 
 5. 启动图结束后 显示一段动画或者动图(类似 新浪微博)
