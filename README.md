@@ -1,4 +1,4 @@
-QQ 1797822324 
+
 
 地址  https://github.com/Ws1797822324/BasisProduct
 star 来一个吧 😜 thanks thanks
@@ -31,3 +31,8 @@ https: // github.com/12207480/TYLaunchAnimation
 1、打开终端，运行sudo gem install cocoapods-deintegrate安装快速解除项目cocopods依赖的库
 2、安装成功后，cd到你项目的更目录运行pod deintegrate解除项目cocopods依赖
 3、运行pod install,重新安装cocopods
+
+
+
+
+QQ 1797822324 Ws
