@@ -1,5 +1,7 @@
 QQ 1797822324 
-star 走一走 😜 thanks thanks
+
+地址  https://github.com/Ws1797822324/BasisProduct
+star 来一个吧 😜 thanks thanks
 
 基础框架 这是一个纯代码的工程框架pod管理 有常用的分类 三方框架 tabbar可灵活变动
 
