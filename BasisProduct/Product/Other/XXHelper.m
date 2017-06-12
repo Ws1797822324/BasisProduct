@@ -26,6 +26,9 @@
 static XXHelper *sectionInstance;
 
 
+//原始尺寸  ,放大图片方法
+static CGRect oldframe;
+
 @implementation XXHelper
 
 
@@ -104,101 +107,7 @@ static XXHelper *sectionInstance;
     [[UIApplication sharedApplication]openURL:[NSURL URLWithString:[NSString stringWithFormat:@"tel://%@",tel]]];
 }
 
-#pragma mark - 判断手机号码是否正确
-+ (BOOL)isValidateMobileNumber:(NSString *)mobileNum
-{
-    /**
-     * 手机号码
-     * 移动：134[0-8],135,136,137,138,139,147,150,151,152,157,158,159,178,182,183,184,187,188
-     * 联通：130,131,132,155,156,185,186,145,176
-     * 电信：133,1349,153,180,181,189
-     */
-    NSString *MOBILE = @"^1(3[0-9]|4[47]|5[0-35-9]|7[68]|8[0-9])\\d{8}$";
-    
-    /**
-     * 中国移动
-     */
-    NSString * CM = @"^1(34[0-8]|(3[5-9]|5[017-9]|8[278])\\d)\\d{7}$";
-    /**
-     * 中国联通：China Unicom
-     */
-    NSString * CU = @"^1(3[0-2]|4[5]|5[256]|7[6]|8[56])\\d{8}$";
-    /**
-     * 中国电信
-     */
-    NSString * CT = @"^1((33|53|8[09])[0-9]|349)\\d{7}$";
-    /**
-     * 大陆地区固话及小灵通
-     */
-    // NSString * PHS = @"^0(10|2[0-5789]|\\d{3})\\d{7,8}$";
-    
-    NSPredicate *regextestmobile = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", MOBILE];
-    NSPredicate *regextestcm = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", CM];
-    NSPredicate *regextestcu = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", CU];
-    NSPredicate *regextestct = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", CT];
-    
-    if (([regextestmobile evaluateWithObject:mobileNum] == YES)
-        || ([regextestcm evaluateWithObject:mobileNum] == YES)
-        || ([regextestct evaluateWithObject:mobileNum] == YES)
-        || ([regextestcu evaluateWithObject:mobileNum] == YES))
-    {
-        return YES;
-    }
-    else
-    {
-        return NO;
-    }
-}
 
-#pragma mark - 判断手机号码的运营商类型
-+ (NSString *)judgePhoneNumTypeOfMobileNum:(NSString *)mobileNum
-{
-    NSString *phoneNumType = nil;
-    
-    /**
-     * 手机号码
-     * 移动：134[0-8],135,136,137,138,139,147,150,151,152,157,158,159,178,182,183,184,187,188
-     * 联通：130,131,132,155,156,185,186,145,176
-     * 电信：133,1349,153,180,181,189
-     */
-    //NSString *MOBILE = @"^1(3[0-9]|4[47]|5[0-35-9]|7[68]|8[0-9])\\d{8}$";
-    
-    /**
-     * 中国移动
-     */
-    NSString * CM = @"^1(34[0-8]|(3[5-9]|5[017-9]|8[278])\\d)\\d{7}$";
-    /**
-     * 中国联通：China Unicom
-     */
-    NSString * CU = @"^1(3[0-2]|4[5]|5[256]|7[6]|8[56])\\d{8}$";
-    /**
-     * 中国电信
-     */
-    NSString * CT = @"^1((33|53|8[09])[0-9]|349)\\d{7}$";
-    /**
-     * 大陆地区固话及小灵通
-     */
-    // NSString * PHS = @"^0(10|2[0-5789]|\\d{3})\\d{7,8}$";
-    
-    NSPredicate *regextestcm = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", CM];
-    NSPredicate *regextestcu = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", CU];
-    NSPredicate *regextestct = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", CT];
-    
-    if ([regextestcm evaluateWithObject:mobileNum] == YES)
-    {
-        phoneNumType = @"移动";
-    }
-    else if ([regextestct evaluateWithObject:mobileNum] == YES)
-    {
-        phoneNumType = @"联通";
-    }
-    else if ([regextestcu evaluateWithObject:mobileNum] == YES)
-    {
-        phoneNumType = @"电信";
-    }
-    
-    return phoneNumType;
-}
 
 #pragma mark - 直接打开网页
 + (void)openURLWithUrlString:(NSString *)url
@@ -1142,6 +1051,73 @@ static void addRoundedRectToPath(CGContextRef context, CGRect rect, float ovalWi
 }
 
 
+/**
+ *  浏览大图
+ *
+ *  @param currentImageview 图片所在的imageView
+ */
++(void)scanBigImageWithImageView:(UIImageView *)currentImageview{
+    
+    //当前imageview的图片
+    UIImage *image = currentImageview.image;
+    //当前视图
+    UIWindow *window = [UIApplication sharedApplication].keyWindow;
+    //背景
+    UIView *backgroundView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height)];
+    //当前imageview的原始尺寸->将像素currentImageview.bounds由currentImageview.bounds所在视图转换到目标视图window中，返回在目标视图window中的像素值
+    oldframe = [currentImageview convertRect:currentImageview.bounds toView:window];
+    [backgroundView setBackgroundColor:[UIColor colorWithRed:107/255.0 green:107/255.0 blue:99/255.0 alpha:0.6]];
+    //此时视图不会显示
+    [backgroundView setAlpha:0];
+    //将所展示的imageView重新绘制在Window中
+    UIImageView *imageView = [[UIImageView alloc] initWithFrame:oldframe];
+    [imageView setImage:image];
+    [imageView setTag:1024];
+    [backgroundView addSubview:imageView];
+    //将原始视图添加到背景视图中
+    [window addSubview:backgroundView];
+    
+    
+    //添加点击事件同样是类方法 -> 作用是再次点击回到初始大小
+    UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(hideImageView:)];
+    [backgroundView addGestureRecognizer:tapGestureRecognizer];
+    
+    //动画放大所展示的ImageView
+    
+    [UIView animateWithDuration:0.4 animations:^{
+        CGFloat y,width,height;
+        y = ([UIScreen mainScreen].bounds.size.height - image.size.height * [UIScreen mainScreen].bounds.size.width / image.size.width) * 0.5;
+        //宽度为屏幕宽度
+        width = [UIScreen mainScreen].bounds.size.width;
+        //高度 根据图片宽高比设置
+        height = image.size.height * [UIScreen mainScreen].bounds.size.width / image.size.width;
+        [imageView setFrame:CGRectMake(0, y, width, height)];
+        //重要！ 将视图显示出来
+        [backgroundView setAlpha:1];
+    } completion:^(BOOL finished) {
+        
+    }];
+    
+}
+
+/**
+ *  恢复imageView原始尺寸
+ *
+ *  @param tap 点击事件
+ */
++(void)hideImageView:(UITapGestureRecognizer *)tap{
+    UIView *backgroundView = tap.view;
+    //原始imageview
+    UIImageView *imageView = [tap.view viewWithTag:1024];
+    //恢复
+    [UIView animateWithDuration:0.4 animations:^{
+        [imageView setFrame:oldframe];
+        [backgroundView setAlpha:0];
+    } completion:^(BOOL finished) {
+        //完成后操作->将背景视图删掉
+        [backgroundView removeFromSuperview];
+    }];
+}
 
 
 @end

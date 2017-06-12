@@ -49,19 +49,6 @@
 + (void)makePhoneCallWithTelNumber:(NSString *)tel;
 
 
-#pragma mark - 判断手机号码是否正确
-/**
- *  判断手机号码是否正确
- */
-+ (BOOL)isValidateMobileNumber:(NSString *)mobileNum;
-
-
-#pragma mark - 判断手机号码的运营商类型
-/**
- *  判断手机号码的运营商类型
- */
-+ (NSString *)judgePhoneNumTypeOfMobileNum:(NSString *)mobileNum;
-
 
 #pragma mark - 直接打开网页
 /**
@@ -363,6 +350,13 @@
 +(BOOL)isAssetsLibraryPermissionGranted;
 
 
+#pragma mark - 图片放大
+/**
+ *  浏览大图
+ *
+ *  @param currentImageview 图片所在的imageView
+ */
++(void)scanBigImageWithImageView:(UIImageView *)currentImageview;
 
 
 
