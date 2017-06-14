@@ -10,8 +10,16 @@
 
 @interface XXPaymentLoadingHUD : UIView
 
-+(XXPaymentLoadingHUD*)showLoadingIn:(UIView*)view;
++ (XXPaymentLoadingHUD *)showLoadingIn:(UIView *)view;
 
-+(XXPaymentLoadingHUD*)hideLoadingIn:(UIView*)view;
++ (XXPaymentLoadingHUD *)hideLoadingIn:(UIView *)view;
 
+/**
+ 添加动态图提示
+
+ @param text 提示文字
+ */
+
++ (void)showWithDynamicImageStatus:(NSString *)text;
++ (void)dismissDynamicImageStatus;
 @end

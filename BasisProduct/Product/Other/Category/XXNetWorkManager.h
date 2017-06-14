@@ -8,29 +8,24 @@
 
 #import <AFNetworking/AFNetworking.h>
 
-// 请求成功回调
-typedef void(^successBlock)(id objc);
-// 请求失败回调
-typedef void(^failuerBlock)(id error);
-//上传进度回调
-typedef void(^uploadProgress)(float progress);
+/// 请求成功回调
+typedef void (^successBlock)(id objc);
+/// 请求失败回调
+typedef void (^failuerBlock)(id error);
+///上传进度回调
+typedef void (^uploadProgress)(float uploadProgress);
 
-
+typedef void(^requestProgress)(float requestProgress);
 
 // 请求类型
 
-
-typedef NS_ENUM(NSUInteger, HTTPMethod) {
-    GET = 1,
-    POST
-};
-
+typedef NS_ENUM(NSUInteger, HTTPMethod) { GET = 1, POST };
 
 typedef NS_ENUM(NSUInteger, NetworkStatus) {
-    StatusUnknown           = -1, //未知网络
-    StatusNotReachable      = 0,    //没有网络
-    StatusReachableViaWWAN  = 1,    //手机自带网络
-    StatusReachableViaWiFi  = 2     //wifi
+    StatusUnknown = -1,         //未知网络
+    StatusNotReachable = 0,     //没有网络
+    StatusReachableViaWWAN = 1, //手机自带网络
+    StatusReachableViaWiFi = 2  // wifi
 
 };
 
@@ -45,13 +40,12 @@ typedef NS_ENUM(NSUInteger, NetworkStatus) {
 /**
  *  获取网络
  */
-@property (nonatomic,assign)NetworkStatus networkStats;
+@property (nonatomic, assign) NetworkStatus networkStats;
 
 /**
  *  开启网络监测
  */
 + (void)startMonitoring;
-
 
 /**
  AFN 网络请求
@@ -59,13 +53,19 @@ typedef NS_ENUM(NSUInteger, NetworkStatus) {
  @param method 请求方式
  @param params 参数
  @param hud 是否要HUD
- @param print 是否打印请求结果
  @param urlStr 请求链接
+ @param progress 请求进度
  @param success 成功返回
  @param failuer 失败数据
  */
 
-+ (void) requestWithMethod:(HTTPMethod)method withParams:(id)params withHud:(BOOL)hud withPrint:(BOOL)print withUrlString:(NSString *)urlStr withSuccessBlock:(successBlock)success withFailuerBlock:(failuerBlock)failuer;
++ (void)requestWithMethod:(HTTPMethod)method
+               withParams:(id)params
+            withUrlString:(NSString *)urlStr
+                  withHud:(BOOL)hud
+        withProgressBlock:(requestProgress)progress
+         withSuccessBlock:(successBlock)success
+         withFailuerBlock:(failuerBlock)failuer;
 
 /**
  *  上传图片
@@ -79,7 +79,13 @@ typedef NS_ENUM(NSUInteger, NetworkStatus) {
  *  @param progress     上传进度
  */
 
-+(void)uploadImageWithOperations:(NSDictionary *)operations withImageArray:(NSArray *)imageArray withtargetWidth:(CGFloat )defineWidth withUrlString:(NSString *)urlString withSuccessBlock:(successBlock)successBlock withFailurBlock:(failuerBlock)failureBlock withUpLoadProgress:(uploadProgress)progress;
++ (void)uploadImageWithOperations:(NSDictionary *)operations
+                   withImageArray:(NSArray *)imageArray
+                  withtargetWidth:(CGFloat)defineWidth
+                    withUrlString:(NSString *)urlString
+                 withSuccessBlock:(successBlock)successBlock
+                  withFailurBlock:(failuerBlock)failureBlock
+               withUpLoadProgress:(uploadProgress)progress;
 
 /**
  取消请求
@@ -93,7 +99,8 @@ typedef NS_ENUM(NSUInteger, NetworkStatus) {
  *  @param string      该请求的url
  */
 
-+(void)cancelHttpRequestWithRequestType:(NSString *)requestType requestUrlString:(NSString *)string;
++(void)cancelHttpRequestWithRequestType:(NSString *)requestType
+                       requestUrlString:(NSString *)string;
 
 
 @end

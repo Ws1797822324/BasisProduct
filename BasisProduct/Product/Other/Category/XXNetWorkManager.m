@@ -93,7 +93,7 @@
     [mgr startMonitoring];
 }
 
-+ (void) requestWithMethod:(HTTPMethod)method withParams:(id)params withHud:(BOOL)hud withPrint:(BOOL)print withUrlString:(NSString *)urlStr withSuccessBlock:(successBlock)success withFailuerBlock:(failuerBlock)failuer {
++ (void) requestWithMethod:(HTTPMethod)method withParams:(id)params withUrlString:(NSString *)urlStr withHud:(BOOL)hud withProgressBlock:(requestProgress)progress withSuccessBlock:(successBlock)success withFailuerBlock:(failuerBlock)failuer {
     
     
     if (hud) {
@@ -106,14 +106,15 @@
             [[XXNetWorkManager sharedManager] GET:urlStr parameters:params progress:^(NSProgress * _Nonnull downloadProgress) {
                 
             } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+                
+                
 
                 NSLog(@"请求成功 URLStr \n\n --- %@\n\n",task.currentRequest.URL);
+                
+                [XXProgressHUD hideHUD];
                 success(responseObject);
                 
-                if(print) {
-                    
-                    NSLog(@"\n successPrint = \n %@\n\n",responseObject);
-                }
+                
                 
                 
             } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
@@ -123,10 +124,7 @@
                 
                 [XXProgressHUD showWaiting:@"网络请求失败稍后重试"];
                 [self requestCancle];
-                if(print) {
-                    
-                    NSLog(@"\n failuerPrint = \n %@\n\n",error);
-                }
+                
                 
             }];
             break;
@@ -134,17 +132,17 @@
         case POST:
         {
             [[XXNetWorkManager sharedManager] POST:urlStr parameters:params progress:^(NSProgress * _Nonnull uploadProgress) {
+                
+                progress(uploadProgress.completedUnitCount / uploadProgress.totalUnitCount);
+            
             } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
                 
                 NSLog(@"请求成功 URLStr \n\n --- %@\n\n",task.currentRequest.URL);
-                
+                [XXProgressHUD hideHUD];
                 success(responseObject);
 
                 
-                if(print) {
-                    
-                    NSLog(@"\n successPrint = \n %@\n\n",responseObject);
-                }
+                
                 
             } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
                 NSLog(@"请求失败 URLStr \n\n --- %@\n\n",task.currentRequest.URL);
@@ -154,10 +152,7 @@
                 [XXProgressHUD showWaiting:@"网络请求失败稍后重试"];
                 
                 [self requestCancle];
-                if(print) {
-                    
-                    NSLog(@"\n failuerPrint = \n%@\n\n",error);
-                }
+               
                 
             }];
 

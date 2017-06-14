@@ -21,6 +21,7 @@
 		54522FD81EE52C0E009C5E68 /* NavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54522FD31EE52C0E009C5E68 /* NavigationController.m */; };
 		54522FD91EE52C0E009C5E68 /* RootTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54522FD51EE52C0E009C5E68 /* RootTabBarController.m */; };
 		54522FDA1EE52C0E009C5E68 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54522FD71EE52C0E009C5E68 /* RootViewController.m */; };
+		545BF81F1EF11A5300875BB3 /* DynamicImageArray.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 545BF81E1EF11A5300875BB3 /* DynamicImageArray.bundle */; };
 		5469A6811ED7C9240033AEA1 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5469A67E1ED7C9240033AEA1 /* UIView+Extension.m */; };
 		5469A6821ED7C9240033AEA1 /* UIViewController+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5469A6801ED7C9240033AEA1 /* UIViewController+Extension.m */; };
 		5469A6881ED7C9510033AEA1 /* UIBarButtonItem+Item.m in Sources */ = {isa = PBXBuildFile; fileRef = 5469A6851ED7C9510033AEA1 /* UIBarButtonItem+Item.m */; };
@@ -91,6 +92,7 @@
 		54522FD51EE52C0E009C5E68 /* RootTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootTabBarController.m; sourceTree = "<group>"; };
 		54522FD61EE52C0E009C5E68 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		54522FD71EE52C0E009C5E68 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		545BF81E1EF11A5300875BB3 /* DynamicImageArray.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = DynamicImageArray.bundle; sourceTree = "<group>"; };
 		5469A67D1ED7C9240033AEA1 /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
 		5469A67E1ED7C9240033AEA1 /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
 		5469A67F1ED7C9240033AEA1 /* UIViewController+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Extension.h"; sourceTree = "<group>"; };
@@ -326,13 +328,14 @@
 		5469A68A1ED7C9610033AEA1 /* HUD */ = {
 			isa = PBXGroup;
 			children = (
-				5469A68B1ED7C9610033AEA1 /* XXPaymentLoadingHUD.h */,
-				5469A68C1ED7C9610033AEA1 /* XXPaymentLoadingHUD.m */,
-				5469A68D1ED7C9610033AEA1 /* XXPaymentSuccessHUD.h */,
-				5469A68E1ED7C9610033AEA1 /* XXPaymentSuccessHUD.m */,
-				5469A68F1ED7C9610033AEA1 /* XXProgressHUD.bundle */,
 				5469A6901ED7C9610033AEA1 /* XXProgressHUD.h */,
 				5469A6911ED7C9610033AEA1 /* XXProgressHUD.m */,
+				5469A68F1ED7C9610033AEA1 /* XXProgressHUD.bundle */,
+				5469A68B1ED7C9610033AEA1 /* XXPaymentLoadingHUD.h */,
+				5469A68C1ED7C9610033AEA1 /* XXPaymentLoadingHUD.m */,
+				545BF81E1EF11A5300875BB3 /* DynamicImageArray.bundle */,
+				5469A68D1ED7C9610033AEA1 /* XXPaymentSuccessHUD.h */,
+				5469A68E1ED7C9610033AEA1 /* XXPaymentSuccessHUD.m */,
 			);
 			path = HUD;
 			sourceTree = "<group>";
@@ -530,6 +533,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				18AEFC141E10C3CE00AFAF16 /* Main.storyboard in Resources */,
+				545BF81F1EF11A5300875BB3 /* DynamicImageArray.bundle in Resources */,
 				54B3DD4C1EE162DC001A48A9 /* XXTabBarController.bundle in Resources */,
 				18AEFBE71E10C36400AFAF16 /* Assets.xcassets in Resources */,
 				18AEFC131E10C3CE00AFAF16 /* LaunchScreen.storyboard in Resources */,

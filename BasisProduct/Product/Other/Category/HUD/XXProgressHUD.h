@@ -6,25 +6,22 @@
 //  Copyright © 2017年 apple. All rights reserved.
 //
 
-
-
-
 #import <MBProgressHUD/MBProgressHUD.h>
 
 typedef NS_ENUM(NSInteger, XXProgressHUDStatus) {
-    
+
     /** 成功 */
     XXProgressHUDStatusSuccess,
-    
+
     /** 失败 */
     XXProgressHUDStatusError,
-    
+
     /** 警告*/
     XXProgressHUDStatusWaitting,
-    
+
     /** 提示 */
     XXProgressHUDStatusInfo,
-    
+
     /** 等待 */
     XXProgressHUDStatusLoading
 
@@ -35,15 +32,13 @@ typedef NS_ENUM(NSInteger, XXProgressHUDStatus) {
 /**
  *  是否正在显示
  */
-@property (nonatomic, assign, getter = isShowNow) BOOL showNow;
+@property (nonatomic, assign, getter=isShowNow) BOOL showNow;
 
 /** 返回一个 HUD 的单例 */
 + (instancetype)sharedHUD;
 
 /** 在 window 上添加一个 HUD */
 + (void)showStatus:(XXProgressHUDStatus)status text:(NSString *)text;
-
-
 
 #pragma mark - 建议使用的方法
 

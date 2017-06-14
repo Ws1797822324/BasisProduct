@@ -14,7 +14,18 @@
 // 文字大小
 #define TEXT_SIZE    15.0f
 
+
+
 @implementation XXProgressHUD
+{
+    CADisplayLink *_link;
+    CAShapeLayer *_animationLayer;
+    
+    CGFloat _startAngle;
+    CGFloat _endAngle;
+    CGFloat _progress;
+}
+
 
 + (instancetype)sharedHUD {
     static id hud;
@@ -167,6 +178,7 @@
     [[XXProgressHUD sharedHUD] setShowNow:NO];
     [[XXProgressHUD sharedHUD] hideAnimated:YES];
 }
+
 
 
 @end

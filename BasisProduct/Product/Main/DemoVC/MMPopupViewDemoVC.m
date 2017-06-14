@@ -30,6 +30,8 @@
 }
 #pragma mark - 弹出 View
 - (IBAction)View:(UIButton *)sender {
+   
+
     UIView *tempView = [[UIView alloc]init];
     tempView.backgroundColor = kRandomColor;
     tempView.centerX = kScreenWidth / 2;
@@ -41,6 +43,8 @@
     KLCPopupLayout  popLayout = (KLCPopupLayoutMake(KLCPopupHorizontalLayoutCenter, KLCPopupVerticalLayoutCenter));
     
     [popView showWithLayout:popLayout];
+    
+    
 }
 #pragma mark - 弹出一个 Action
 - (IBAction)action:(UIButton *)sender {

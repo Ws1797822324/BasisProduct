@@ -8,6 +8,8 @@
 
 #import "XXViewController.h"
 #import "MMPopupViewDemoVC.h"
+#import "XXPaymentLoadingHUD.h"
+#import "XXPaymentSuccessHUD.h"
 
 @interface XXViewController () <UIImagePickerControllerDelegate,TZImagePickerControllerDelegate,UIAlertViewDelegate,UIActionSheetDelegate,UINavigationControllerDelegate> {
 
@@ -156,8 +158,16 @@ self.tabBarItem.badgeValue = @"98";
 - (IBAction)push:(UIButton *)sender {
     MMPopupViewDemoVC *vc = [MMPopupViewDemoVC new];
     vc.view.backgroundColor = [UIColor whiteColor];
-    
-    [self.navigationController pushViewController: vc animated:YES];
+
+    [self.navigationController pushViewController:vc animated:YES];
+}
+- (IBAction)afnclick:(UIButton *)sender {
+
+    [XXPaymentLoadingHUD showWithDynamicImageStatus:@"快跑"];
+
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [XXPaymentLoadingHUD dismissDynamicImageStatus];
+    });
 }
 
 @end
