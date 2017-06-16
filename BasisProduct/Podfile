@@ -3,25 +3,28 @@
 
 target 'Product' do
   
-pod 'AFNetworking', '~> 3.1.0'
+pod 'AFNetworking'
 
-pod 'MBProgressHUD', '~> 1.0.0'
+pod 'MBProgressHUD'
 
-pod 'SDWebImage', '~> 4.0.0'
+pod 'SDWebImage'
 
-pod 'IQKeyboardManager', '~> 4.0.9'
+pod 'IQKeyboardManager'
 
-pod 'MJRefresh', '~> 3.1.12'
+pod 'MJRefresh'
 
-pod 'MJExtension', '~> 3.0.13'
+pod 'MJExtension'
 
-pod 'KLCPopup', '~> 1.0'
+pod 'KLCPopup'
 
-pod 'TZImagePickerController', '~> 1.7.9'
+pod 'TZImagePickerController'
 
-pod 'JQFMDB', '~> 1.1.4'
+pod 'JQFMDB'
 
-pod 'MMPopupView', '~> 1.7.2'
+pod 'MMPopupView'
+
+pod 'SDAutoLayout'
+
 #---------------------------------------#
 #分页
 # pod 'WMPageController', '~> 2.2.1'

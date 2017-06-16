@@ -169,5 +169,8 @@ self.tabBarItem.badgeValue = @"98";
         [XXPaymentLoadingHUD dismissDynamicImageStatus];
     });
 }
+- (IBAction)cellAction:(UIButton *)sender {
+    
+}
 
 @end

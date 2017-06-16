@@ -27,22 +27,24 @@ PODS:
   - MJRefresh (3.1.12)
   - MMPopupView (1.7.2):
     - Masonry
+  - SDAutoLayout (2.1.7)
   - SDWebImage (4.0.0):
     - SDWebImage/Core (= 4.0.0)
   - SDWebImage/Core (4.0.0)
   - TZImagePickerController (1.7.9)
 
 DEPENDENCIES:
-  - AFNetworking (~> 3.1.0)
-  - IQKeyboardManager (~> 4.0.9)
-  - JQFMDB (~> 1.1.4)
-  - KLCPopup (~> 1.0)
-  - MBProgressHUD (~> 1.0.0)
-  - MJExtension (~> 3.0.13)
-  - MJRefresh (~> 3.1.12)
-  - MMPopupView (~> 1.7.2)
-  - SDWebImage (~> 4.0.0)
-  - TZImagePickerController (~> 1.7.9)
+  - AFNetworking
+  - IQKeyboardManager
+  - JQFMDB
+  - KLCPopup
+  - MBProgressHUD
+  - MJExtension
+  - MJRefresh
+  - MMPopupView
+  - SDAutoLayout
+  - SDWebImage
+  - TZImagePickerController
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
@@ -55,9 +57,10 @@ SPEC CHECKSUMS:
   MJExtension: 5932755f451458eefa24239358817f8d291240c7
   MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
   MMPopupView: fe1dd010824029dfb632fdf1a531db5dd5386020
+  SDAutoLayout: e9b36d04b8c0b504762a04d76fbbe5108944297a
   SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
   TZImagePickerController: 0a8ff228d287ebdd7d485e8c42a2a932894f1fba
 
-PODFILE CHECKSUM: ab2d78dbfeddd55788308b0ac46c8df40058f4b7
+PODFILE CHECKSUM: f89f6a819d2704afd6c499c44c85e3ef384435d4
 
 COCOAPODS: 1.2.0

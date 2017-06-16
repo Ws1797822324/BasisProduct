@@ -47,9 +47,9 @@
                         <action selector="push:" destination="-1" eventType="touchUpInside" id="uut-e1-qtl"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tez-23-xgD">
-                    <rect key="frame" x="125" y="387" width="124" height="30"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tez-23-xgD">
+                    <rect key="frame" x="141" y="349" width="92" height="34"/>
+                    <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <state key="normal" title="点我试试啊">
                         <color key="titleColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
@@ -57,14 +57,29 @@
                         <action selector="afnclick:" destination="-1" eventType="touchUpInside" id="BNn-MA-Qij"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6C6-1B-9ny">
+                    <rect key="frame" x="172" y="393" width="30" height="30"/>
+                    <color key="backgroundColor" red="0.98039215690000003" green="0.4039215686" blue="0.058823529409999999" alpha="0.5" colorSpace="custom" customColorSpace="displayP3"/>
+                    <state key="normal">
+                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="cellAction:" destination="-1" eventType="touchUpInside" id="eV0-KP-Q5T"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="6C6-1B-9ny" firstAttribute="centerX" secondItem="Tez-23-xgD" secondAttribute="centerX" id="31d-oI-NEs"/>
+                <constraint firstItem="6C6-1B-9ny" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="42x-RJ-Bal"/>
                 <constraint firstItem="qyy-x9-Prc" firstAttribute="top" secondItem="XbM-T9-XeK" secondAttribute="bottom" constant="57" id="B9J-jj-C48"/>
+                <constraint firstItem="Tez-23-xgD" firstAttribute="top" secondItem="qyy-x9-Prc" secondAttribute="bottom" constant="16" id="Fof-lJ-BOl"/>
                 <constraint firstItem="GWp-wf-TQM" firstAttribute="centerX" secondItem="XbM-T9-XeK" secondAttribute="centerX" id="Jta-x9-8QT"/>
                 <constraint firstItem="XbM-T9-XeK" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="96" id="MMI-AP-xPc"/>
                 <constraint firstItem="XbM-T9-XeK" firstAttribute="centerY" secondItem="GWp-wf-TQM" secondAttribute="centerY" id="RON-LF-gmk"/>
+                <constraint firstItem="Tez-23-xgD" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="U6W-4v-tOn"/>
                 <constraint firstItem="qyy-x9-Prc" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="WgI-bD-ZJg"/>
+                <constraint firstItem="6C6-1B-9ny" firstAttribute="top" secondItem="Tez-23-xgD" secondAttribute="bottom" constant="10" id="si8-jf-zpk"/>
                 <constraint firstItem="XbM-T9-XeK" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="tdu-eB-xL6"/>
             </constraints>
             <point key="canvasLocation" x="25.5" y="51.5"/>
