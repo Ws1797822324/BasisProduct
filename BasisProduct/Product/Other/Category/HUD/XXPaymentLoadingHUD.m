@@ -110,13 +110,12 @@ static XXPaymentLoadingHUD *Hud = nil;
 
 #pragma mark - 动态图片
 + (void)showWithDynamicImageStatus:(NSString *)text {
-    XXPaymentLoadingHUD *custom = [[XXPaymentLoadingHUD alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    XXPaymentLoadingHUD *custom = [[XXPaymentLoadingHUD alloc] initWithFrame:CGRectMake([UIScreen mainScreen].bounds.size.width / 2 - 75,[UIScreen mainScreen].bounds.size.height / 2 - 50, 150, 120)];
     Hud = custom;
     [[UIApplication sharedApplication].keyWindow addSubview:custom];
 
     UIView *customView =
-        [[UIView alloc] initWithFrame:CGRectMake([UIScreen mainScreen].bounds.size.width / 2 - 75,
-                                                 [UIScreen mainScreen].bounds.size.height / 2 - 50, 150, 120)];
+        [[UIView alloc] initWithFrame:CGRectMake(0,0, 150, 120)];
     customView.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.5];
     [custom addSubview:customView];
     customView.layer.masksToBounds = YES;

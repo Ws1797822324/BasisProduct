@@ -8,6 +8,8 @@
 
 #import "NavigationController.h"
 
+#import "XXPaymentLoadingHUD.h"
+
 
 @interface NavigationController () <UINavigationControllerDelegate>
 
@@ -51,22 +53,19 @@
         UIBarButtonItem *left = [UIBarButtonItem barButtonItemWithImage:[UIImage imageNamed:@"navigationbar_back"] highImage:[UIImage imageNamed:@"navigationbar_back_highlighted"] target:self action:@selector(popToPre) forControlEvents:UIControlEventTouchUpInside titleName:nil];
         // 设置导航条的按钮
         viewController.navigationItem.leftBarButtonItem = left;
-        
-        UIBarButtonItem *right = [UIBarButtonItem barButtonItemWithImage:[UIImage imageNamed:@"navigationbar_more"] highImage:[UIImage imageNamed:@"navigationbar_more_highlighted"] target:self action:@selector(popToRoot) forControlEvents:UIControlEventTouchUpInside titleName:nil];
-        viewController.navigationItem.rightBarButtonItem = right;
-    }
+        }
     
     [super pushViewController:viewController animated:animated];
     
 }
 
-- (void)popToRoot
-{
-    [self popToRootViewControllerAnimated:YES];
-}
+
 - (void)popToPre
 {
     [self popViewControllerAnimated:YES];
+    [XXProgressHUD hideHUD];
+    [XXPaymentLoadingHUD dismissDynamicImageStatus];
+
 }
 
 

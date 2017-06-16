@@ -21,5 +21,6 @@
  */
 
 + (void)showWithDynamicImageStatus:(NSString *)text;
+
 + (void)dismissDynamicImageStatus;
 @end
