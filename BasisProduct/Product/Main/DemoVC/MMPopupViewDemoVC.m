@@ -21,6 +21,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    _datePickerView = [[PTXDatePickerView alloc]initWithFrame:CGRectMake(0, kScreenHeight, kScreenWidth, 246.0)];
+    _datePickerView.delegate = self;
+
+    
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -93,8 +98,7 @@
 }
 
 - (IBAction)date:(UIButton *)sender {
-    _datePickerView = [[PTXDatePickerView alloc]initWithFrame:CGRectMake(0, kScreenHeight, kScreenWidth, 246.0)];
-    _datePickerView.delegate = self;
+
     [self.view addSubview:_datePickerView];
     [_datePickerView showViewWithDate:_selectedDate animation:YES];
     
