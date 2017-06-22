@@ -95,7 +95,8 @@ typedef NS_ENUM(NSUInteger, NetworkStatus) {
 /**
  *  取消指定的url请求
  *
- *  @param requestType 该请求的请求类型
+ *  @param requestType 该请求的请求类型 GET, POST
+ 
  *  @param string      该请求的url
  */
 

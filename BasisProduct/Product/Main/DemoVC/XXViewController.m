@@ -25,6 +25,7 @@
 @property (nonatomic ,assign) BOOL allowCrop;  // 是否允许裁剪
 @property (weak, nonatomic) IBOutlet UIButton *xxButton;
 
+@property (weak, nonatomic) IBOutlet UIView *xxView;
 
 
 @end
@@ -170,6 +171,7 @@ self.tabBarItem.badgeValue = @"98";
     });
 }
 - (IBAction)cellAction:(UIButton *)sender {
+
     
 }
 

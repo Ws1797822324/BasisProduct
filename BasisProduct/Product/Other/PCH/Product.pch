@@ -22,6 +22,8 @@
 //颜色
 #define kRGBColor(r, g, b, a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:a]
 
+#define kHexColor(colorStr) [UIColor colorWithHexString:colorStr]
+
 #define kRandomColor kRGBColor(arc4random_uniform(255), arc4random_uniform(255), arc4random_uniform(255),1)
 
 
@@ -48,6 +50,24 @@
 [View.layer setMasksToBounds:YES];\
 [View.layer setBorderWidth:(Width)];\
 [View.layer setBorderColor:[Color CGColor]]
+
+
+// 单例模式宏模板
+#define SINGLETON_FOR_HEADER(className) \
+\
++ (className *)sharedInstance;
+
+#define SINGLETON_FOR_CLASS(className) \
+\
++ (className *)sharedInstance { \
+static className *shared##className = nil; \
+static dispatch_once_t onceToken; \
+dispatch_once(&onceToken, ^{ \
+shared##className = [[self alloc] init]; \
+}); \
+return shared##className; \
+}
+
 
 
 /**Dubug相关*/

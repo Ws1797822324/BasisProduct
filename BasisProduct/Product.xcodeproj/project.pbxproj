@@ -14,6 +14,7 @@
 		18AEFC121E10C3CE00AFAF16 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18AEFC0F1E10C3CE00AFAF16 /* AppDelegate.m */; };
 		18AEFC131E10C3CE00AFAF16 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18AEFC101E10C3CE00AFAF16 /* LaunchScreen.storyboard */; };
 		18AEFC141E10C3CE00AFAF16 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18AEFC111E10C3CE00AFAF16 /* Main.storyboard */; };
+		5444C2631EFBAA890044CC35 /* UIColor+ColorChange.m in Sources */ = {isa = PBXBuildFile; fileRef = 5444C2621EFBAA890044CC35 /* UIColor+ColorChange.m */; };
 		54522FD81EE52C0E009C5E68 /* NavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54522FD31EE52C0E009C5E68 /* NavigationController.m */; };
 		54522FD91EE52C0E009C5E68 /* RootTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54522FD51EE52C0E009C5E68 /* RootTabBarController.m */; };
 		54522FDA1EE52C0E009C5E68 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54522FD71EE52C0E009C5E68 /* RootViewController.m */; };
@@ -79,6 +80,8 @@
 		18AEFC101E10C3CE00AFAF16 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		18AEFC111E10C3CE00AFAF16 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		2D7588D42A2359605113B65F /* libPods-Product.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Product.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5444C2611EFBAA890044CC35 /* UIColor+ColorChange.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+ColorChange.h"; sourceTree = "<group>"; };
+		5444C2621EFBAA890044CC35 /* UIColor+ColorChange.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+ColorChange.m"; sourceTree = "<group>"; };
 		54522FD21EE52C0E009C5E68 /* NavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationController.h; sourceTree = "<group>"; };
 		54522FD31EE52C0E009C5E68 /* NavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationController.m; sourceTree = "<group>"; };
 		54522FD41EE52C0E009C5E68 /* RootTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootTabBarController.h; sourceTree = "<group>"; };
@@ -262,6 +265,8 @@
 				5469A68A1ED7C9610033AEA1 /* HUD */,
 				5469A6831ED7C9510033AEA1 /* Nav */,
 				5469A67C1ED7C9240033AEA1 /* V+VC */,
+				5444C2611EFBAA890044CC35 /* UIColor+ColorChange.h */,
+				5444C2621EFBAA890044CC35 /* UIColor+ColorChange.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -636,6 +641,7 @@
 				54522FDA1EE52C0E009C5E68 /* RootViewController.m in Sources */,
 				5469A6931ED7C9610033AEA1 /* XXPaymentSuccessHUD.m in Sources */,
 				54D7A9501EF36F8300DFAC3E /* MMPopupViewDemoVC.m in Sources */,
+				5444C2631EFBAA890044CC35 /* UIColor+ColorChange.m in Sources */,
 				549D49EB1EB99A4E0016A62E /* XXNetWorkManager.m in Sources */,
 				18AEFBD61E10C36400AFAF16 /* main.m in Sources */,
 			);
