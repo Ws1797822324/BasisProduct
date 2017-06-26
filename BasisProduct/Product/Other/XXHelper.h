@@ -179,7 +179,7 @@
 +(NSMutableDictionary *)clearNullData:(NSDictionary *)dic;
 
 
-#pragma mark - 将image 转化成nsdata
+#pragma mark - 将image 转化成NSData
 /**
  *  将image 转化成nsdata
  */
@@ -357,6 +357,10 @@
  *  @param currentImageview 图片所在的imageView
  */
 +(void)scanBigImageWithImageView:(UIImageView *)currentImageview;
+
+#pragma mark -  修正照片方向(手机转90度方向拍照)
+
+- (UIImage *)fixOrientation:(UIImage *)aImage;
 
 
 
