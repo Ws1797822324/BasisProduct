@@ -12,38 +12,43 @@
 // Include any system framework and library headers here that should be included in all compilation units.
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
 
-// 头文件  导入的头文件
+/// 头文件  导入的头文件
 #import "Header.h"
-// 网络请求 API
+/// 网络请求 API
 #import "API.pch"
 
 #pragma mark -  宏定义
 
-//颜色
+///颜色
 #define kRGBColor(r, g, b, a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:a]
 
 #define kHexColor(colorStr) [UIColor colorWithHexString:colorStr]
 
 #define kRandomColor kRGBColor(arc4random_uniform(255), arc4random_uniform(255), arc4random_uniform(255),1)
 
+/// 快速定义 image
+#define kImageNamed(name)  [UIImage imageNamed:(name)]
 
 #define kUserDefaults [NSUserDefaults standardUserDefaults]
-// 屏幕
+/// 屏幕
 #define kScreenWidth [UIScreen mainScreen].bounds.size.width
 #define kScreenHeight [UIScreen mainScreen].bounds.size.height
-// 通知
+/// 通知
 #define kNoteCenter [NSNotificationCenter defaultCenter]
 
-// 弱引用
+/// 弱引用
 #define kWeakSelf __weak typeof(self) weakSelf = self
 
-// 添加圆角
+/// 判断字符串是否为空
+#define IsStrEmpty(_ref)    (((_ref) == nil) || ([(_ref) isEqual:[NSNull null]]) ||([(_ref)isEqualToString:@""]))
+
+/// 添加圆角
 #define kViewRadius(View, Radius)\
 \
 [View.layer setCornerRadius:(Radius)];\
 [View.layer setMasksToBounds:YES]
 
-// 添加边框和圆角
+/// 添加边框和圆角
 #define kViewBorderRadius(View, Radius, Width, Color)\
 \
 [View.layer setCornerRadius:(Radius)];\
@@ -52,7 +57,7 @@
 [View.layer setBorderColor:[Color CGColor]]
 
 
-// 单例模式宏模板
+/// 单例模式宏模板
 #define SINGLETON_FOR_HEADER(className) \
 \
 + (className *)sharedInstance;
@@ -73,9 +78,9 @@ return shared##className; \
 /**Dubug相关*/
 
 #ifdef DEBUG
-#define MyLog(format,...)  NSLog((@"[函数名:%s]\n" "[行号:%d]\n" format),__FUNCTION__,__LINE__,##__VA_ARGS__)
+#define XXLog(format,...)  NSLog((@"[函数名:%s]\n" "[行号:%d]\n" format),__FUNCTION__,__LINE__,##__VA_ARGS__)
 #else
-#define MyLog(...)
+#define XXLog(...)
 #endif
 
 #ifdef DEBUG

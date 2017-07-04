@@ -480,7 +480,7 @@ static void addRoundedRectToPath(CGContextRef context, CGRect rect, float ovalWi
     NSData *data =UIImagePNGRepresentation(image);
     if (data==nil)
     {
-        data =UIImageJPEGRepresentation(image, 0.1);
+        data =UIImageJPEGRepresentation(image, 0.8);
     }
     return data;
 }
@@ -1195,6 +1195,20 @@ static void addRoundedRectToPath(CGContextRef context, CGRect rect, float ovalWi
     CGContextRelease(ctx);
     CGImageRelease(cgimg);
     return img;
+}
+
+#pragma mark -计算文字的CGSize
+
++ (CGSize)calculteTheSizeWithContent:(NSString *)content width:(float)width font:(float )font {
+    
+    NSDictionary *attribute = @{NSFontAttributeName : [UIFont systemFontOfSize:font]};
+    
+    CGSize size = [content boundingRectWithSize:CGSizeMake(width, MAXFLOAT)
+                                        options:NSStringDrawingTruncatesLastVisibleLine |
+                   NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading
+                                     attributes:attribute
+                                        context:nil].size;
+    return size;
 }
 
 

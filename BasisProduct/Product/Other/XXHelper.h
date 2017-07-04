@@ -362,6 +362,14 @@
 
 - (UIImage *)fixOrientation:(UIImage *)aImage;
 
-
+/**
+ 计算文字的CGSize
+ 
+ @param content 计算的文本
+ @param width 文本所占的宽度
+ @param font 文本的字号大小
+ @return 文字的CGSize
+ */
++ (CGSize)calculteTheSizeWithContent:(NSString *)content width:(float)width font:(float )font;
 
 @end

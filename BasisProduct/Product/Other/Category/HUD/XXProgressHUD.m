@@ -14,7 +14,17 @@
 // 文字大小
 #define TEXT_SIZE    15.0f
 
+@interface XXProgressHUD ()
 
+{
+    UIView *viewTop;
+    UIView *viewBottom;
+    
+}
+@property (nonatomic ,strong) UIView *viewBottom;
+
+
+@end
 
 @implementation XXProgressHUD
 {
@@ -24,6 +34,9 @@
     CGFloat _startAngle;
     CGFloat _endAngle;
     CGFloat _progress;
+    
+ 
+
 }
 
 
@@ -172,7 +185,6 @@
     
     [self showStatus:XXProgressHUDStatusLoading text:text];
 }
-
 + (void)hideHUD {
     
     [[XXProgressHUD sharedHUD] setShowNow:NO];
