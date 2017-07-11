@@ -41,6 +41,19 @@
  */
 +(BOOL)checkIdentityCardNo:(NSString*)cardNo;
 
+#pragma mark - 判断输入的是否是中文
+
+/**
+ * 判断输入的是否是中文
+ */
++(BOOL) checkInputChinese:(NSString *)text;
+#pragma mark - 判断字符串中是否有非法字符
+
+/**
+ * 非法字符是指 除数字 字母 中文文字以外的所有字符
+ */
++ (BOOL)JudgeTheillegalCharacter:(NSString *)content;
+
 
 #pragma mark - 拨打电话
 /**

@@ -101,6 +101,50 @@ static CGRect oldframe;
     return  NO;
 }
 
+#pragma mark - 判断输入的是否是中文
+
+/**
+ * 判断输入的是否是中文
+ */
++(BOOL) checkInputChinese:(NSString *)text {
+    
+    NSString *strRegex = @"^[\u4e00-\u9fa5]+$";
+    
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF MATCHES %@",strRegex];
+    if ([predicate evaluateWithObject:text]) {
+        
+        return true;
+    }else{
+        return false;
+    }
+    
+}
+
+
+#pragma mark - 判断字符串中是否有非法字符
+
+/**
+ * 非法字符是指 除数字 字母 中文文字以外的所有字符
+ */
++ (BOOL)JudgeTheillegalCharacter:(NSString *)content{
+    
+    //提示 标签不能输入特殊字符
+    
+    NSString *str =@"^[A-Za-z0-9\\u4e00-\u9fa5]+$";
+    
+    NSPredicate* emailTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", str];
+    
+    if (![emailTest evaluateWithObject:content]) {
+        
+        return YES;
+        
+    } else {
+        
+        return NO;
+    }
+    
+}
+
 #pragma mark - 拨打电话
 + (void)makePhoneCallWithTelNumber:(NSString *)tel
 {

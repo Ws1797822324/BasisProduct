@@ -44,6 +44,7 @@
 		54D7A9511EF36F8300DFAC3E /* MMPopupViewDemoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54D7A9441EF36F8300DFAC3E /* MMPopupViewDemoVC.xib */; };
 		54D7A9571EF36F8300DFAC3E /* XXViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54D7A94E1EF36F8300DFAC3E /* XXViewController.m */; };
 		54D7A9581EF36F8300DFAC3E /* XXViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54D7A94F1EF36F8300DFAC3E /* XXViewController.xib */; };
+		54FAB2571F14C1A40019DA31 /* UINavigationBar+ChangeColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 54FAB2561F14C1A40019DA31 /* UINavigationBar+ChangeColor.m */; };
 		78414B0BEFFBFCF30DDC872A /* libPods-Product.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D7588D42A2359605113B65F /* libPods-Product.a */; };
 /* End PBXBuildFile section */
 
@@ -139,6 +140,8 @@
 		54D7A94D1EF36F8300DFAC3E /* XXViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XXViewController.h; sourceTree = "<group>"; };
 		54D7A94E1EF36F8300DFAC3E /* XXViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XXViewController.m; sourceTree = "<group>"; };
 		54D7A94F1EF36F8300DFAC3E /* XXViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XXViewController.xib; sourceTree = "<group>"; };
+		54FAB2551F14C1A40019DA31 /* UINavigationBar+ChangeColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+ChangeColor.h"; sourceTree = "<group>"; };
+		54FAB2561F14C1A40019DA31 /* UINavigationBar+ChangeColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+ChangeColor.m"; sourceTree = "<group>"; };
 		6923A30AEE9690ABE86FAB57 /* Pods-Product.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Product.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Product/Pods-Product.debug.xcconfig"; sourceTree = "<group>"; };
 		B9F44DC4A0A59370117E8EE3 /* Pods-Product.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Product.release.xcconfig"; path = "Pods/Target Support Files/Pods-Product/Pods-Product.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -310,6 +313,8 @@
 			children = (
 				5469A6841ED7C9510033AEA1 /* UIBarButtonItem+Item.h */,
 				5469A6851ED7C9510033AEA1 /* UIBarButtonItem+Item.m */,
+				54FAB2551F14C1A40019DA31 /* UINavigationBar+ChangeColor.h */,
+				54FAB2561F14C1A40019DA31 /* UINavigationBar+ChangeColor.m */,
 				5469A6861ED7C9510033AEA1 /* UINavigationController+FDFullscreenPopGesture.h */,
 				5469A6871ED7C9510033AEA1 /* UINavigationController+FDFullscreenPopGesture.m */,
 			);
@@ -627,6 +632,7 @@
 				5469A6891ED7C9510033AEA1 /* UINavigationController+FDFullscreenPopGesture.m in Sources */,
 				54C3ABBA1EE0152E00AC9375 /* XXHelper.m in Sources */,
 				18AEFC121E10C3CE00AFAF16 /* AppDelegate.m in Sources */,
+				54FAB2571F14C1A40019DA31 /* UINavigationBar+ChangeColor.m in Sources */,
 				54B3DD4D1EE162DC001A48A9 /* XXTabBarController.m in Sources */,
 				5469A6951ED7C9610033AEA1 /* XXProgressHUD.m in Sources */,
 				549D49CD1EB993C50016A62E /* PTXDatePickerView.m in Sources */,
