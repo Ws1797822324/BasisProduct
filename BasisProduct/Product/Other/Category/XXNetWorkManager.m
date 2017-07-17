@@ -179,13 +179,9 @@
  */
 +(void)uploadImageWithOperations:(NSDictionary *)operations withImageArray:(NSArray *)imageArray withtargetWidth:(CGFloat )defineWidth withUrlString:(NSString *)urlString withSuccessBlock:(successBlock)successBlock withFailurBlock:(failuerBlock)failureBlock withUpLoadProgress:(uploadProgress)progress;
 {
+
     
-    
-    //1.创建管理者对象
-    
-    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-    
-    [manager POST:urlString parameters:operations constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
+    [[XXNetWorkManager sharedManager] POST:urlString parameters:operations constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
         
         NSUInteger i = 0 ;
         

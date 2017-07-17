@@ -41,7 +41,7 @@
  */
 +(BOOL)checkIdentityCardNo:(NSString*)cardNo;
 
-#pragma mark - 判断输入的是否是中文
+#pragma mark - 判断输入的是否是中文 
 
 /**
  * 判断输入的是否是中文
@@ -53,7 +53,6 @@
  * 非法字符是指 除数字 字母 中文文字以外的所有字符
  */
 + (BOOL)JudgeTheillegalCharacter:(NSString *)content;
-
 
 #pragma mark - 拨打电话
 /**
@@ -148,8 +147,8 @@
 #pragma mark - 给view设置圆角
 
 /**
-  给view设置圆角(指定圆角)
-
+ 给view设置圆角(指定圆角)
+ 
  @param view 目标 View
  @param targetAngles  想要改变的角 可多选 用 | 字符分开
  @param size 圆角半径(CGSize 格式 所以是给出的 椭圆半径)
@@ -192,7 +191,7 @@
 +(NSMutableDictionary *)clearNullData:(NSDictionary *)dic;
 
 
-#pragma mark - 将image 转化成NSData
+#pragma mark - 将image 转化成nsdata
 /**
  *  将image 转化成nsdata
  */
@@ -276,7 +275,7 @@
 
 #pragma mark - 删除多余的cell、 分割线
 
--(void)deleteExtraCellLine: (UITableView *)tableView;
++ (void)deleteExtraCellLine: (UITableView *)tableView;
 
 
 #pragma mark -   倒计时按钮 返回页面重置时间
@@ -290,7 +289,7 @@
  *  @param color    倒计时中的颜色
  *  @param button   要操作的按钮
  */
-- (void)startWithTime:(NSInteger)timeLine title:(NSString *)title countDownTitle:(NSString *)subTitle mainColor:(UIColor *)mColor countColor:(UIColor *)color disposeButton:(UIButton *)button;
++ (void)startWithTime:(NSInteger)timeLine title:(NSString *)title countDownTitle:(NSString *)subTitle mainColor:(UIColor *)mColor countColor:(UIColor *)color disposeButton:(UIButton *)button;
 
 
 #pragma mark -  倒计时按钮 返回页面不重置时间
@@ -306,34 +305,34 @@
  *  @param button   要操作的按钮
  */
 
-- (void)startSeniorWithTime:(NSInteger)timeLine title:(NSString *)title countDownTitle:(NSString *)subTitle mainColor:(UIColor *)mColor countColor:(UIColor *)color disposeButton:(UIButton *)button;
++ (void)startSeniorWithTime:(NSInteger)timeLine title:(NSString *)title countDownTitle:(NSString *)subTitle mainColor:(UIColor *)mColor countColor:(UIColor *)color disposeButton:(UIButton *)button;
 
-#pragma mark -  图片转成base64编码 
+#pragma mark -  图片转成base64编码
 /**
  图片转成base64编码
  @param imageName 传入图片名
  @return 返回base64格式Str
  */
--(NSString *) imageConvertFormatBase64imageName:(NSString *)imageName;
++ (NSString *) imageConvertFormatBase64imageName:(NSString *)imageName;
 
-#pragma mark - 将数组里的字符串排序 
+#pragma mark - 将数组里的字符串排序
 
 /**
  @param dataArray 要排序的数组
  @param grouping 是否分组存储 就是分成通讯录那样
  分布的话 分区数 dataArr.count
  分区中Cell 个数 [_dataArr[section][@"info"]count
- 索引 就取出  _dataArr 中所有字典中的 title  
+ 索引 就取出  _dataArr 中所有字典中的 title
  @return 排序好的数组
  */
-- (NSMutableArray *)Transformation:(NSArray *)dataArray isGrouping:(BOOL)grouping;
++ (NSMutableArray *)Transformation:(NSArray *)dataArray isGrouping:(BOOL)grouping;
 
 #pragma mark -  计算 image 高度
 
 /**
  
  计算 image 高度
-
+ 
  @param image 目标 image
  @param defineWidth  理想宽度
  @return image 高度
@@ -374,15 +373,19 @@
 #pragma mark -  修正照片方向(手机转90度方向拍照)
 
 - (UIImage *)fixOrientation:(UIImage *)aImage;
+#pragma mark -  计算文字的高度
 
 /**
- 计算文字的CGSize
+ 计算文字的高度
  
  @param content 计算的文本
  @param width 文本所占的宽度
  @param font 文本的字号大小
  @return 文字的CGSize
  */
-+ (CGSize)calculteTheSizeWithContent:(NSString *)content width:(float)width font:(float )font;
++ (CGFloat)calculteTheSizeWithContent:(NSString *)content width:(float)width font:(float )font;
+
+
+
 
 @end

@@ -64,15 +64,21 @@
 - (void)viewDidLoad {
     
 
-self.tabBarItem.badgeValue = @"98";
     
 //    [XXProgressHUD showSuccess:@"这是个测试 VC"];
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     // 监听tabbar点击的通知
     [kNoteCenter addObserver:self selector:@selector(tabBarSelect) name:@"XXTabBarDidSelectNotification" object:nil];
+    
 }
+-(void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    // 隐藏导航栏下那条线
+    [self.navigationController.navigationBar hiddenLine];
+    self.navigationController.navigationBar.barTintColor = [UIColor yellowColor];
 
+}
 /**
  *  点击tabBar
  */
@@ -166,7 +172,6 @@ self.tabBarItem.badgeValue = @"98";
 
     [XXPaymentLoadingHUD showWithDynamicImageStatus:@"快跑"];
 
-    
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [XXPaymentLoadingHUD dismissDynamicImageStatus];
     });

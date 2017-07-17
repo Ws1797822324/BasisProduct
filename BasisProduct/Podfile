@@ -3,17 +3,17 @@
 
 target 'Product' do
   
-pod 'AFNetworking'
+pod 'AFNetworking', '~> 3.1.0'
 
 pod 'MBProgressHUD'
 
-pod 'SDWebImage'
+pod 'SDWebImage','~> 4.0.0'
 
 pod 'IQKeyboardManager'
 
 pod 'MJRefresh'
 
-pod 'MJExtension'
+pod 'YYModel'
 
 pod 'KLCPopup'
 
@@ -25,9 +25,15 @@ pod 'MMPopupView'
 
 pod 'SDAutoLayout'
 
+pod 'WMPageController'
+
+pod 'pop', '~> 1.0.9'
+
+pod 'ReactiveObjC', '~> 2.1.2'
+
+
 #---------------------------------------#
-#分页
-# pod 'WMPageController', '~> 2.2.1'
+
 #抽屉
 # pod 'MMDrawerController', '~> 0.6.0'
 #折线图饼状图

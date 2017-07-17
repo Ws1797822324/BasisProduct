@@ -25,10 +25,9 @@
     // 获取当前类下面的UIBarButtonItem
     UIBarButtonItem *item = [UIBarButtonItem appearanceWhenContainedIn:self, nil];
 
-
     // 设置导航条按钮的文字颜色
     NSMutableDictionary *titleAttr = [NSMutableDictionary dictionary];
-    titleAttr[NSForegroundColorAttributeName] = [UIColor blueColor];
+    titleAttr[NSForegroundColorAttributeName] = [UIColor blackColor];
     [item setTitleTextAttributes:titleAttr forState:UIControlStateNormal];
     
     
@@ -39,7 +38,7 @@
     // Do any additional setup after loading the view.
     _popDelegate = self.interactivePopGestureRecognizer.delegate;
     self.delegate = self;
-    self.navigationBar.barTintColor = [UIColor orangeColor];
+    self.navigationBar.barTintColor = [UIColor whiteColor];
 
 
 }
@@ -50,9 +49,8 @@
         
         viewController.hidesBottomBarWhenPushed = YES;
         
-        UIBarButtonItem *left = [UIBarButtonItem barButtonItemWithImage:[UIImage imageNamed:@"navigationbar_back"] highImage:[UIImage imageNamed:@"navigationbar_back_highlighted"] target:self action:@selector(popToPre) forControlEvents:UIControlEventTouchUpInside titleName:nil];
         // 设置导航条的按钮
-        viewController.navigationItem.leftBarButtonItem = left;
+        viewController.navigationItem.leftBarButtonItem = [UIBarButtonItem leftbarButtonItemWithNorImage:[UIImage imageNamed:@"navigationbar_back"] highImage:[UIImage imageNamed:@"navigationbar_back"] target:self  action:@selector(popToPre) withTitle:@""];
         }
     
     [super pushViewController:viewController animated:animated];

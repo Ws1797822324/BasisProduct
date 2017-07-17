@@ -9,6 +9,7 @@
 
 #import "XXTabBar.h"
 #import "XXTabBarItem.h"
+#import "PublishViewController.h"
 
 @interface XXTabBar ()
 
@@ -31,15 +32,16 @@
     if (_specialButton == nil) {
         
         UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
-        [btn setImage:[UIImage imageNamed:@"tabbar_compose_icon_add"] forState:UIControlStateNormal];
-        [btn setImage:[UIImage imageNamed:@"tabbar_compose_background_icon_add"] forState:UIControlStateHighlighted];
-        [btn setBackgroundImage:[UIImage imageNamed:@"tabbar_compose_button"] forState:UIControlStateNormal];
-        [btn setBackgroundImage:[UIImage imageNamed:@"tabbar_compose_button_highlighted"] forState:UIControlStateHighlighted];
+        [btn setImage:[UIImage imageNamed:@"post_normal"] forState:UIControlStateNormal];
+        [btn setImage:[UIImage imageNamed:@"post_normal_click"] forState:UIControlStateHighlighted];
+        [btn setBackgroundImage:[UIImage imageNamed:@"post_normal"] forState:UIControlStateNormal];
+        [btn setBackgroundImage:[UIImage imageNamed:@"post_normal_click"] forState:UIControlStateHighlighted];
         
         [btn addTarget:self action:@selector(specialClick) forControlEvents:UIControlEventTouchUpInside];
-        // 默认按钮的尺寸跟背景图片一样大
-        // sizeToFit:默认会根据按钮的背景图片或者image和文字计算出按钮的最合适的尺寸
+
         [btn sizeToFit];
+        
+
         
         _specialButton = btn;
         
@@ -50,9 +52,11 @@
 }
 
 -(void) specialClick {
-    UIViewController *publish = [[UIViewController alloc] init];
-    publish.view.backgroundColor = [UIColor yellowColor];
-    [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:publish animated:NO completion:nil];
+
+    if (self.delegateAction && [self.delegateAction respondsToSelector:@selector(tabBarDidClickAtCenterButton:)]) {
+        [self.delegateAction tabBarDidClickAtCenterButton:self];
+    }
+
 }
 - (void)addTabBarItem:(UITabBarItem *)item {
     
@@ -93,63 +97,36 @@
 
 #pragma mark - 有特殊的 item  用下面的布局
 
-//- (void)layoutSubviews {
-//    
-//    [super layoutSubviews];
-//    // 标记按钮是否已经添加过监听器,避免循环添加事件
-//    static BOOL added = NO;
-//
-//    CGFloat w = self.frame.size.width;
-//    CGFloat h = self.frame.size.height;
-//    
-//    int count = (int)self.tabBarItems.count ;
-//    CGFloat itemY = 0;
-//    CGFloat itemW = w / (self.subviews.count + 1);
-//    CGFloat itemH = h;
-// 
-//    self.specialButton.center = CGPointMake(w * 0.5, h * 0.5);
-//
-//    for (int index = 0; index < count ; index++) {
-//
-//        LCTabBarItem *tabBarItem = self.tabBarItems[index];
-//        if (![tabBarItem isKindOfClass:[UIControl class]] || tabBarItem == self.specialButton) continue;
-//        tabBarItem.tag = index;
-//        
-//        CGFloat itemX =  ((index > (count/ 2) - 1) ? (index + 1) : index) * itemW;
-//
-//        tabBarItem.frame = CGRectMake(itemX, itemY, itemW, itemH);
-//
-//        if (added == NO) {
-//            // 监听按钮点击
-//            [tabBarItem addTarget:self action:@selector(buttonClick) forControlEvents:UIControlEventTouchUpInside];
-//        }
-//    }
-//    added = YES;
-//
-//    }
-
-#pragma mark - 没有特殊的 item  用下面的布局
-
 - (void)layoutSubviews {
-
+    
     [super layoutSubviews];
     // 标记按钮是否已经添加过监听器,避免循环添加事件
     static BOOL added = NO;
 
     CGFloat w = self.frame.size.width;
     CGFloat h = self.frame.size.height;
-
-    int count = (int) self.tabBarItems.count;
+    
+    int count = (int)self.tabBarItems.count ;
     CGFloat itemY = 0;
-    CGFloat itemW = w / self.subviews.count;
+    CGFloat itemW = w / (self.subviews.count + 1);
     CGFloat itemH = h;
+ 
 
-    for (int index = 0; index < count; index++) {
+    self.specialButton.centerX = w * 0.5;
+    self.specialButton.centerY = h * 0.3;
+
+    
+    
+    for (int index = 0; index < count ; index++) {
 
         XXTabBarItem *tabBarItem = self.tabBarItems[index];
+        if (![tabBarItem isKindOfClass:[UIControl class]] || tabBarItem == self.specialButton) continue;
         tabBarItem.tag = index;
-        CGFloat itemX = index * itemW;
+        
+        CGFloat itemX =  ((index > (count/ 2) - 1) ? (index + 1) : index) * itemW;
+
         tabBarItem.frame = CGRectMake(itemX, itemY, itemW, itemH);
+
         if (added == NO) {
             // 监听按钮点击
             [tabBarItem addTarget:self action:@selector(buttonClick) forControlEvents:UIControlEventTouchUpInside];
@@ -157,6 +134,27 @@
     }
     added = YES;
 
+    }
+
+- (UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event {
+    
+   
+    
+    if (self.isHidden == NO) {
+        
+        //将当前tabbar的触摸点转换坐标系，转换到发布按钮的身上，生成一个新的点
+        CGPoint newP = [self convertPoint:point toView:self.specialButton];
+        
+        //判断如果这个新的点是在发布按钮身上，那么处理点击事件最合适的view就是发布按钮
+        if ( [self.specialButton pointInside:newP withEvent:event]) {
+            return self.specialButton;
+        }else{//如果点不在发布按钮身上，直接让系统处理就可以了
+            return [super hitTest:point withEvent:event];
+        }
+    }
+    else {//tabbar隐藏了，那么说明已经push到其他的页面了，这个时候还是让系统去判断最合适的view处理就好了
+        return [super hitTest:point withEvent:event];
+    }
 }
 
 // 让所有的控制器都能接到通知

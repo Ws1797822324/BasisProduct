@@ -24,6 +24,13 @@
 
 @end
 
+@protocol XXTabBarprotocol <NSObject>
+
+/** 点击中间按钮的代理 */
+-(void)tabBarDidClickAtCenterButton:(XXTabBar *)tabBar;
+
+
+@end
 
 
 @interface XXTabBar : UIView
@@ -72,6 +79,9 @@
  *  TabBar delegate
  */
 @property (nonatomic, weak) id<XXTabBarDelegate> delegate;
+
+@property (nonatomic ,weak) id <XXTabBarprotocol> delegateAction;
+
 
 /**
  *  Add tabBar item

@@ -17,9 +17,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.view.backgroundColor = kRGBColor(250, 250, 250, 0.8);
+    self.view.backgroundColor = kRGBColor(242, 242, 242, 1);
     
-    self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
+    self.navigationController.navigationBar.barStyle = UIBarStyleDefault;
     // Do any additional setup after loading the view.
 }
 

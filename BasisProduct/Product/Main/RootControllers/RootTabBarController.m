@@ -12,6 +12,8 @@
 
 #import "XXViewController.h"
 
+#import "MyViewController.h"
+
 
 @interface RootTabBarController () 
 
@@ -36,9 +38,9 @@
     
     self.tabBar.backgroundColor = kRGBColor(250, 250, 250, 0.8);
 // 选中时的字体颜色
-    self.selectedItemTitleColor = [UIColor redColor];
+    self.selectedItemTitleColor = [UIColor greenColor];
     
-    self.itemTitleColor = [UIColor orangeColor];
+    self.itemTitleColor = [UIColor darkGrayColor];
     // 添加所有子控制器
     [self setUpAllChildViewController];
     
@@ -74,15 +76,11 @@
     controller3.title = @"第三";
     controller3.tabBarItem.image = [UIImage imageNamed:@"tabbar_discover"];
     controller3.tabBarItem.selectedImage = [UIImage imageNamed:@"tabbar_discover_selected"];
-    controller3.tabBarItem.badgeValue = @"88";
     NavigationController *NaVC3 = [[NavigationController alloc]initWithRootViewController:controller3];
 
-    UIViewController *controller4 = [[UIViewController alloc] init];
-    controller4.view.backgroundColor = kRandomColor;
-    controller4.title = @"第四";
+     MyViewController *controller4 = [[MyViewController alloc] init];
     controller4.tabBarItem.image = [UIImage imageNamed:@"tabbar_profile"];
     controller4.tabBarItem.selectedImage = [UIImage imageNamed:@"tabbar_profile_selected"];
-    
     NavigationController *NaVC4 = [[NavigationController alloc]initWithRootViewController:controller4];
 
     self.viewControllers = [NSMutableArray arrayWithObjects:NaVC1, NaVC2, NaVC3, NaVC4, nil];

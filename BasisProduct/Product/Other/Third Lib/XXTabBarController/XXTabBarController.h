@@ -7,9 +7,11 @@
 //  Copyright © 2017年 apple. All rights reserved.
 //
 #import <UIKit/UIKit.h>
+
 #import "XXTabBar.h"
 
-@interface XXTabBarController : UITabBarController
+
+@interface XXTabBarController : UITabBarController 
 
 /**
  *  TabBar

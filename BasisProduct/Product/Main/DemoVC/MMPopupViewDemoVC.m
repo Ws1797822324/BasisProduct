@@ -24,11 +24,16 @@
     
     _datePickerView = [[PTXDatePickerView alloc]initWithFrame:CGRectMake(0, kScreenHeight, kScreenWidth, 246.0)];
     _datePickerView.delegate = self;
-
     
     // Do any additional setup after loading the view from its nib.
 }
 
+-(void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    /// 恢复导航栏下那条线
+    [self.navigationController.navigationBar resetLine];
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -59,7 +64,7 @@
         
         NSLog(@"click -> NO:%ld",index);
     };
-    
+
     NSArray * items = @[MMItemMake(@"第一个", MMItemTypeNormal, ^(NSInteger index) {
         NSLog(@"hahahh");
     }), MMItemMake(@"第二", MMItemTypeNormal, ^(NSInteger index) {

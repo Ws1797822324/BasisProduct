@@ -34,11 +34,6 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>MJExtension.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>MJRefresh.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -59,6 +54,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>ReactiveObjC.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>SDAutoLayout.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -70,6 +70,21 @@
 			<false/>
 		</dict>
 		<key>TZImagePickerController.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>WMPageController.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>YYModel.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>pop.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -87,7 +102,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>4709AF9D45CFB366F3C58349249C1A93</key>
+		<key>296AE34A13C153B86DB6B3998B2B6E75</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>2AFC774EBAB7122C69E5A6A637534D41</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -97,12 +117,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>8642CC820CE8C5B88C113D7F47AF4BC3</key>
+		<key>7EADF58C7C98F31E726A755F6ED1A1BC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>8A4156D75D350E388E39941A0A8A5433</key>
+		<key>7F5A83AC1470A8DCD97D6577499C1A8D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>809E6E88BAA056857AAF5A63408A426B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8642CC820CE8C5B88C113D7F47AF4BC3</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -122,7 +152,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A316B54C67E947D23CECD230FA5BFAEF</key>
+		<key>9F49CA6185A95998F6D006E5B953E9C2</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A4B629A3DC8518A057528551C5127D19</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -132,17 +167,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>AD0F5E9C84EB82FFDF493C66A3A365AD</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>AF73A930E3ED3839FDC70D387E793AD5</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>BC730AEEC63209209D4BF5D7BF4B8BF4</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>EB8070896AFD1F615C344C3D26871BDB</key>
 		<dict>
 			<key>primary</key>
 			<true/>

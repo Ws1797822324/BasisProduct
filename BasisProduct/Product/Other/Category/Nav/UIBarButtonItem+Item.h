@@ -11,8 +11,6 @@
 @interface UIBarButtonItem (Item)
 
 
-+ (UIBarButtonItem *)barButtonItemWithImage:(UIImage *)image highImage:(UIImage *)highImage target:(id)target action:(SEL)action forControlEvents:(UIControlEvents)controlEvents titleName:(NSString *)name;
-
 +(UIBarButtonItem *)leftbarButtonItemWithNorImage:(UIImage *)norImage highImage:(UIImage *)highImage target:(id)target action:(SEL)action withTitle:(NSString *)title;
 
 

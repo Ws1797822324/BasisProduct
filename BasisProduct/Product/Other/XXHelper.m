@@ -28,7 +28,13 @@ static XXHelper *sectionInstance;
 
 //原始尺寸  ,放大图片方法
 static CGRect oldframe;
+@interface XXHelper ()
 
+
+
+
+
+@end
 @implementation XXHelper
 
 
@@ -100,7 +106,6 @@ static CGRect oldframe;
     }
     return  NO;
 }
-
 #pragma mark - 判断输入的是否是中文
 
 /**
@@ -109,15 +114,15 @@ static CGRect oldframe;
 +(BOOL) checkInputChinese:(NSString *)text {
     
     NSString *strRegex = @"^[\u4e00-\u9fa5]+$";
-    
+
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF MATCHES %@",strRegex];
     if ([predicate evaluateWithObject:text]) {
-        
+
         return true;
     }else{
         return false;
     }
-    
+
 }
 
 
@@ -139,12 +144,11 @@ static CGRect oldframe;
         return YES;
         
     } else {
-        
-        return NO;
+    
+    return NO;
     }
     
 }
-
 #pragma mark - 拨打电话
 + (void)makePhoneCallWithTelNumber:(NSString *)tel
 {
@@ -347,9 +351,9 @@ static CGRect oldframe;
  */
 + (void)setCornerRadiuswithView:(UIView *)view targetAngles:(UIRectCorner) targetAngles cornerRadii:(CGSize) size {
     
-
+    
     UIBezierPath *maskPath = [UIBezierPath bezierPathWithRoundedRect:view.bounds byRoundingCorners:targetAngles cornerRadii:size];
-
+    
     CAShapeLayer *maskLayer = [[CAShapeLayer alloc] init];
     maskLayer.frame = view.bounds;
     maskLayer.path = maskPath.CGPath;
@@ -517,14 +521,13 @@ static void addRoundedRectToPath(CGContextRef context, CGRect rect, float ovalWi
     return result;
 }
 
-#pragma mark - 将image 转化成NSData
-
+#pragma mark - 将image 转化成nsdata
 +(NSData *)getImageDataWith:(UIImage *)image
 {
     NSData *data =UIImagePNGRepresentation(image);
     if (data==nil)
     {
-        data =UIImageJPEGRepresentation(image, 0.8);
+        data =UIImageJPEGRepresentation(image, 0.1);
     }
     return data;
 }
@@ -536,7 +539,7 @@ static void addRoundedRectToPath(CGContextRef context, CGRect rect, float ovalWi
     {
         return @"0.00";
     }
-    else if ([text floatValue]<1)
+    else if ([text floatValue]<0.001)
     {
         return [NSString stringWithFormat:@"%@",text];
     }
@@ -812,7 +815,7 @@ static void addRoundedRectToPath(CGContextRef context, CGRect rect, float ovalWi
 
 #pragma mark -  删除多余的cell、 分割线
 
--(void)deleteExtraCellLine: (UITableView *)tableView {
++ (void)deleteExtraCellLine: (UITableView *)tableView {
     UIView *view = [UIView new];
     view.backgroundColor = [UIColor clearColor];
     [tableView setTableFooterView:view];
@@ -823,7 +826,7 @@ static void addRoundedRectToPath(CGContextRef context, CGRect rect, float ovalWi
 #pragma mark -  倒计时按钮 返回重置时间
 
 
-- (void)startWithTime:(NSInteger)timeLine title:(NSString *)title countDownTitle:(NSString *)subTitle mainColor:(UIColor *)mColor countColor:(UIColor *)color disposeButton:(UIButton *)button{
++ (void)startWithTime:(NSInteger)timeLine title:(NSString *)title countDownTitle:(NSString *)subTitle mainColor:(UIColor *)mColor countColor:(UIColor *)color disposeButton:(UIButton *)button{
     
     
     //倒计时时间
@@ -859,7 +862,7 @@ static void addRoundedRectToPath(CGContextRef context, CGRect rect, float ovalWi
 
 #pragma mark -  倒计时按钮 返回页面不重置时间
 
-- (void)startSeniorWithTime:(NSInteger)timeLine title:(NSString *)title countDownTitle:(NSString *)subTitle mainColor:(UIColor *)mColor countColor:(UIColor *)color disposeButton:(UIButton *)button {
++ (void)startSeniorWithTime:(NSInteger)timeLine title:(NSString *)title countDownTitle:(NSString *)subTitle mainColor:(UIColor *)mColor countColor:(UIColor *)color disposeButton:(UIButton *)button {
     
     int __block time = (int)timeLine;
     
@@ -896,7 +899,7 @@ static void addRoundedRectToPath(CGContextRef context, CGRect rect, float ovalWi
 
 #pragma mark -   图片转成base64编码
 
--(NSString *) imageConvertFormatBase64imageName:(NSString *)imageName {
++(NSString *) imageConvertFormatBase64imageName:(NSString *)imageName {
     UIImage *originImage = [UIImage imageNamed:imageName];
     
     NSData *data = UIImageJPEGRepresentation(originImage, 1.0f);
@@ -907,7 +910,7 @@ static void addRoundedRectToPath(CGContextRef context, CGRect rect, float ovalWi
 
 #pragma mark - 将数组里的字符串排序
 
-- (NSMutableArray *)Transformation:(NSArray *)dataArray isGrouping:(BOOL)grouping
++ (NSMutableArray *)Transformation:(NSArray *)dataArray isGrouping:(BOOL)grouping
 {
     NSMutableArray *TwoArr = [NSMutableArray array];
     for (NSString *TransformationStr in dataArray)
@@ -951,7 +954,7 @@ static void addRoundedRectToPath(CGContextRef context, CGRect rect, float ovalWi
                 [arr addObject:dataArray[i]];
             }
         }
-        [dic setObject:arr forKey:@"info"];  
+        [dic setObject:arr forKey:@"info"];
         for (id obj in arr) {
             [allNewDataArr addObject:obj];
         }
@@ -1213,7 +1216,8 @@ static void addRoundedRectToPath(CGContextRef context, CGRect rect, float ovalWi
             break;
     }
     
-
+    // Now we draw the underlying CGImage into a new context, applying the transform
+    // calculated above.
     CGContextRef ctx = CGBitmapContextCreate(NULL, aImage.size.width, aImage.size.height,
                                              CGImageGetBitsPerComponent(aImage.CGImage), 0,
                                              CGImageGetColorSpace(aImage.CGImage),
@@ -1240,10 +1244,9 @@ static void addRoundedRectToPath(CGContextRef context, CGRect rect, float ovalWi
     CGImageRelease(cgimg);
     return img;
 }
+#pragma mark -计算label 所占的高度
 
-#pragma mark -计算文字的CGSize
-
-+ (CGSize)calculteTheSizeWithContent:(NSString *)content width:(float)width font:(float )font {
++ (CGFloat)calculteTheSizeWithContent:(NSString *)content width:(float)width font:(float )font {
     
     NSDictionary *attribute = @{NSFontAttributeName : [UIFont systemFontOfSize:font]};
     
@@ -1252,8 +1255,9 @@ static void addRoundedRectToPath(CGContextRef context, CGRect rect, float ovalWi
                    NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading
                                      attributes:attribute
                                         context:nil].size;
-    return size;
+    return size.height;
 }
+
 
 
 @end

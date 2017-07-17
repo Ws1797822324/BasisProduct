@@ -12,9 +12,9 @@
 // Include any system framework and library headers here that should be included in all compilation units.
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
 
-/// 头文件  导入的头文件
+// 头文件  导入的头文件
 #import "Header.h"
-/// 网络请求 API
+// 网络请求 API
 #import "API.pch"
 
 #pragma mark -  宏定义
@@ -22,25 +22,29 @@
 ///颜色
 #define kRGBColor(r, g, b, a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:a]
 
+#define kAllRGB kRGBColor (250, 103, 15, 1)
+
+
 #define kHexColor(colorStr) [UIColor colorWithHexString:colorStr]
 
 #define kRandomColor kRGBColor(arc4random_uniform(255), arc4random_uniform(255), arc4random_uniform(255),1)
 
-/// 快速定义 image
-#define kImageNamed(name)  [UIImage imageNamed:(name)]
-
+/// 归档
 #define kUserDefaults [NSUserDefaults standardUserDefaults]
-/// 屏幕
-#define kScreenWidth [UIScreen mainScreen].bounds.size.width
-#define kScreenHeight [UIScreen mainScreen].bounds.size.height
+
 /// 通知
 #define kNoteCenter [NSNotificationCenter defaultCenter]
 
+
+/// 屏幕
+#define kScreenWidth [UIScreen mainScreen].bounds.size.width
+#define kScreenHeight [UIScreen mainScreen].bounds.size.height
+
+
 /// 弱引用
 #define kWeakSelf __weak typeof(self) weakSelf = self
-
-/// 判断字符串是否为空
-#define IsStrEmpty(_ref)    (((_ref) == nil) || ([(_ref) isEqual:[NSNull null]]) ||([(_ref)isEqualToString:@""]))
+/// 快速定义 image
+#define kImageNamed(name)  [UIImage imageNamed:(name)]
 
 /// 添加圆角
 #define kViewRadius(View, Radius)\
