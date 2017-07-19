@@ -57,6 +57,8 @@
 
 #import <YYModel.h>
 
+#import <UITableView+FDTemplateLayoutCell.h>
+
 #import <ReactiveObjC/ReactiveObjC.h>
 
 #import <SDWebImage/UIImageView+WebCache.h>
@@ -78,8 +80,6 @@
 #import "TZImagePickerController.h"
 
 #import <JQFMDB/JQFMDB.h>
-
-#import <SDAutoLayout.h>
 
 #import <pop/POP.h>
 

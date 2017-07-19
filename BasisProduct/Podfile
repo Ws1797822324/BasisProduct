@@ -5,32 +5,31 @@ target 'Product' do
   
 pod 'AFNetworking', '~> 3.1.0'
 
-pod 'MBProgressHUD'
+pod 'MBProgressHUD', '~> 1.0.0'
 
 pod 'SDWebImage','~> 4.0.0'
 
-pod 'IQKeyboardManager'
+pod 'IQKeyboardManager','~> 4.0.9'
 
-pod 'MJRefresh'
+pod 'MJRefresh','~> 3.1.12'
 
-pod 'YYModel'
+pod 'YYModel','~> 1.0.4'
 
-pod 'KLCPopup'
+pod 'KLCPopup','~> 1.0'
 
-pod 'TZImagePickerController'
+pod 'TZImagePickerController','~> 1.7.9'
 
-pod 'JQFMDB'
+pod 'JQFMDB','~> 1.1.4'
 
-pod 'MMPopupView'
+pod 'MMPopupView','~> 1.7.2'
 
-pod 'SDAutoLayout'
-
-pod 'WMPageController'
+pod 'WMPageController','~> 2.2.1'
 
 pod 'pop', '~> 1.0.9'
 
 pod 'ReactiveObjC', '~> 2.1.2'
 
+pod 'UITableView+FDTemplateLayoutCell', '~> 1.5.beta'
 
 #---------------------------------------#
 

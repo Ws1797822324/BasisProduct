@@ -28,29 +28,29 @@ PODS:
     - Masonry
   - pop (1.0.9)
   - ReactiveObjC (2.1.2)
-  - SDAutoLayout (2.1.7)
   - SDWebImage (4.0.0):
     - SDWebImage/Core (= 4.0.0)
   - SDWebImage/Core (4.0.0)
   - TZImagePickerController (1.7.9)
+  - UITableView+FDTemplateLayoutCell (1.5.beta)
   - WMPageController (2.2.1)
   - YYModel (1.0.4)
 
 DEPENDENCIES:
   - AFNetworking (~> 3.1.0)
-  - IQKeyboardManager
-  - JQFMDB
-  - KLCPopup
-  - MBProgressHUD
-  - MJRefresh
-  - MMPopupView
+  - IQKeyboardManager (~> 4.0.9)
+  - JQFMDB (~> 1.1.4)
+  - KLCPopup (~> 1.0)
+  - MBProgressHUD (~> 1.0.0)
+  - MJRefresh (~> 3.1.12)
+  - MMPopupView (~> 1.7.2)
   - pop (~> 1.0.9)
   - ReactiveObjC (~> 2.1.2)
-  - SDAutoLayout
-  - SDWebImage
-  - TZImagePickerController
-  - WMPageController
-  - YYModel
+  - SDWebImage (~> 4.0.0)
+  - TZImagePickerController (~> 1.7.9)
+  - UITableView+FDTemplateLayoutCell (~> 1.5.beta)
+  - WMPageController (~> 2.2.1)
+  - YYModel (~> 1.0.4)
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
@@ -64,12 +64,12 @@ SPEC CHECKSUMS:
   MMPopupView: fe1dd010824029dfb632fdf1a531db5dd5386020
   pop: f667631a5108a2e60d9e8797c9b32ddaf2080bce
   ReactiveObjC: 7b6782ae39f9ac0f57205c3b0c0b69b9dd7048c0
-  SDAutoLayout: e9b36d04b8c0b504762a04d76fbbe5108944297a
   SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
   TZImagePickerController: 0a8ff228d287ebdd7d485e8c42a2a932894f1fba
+  UITableView+FDTemplateLayoutCell: 02b508ab1cb4cea16a8c17ac83d2cd1fd72124f9
   WMPageController: 181bcc9b1fb7c9c3466bff66012552953a547d28
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
 
-PODFILE CHECKSUM: a489664fe5c50a2976f9a27b5742a6cbf9e38585
+PODFILE CHECKSUM: 50453af774f689d42af6c5daa92c9ad42caca05b
 
 COCOAPODS: 1.2.0

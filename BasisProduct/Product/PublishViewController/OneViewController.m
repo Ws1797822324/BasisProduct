@@ -111,11 +111,12 @@
     
     [self.view addSubview:_cancelButton];
     
-    _cancelButton.sd_layout
-    .bottomSpaceToView(self.view, 15)
-    .centerXEqualToView(self.view)
-    .widthIs(40)
-    .heightIs(40);
+    [_cancelButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.bottom.equalTo(self.view).offset(-15);
+        make.centerX.equalTo(self.view.mas_centerX);
+        make.width.height.offset(40);
+    }];
+
 }
 
 - (void)cancelAction {

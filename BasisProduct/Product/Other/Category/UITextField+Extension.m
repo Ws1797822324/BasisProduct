@@ -21,7 +21,7 @@
     if ([string rangeOfCharacterFromSet:[characterSet invertedSet]].location != NSNotFound) {
         return NO;
     }
-    NSLog(@"%@",NSStringFromRange(range));
+
     text = [text stringByReplacingCharactersInRange:range withString:string];
     text = [text stringByReplacingOccurrencesOfString:@" " withString:@""];
     
@@ -52,7 +52,14 @@
     
     
     if (newString.length >= 14) {
+
         return NO;
+    }
+    if (newString.length == 13) {
+        [kNoteCenter postNotificationName:@"phoneinputcomplete" object:nil];
+    } else {
+        [kNoteCenter postNotificationName:@"phoneinput" object:nil];
+
     }
     
     [self setText:newString];

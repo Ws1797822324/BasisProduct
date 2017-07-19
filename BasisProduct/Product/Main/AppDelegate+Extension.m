@@ -53,6 +53,15 @@
 }
 #pragma mark - 设置主控制器
 -(void)setRootControllor {
+
+    NSLog(@"phone model %@",[XXHelper getUserPhoneModelNumber]);
+        NSDictionary *currentVersion = [NSBundle mainBundle].infoDictionary;
+    
+    
+
+    /// 存储版本号
+    [kUserDefaults setObject: currentVersion[@"CFBundleShortVersionString"] forKey:@"productVersion"];
+    
     
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     
@@ -60,7 +69,7 @@
     
     LoginViewController * loginVC = [LoginViewController viewControllerFromNib];
     
-    self.window.rootViewController = loginVC;
+    self.window.rootViewController = tabBarVc;
     
     [self.window makeKeyAndVisible];
 

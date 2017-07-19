@@ -8,35 +8,37 @@
 
 #import "SettingVC.h"
 
+#import "SDImageCache.h"
+
 @interface SettingVC ()
 
-@property (nonatomic ,copy) NSArray *nameArr;
-/// 缓存
-@property (nonatomic ,copy) NSString *cacheSize;
+@property (nonatomic, copy) NSArray *nameArr;
 
 
 @end
 
 @implementation SettingVC
 
--(void)viewWillAppear:(BOOL)animated {
+- (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     [self.navigationController.navigationBar resetLine];
-   
-    
 }
 - (void)viewDidLoad {
-    
+
     [super viewDidLoad];
 
-    kViewRadius(self.singOut,4);
-    
+    kViewRadius(self.singOut, 4);
+
     self.title = @"设置";
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     self.tableView.bounces = NO;
-    _nameArr = @[@"修改个人资料",@"更换手机号码",@"修改支付密码",@"修改登录密码",@"人脸识别",@"声纹识别",@"清除缓存",@"语音设置",@"意见反馈",@"关于多吃菜"];
-    [_tableView registerNib:[UINib nibWithNibName:NSStringFromClass([SettingCell class]) bundle:nil] forCellReuseIdentifier:@"SettingCellID"];
+    _nameArr = @[
+        @"修改个人资料", @"更换手机号码", @"修改支付密码", @"修改登录密码", @"人脸识别",
+        @"声纹识别", @"清除缓存", @"语音设置", @"意见反馈", @"关于多吃菜"
+    ];
+    [_tableView registerNib:[UINib nibWithNibName:NSStringFromClass([SettingCell class]) bundle:nil]
+        forCellReuseIdentifier:@"SettingCellID"];
     [XXHelper deleteExtraCellLine:_tableView];
     // Do any additional setup after loading the view from its nib.
 }
@@ -48,17 +50,17 @@
 
 #pragma mark - UITableViewDataSource
 
--(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return _nameArr.count;
 }
 
--(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+
     return 1;
 }
 
--(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+
     SettingCell *cell = [tableView dequeueReusableCellWithIdentifier:@"SettingCellID" forIndexPath:indexPath];
     cell.nameLabel.text = _nameArr[indexPath.row];
     cell.switchView.tag = indexPath.row;
@@ -70,104 +72,70 @@
         cell.switchView.hidden = YES;
         cell.rightImg.hidden = NO;
         cell.cacheLabel.hidden = YES;
-
-
     }
     if (indexPath.row == 6) {
         cell.cacheLabel.hidden = NO;
         cell.switchView.hidden = YES;
         cell.rightImg.hidden = YES;
-        [self readCacheSize];
-        cell.cacheLabel.text =  [NSString stringWithFormat:@"%@ M",[XXHelper positiveFormat:_cacheSize]];
+ 
+        NSUInteger intg = [[SDImageCache sharedImageCache] getSize];
+        //
+        NSString * currentVolum = [NSString stringWithFormat:@"%@",[self fileSizeWithInterge:intg]];
         
-        NSLog(@"%@",[XXHelper positiveFormat:_cacheSize]);
+        cell.cacheLabel.text = [NSString stringWithFormat:@"%@", currentVolum];
+
+
     }
-    
+
     return cell;
 }
 
-#pragma mark - UITableViewDelegate 
+#pragma mark - UITableViewDelegate
 
--(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    
+
     if (indexPath.row == 6) {
 
-    NSArray * items = @[MMItemMake(@"确定", MMItemTypeNormal, ^(NSInteger index) {
-        [self clearFile];
+        NSArray *items = @[
+            MMItemMake(@"确定", MMItemTypeNormal,
+                       ^(NSInteger index){
+                           
+                           [[SDImageCache sharedImageCache] clearDiskOnCompletion:^{
+                               [XXProgressHUD showSuccess:@"清除缓存成功"];
+                           }];
+                           
+                       }),
+            MMItemMake(@"取消", MMItemTypeHighlight,
+                       ^(NSInteger index){
 
-    }), MMItemMake(@"取消", MMItemTypeHighlight, ^(NSInteger index) {
-        
-    })];
+                       })
+        ];
 
-    MMAlertView *alertView = [[MMAlertView alloc]initWithTitle:@"清除缓存" detail:@"" items:items];
-    
-    [alertView show];
-    
+        MMAlertView *alertView = [[MMAlertView alloc] initWithTitle:@"清除缓存" detail:@"" items:items];
+
+        [alertView show];
+    }
+}
+#pragma mark - 计算出图片缓存的大小
+- (NSString *)fileSizeWithInterge:(NSInteger)size{
+    // 1k = 1024, 1m = 1024k
+    if (size < 1024) {// 小于1k
+        return [NSString stringWithFormat:@"%ldB",(long)size];
+    }else if (size < 1024 * 1024){// 小于1m
+        CGFloat aFloat = size/1024;
+        return [NSString stringWithFormat:@"%.0fK",aFloat];
+    }else if (size < 1024 * 1024 * 1024){// 小于1G
+        CGFloat aFloat = size/(1024 * 1024);
+        return [NSString stringWithFormat:@"%.1fM",aFloat];
+    }else{
+        CGFloat aFloat = size/(1024*1024*1024);
+        return [NSString stringWithFormat:@"%.1fG",aFloat];
     }
 }
 
-#pragma mark - 计算缓存
--( float )readCacheSize
-{
-    NSString *cachePath = [NSSearchPathForDirectoriesInDomains (NSCachesDirectory , NSUserDomainMask , YES) firstObject];
-//    [cachePath floatValue]< 0.001 ? cachePath = @"0.01" : cachePath;
-    _cacheSize = cachePath;
-    NSLog(@" kkk   %@",cachePath);
 
-    return [ self folderSizeAtPath :cachePath];
-}
-
-- ( float ) folderSizeAtPath:( NSString *) folderPath{
-    
-    NSFileManager * manager = [NSFileManager defaultManager];
-    if (![manager fileExistsAtPath :folderPath]) return 0 ;
-    NSEnumerator *childFilesEnumerator = [[manager subpathsAtPath :folderPath] objectEnumerator];
-    NSString * fileName;
-    long long folderSize = 0 ;
-    while ((fileName = [childFilesEnumerator nextObject]) != nil ){
-        //获取文件全路径
-        NSString * fileAbsolutePath = [folderPath stringByAppendingPathComponent :fileName];
-        folderSize += [ self fileSizeAtPath :fileAbsolutePath];
-    }
-    
-    return folderSize/( 1024.0 * 1024.0);
-    
-}
-// 计算 单个文件的大小
-- ( long long ) fileSizeAtPath:( NSString *) filePath{
-    NSFileManager * manager = [NSFileManager defaultManager];
-    if ([manager fileExistsAtPath :filePath]){
-        return [[manager attributesOfItemAtPath :filePath error : nil] fileSize];
-    }
-    return 0;
-}
-// MARK: ------ 清除缓存 ------
-- (void)clearFile
-{
-    NSString * cachePath = [NSSearchPathForDirectoriesInDomains (NSCachesDirectory , NSUserDomainMask , YES ) firstObject];
-    NSArray * files = [[NSFileManager defaultManager ] subpathsAtPath :cachePath];
-    //NSLog ( @"cachpath = %@" , cachePath);
-    for ( NSString * p in files) {
-        
-        NSError * error = nil ;
-        //获取文件全路径
-        NSString * fileAbsolutePath = [cachePath stringByAppendingPathComponent :p];
-        
-        if ([[NSFileManager defaultManager ] fileExistsAtPath :fileAbsolutePath]) {
-            [[NSFileManager defaultManager ] removeItemAtPath :fileAbsolutePath error :&error];
-        }
-    }
-    
-    //读取缓存大小
-    float cacheSize = [self readCacheSize] *1024;
-    self.cacheSize = [NSString stringWithFormat:@"%.2fKB",cacheSize];
-    NSIndexPath *indexPath=[NSIndexPath indexPathForRow:6 inSection:0];
-    [_tableView reloadRowsAtIndexPaths:[NSArray arrayWithObjects:indexPath,nil] withRowAnimation:UITableViewRowAnimationNone];
-    
-   
-}
 // MARK: ------ 退出登录操作 ------
 - (IBAction)singOutAction:(UIButton *)sender {
     

@@ -40,29 +40,26 @@
     
     _passwordTF.secureTextEntry = YES;
 
-
-
-    [_userNameTF.rac_textSignal subscribeNext:^(NSString * _Nullable x) {
-        
-        if (x.length != 13) {
-            _loginBtn.userInteractionEnabled = NO;
-            [_loginBtn setBackgroundColor:kRGBColor(209, 209, 209, 1)];
-            
-        } else {
-            _loginBtn.userInteractionEnabled = YES;
-            [_loginBtn setBackgroundColor:kAllRGB];
-            
-        }
-    }];
     
+    [[kNoteCenter rac_addObserverForName:@"phoneinputcomplete" object:nil] subscribeNext:^(NSNotification * _Nullable x) {
+        NSLog(@"111  -- %@",x);
+        _loginBtn.userInteractionEnabled = YES;
+        [_loginBtn setBackgroundColor:kAllRGB];
+    }];
+    [[kNoteCenter rac_addObserverForName:@"phoneinput" object:nil] subscribeNext:^(NSNotification * _Nullable x) {
+        _loginBtn.userInteractionEnabled = NO;
+        [_loginBtn setBackgroundColor:kRGBColor(209, 209, 209, 1)];
+
+    }];
     _loginBtn.userInteractionEnabled = NO;
     _userNameTF.delegate = self;
     [_loginBtn setBackgroundColor:kRGBColor(209, 209, 209, 1)];
-    
+   
 
 }
 #pragma mark - UITextFieldDelegate
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
+
     
     [textField phoneTFValueChangeValueString:string shouldChangeCharactersInRange:range];
 
@@ -100,6 +97,9 @@
 */
 #pragma mark - 登录按钮点击方法
 - (IBAction)loginBtnAction:(UIButton *)sender {
+    
+    _userNameTF.text= [_userNameTF.text stringByReplacingOccurrencesOfString:@" " withString:@""];
+    NSLog(@"%@",_userNameTF.text);
     if ([_userNameTF.text length] != 11) {
         
         [XXProgressHUD showMessage:@"请正确输入手机号"];
