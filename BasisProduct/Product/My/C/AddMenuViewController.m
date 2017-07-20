@@ -42,7 +42,7 @@ static NSString *sectionHeaderID = @"sectionHeader";
     
     /// 关闭 侧滑返回功能
     self.fd_interactivePopDisabled = YES;
-    [self.navigationController.navigationBar resetLine];
+    [self.navigationController.navigationBar lt_reset];
    
 
     

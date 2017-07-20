@@ -32,7 +32,7 @@
 
 #import "UINavigationController+FDFullscreenPopGesture.h"
 
-#import "UINavigationBar+ChangeColor.h"
+#import "UINavigationBar+Awesome.h"
 
 #import "UIColor+ColorChange.h"
 

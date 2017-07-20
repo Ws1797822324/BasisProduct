@@ -32,7 +32,7 @@
     [super viewWillAppear:animated];
     
     /// 恢复导航栏下那条线
-    [self.navigationController.navigationBar resetLine];
+    [self.navigationController.navigationBar lt_reset];
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

@@ -21,24 +21,24 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    [self.navigationController.navigationBar resetLine];
+    [self.navigationController.navigationBar lt_reset];
 }
 - (void)viewDidLoad {
-
+    
     [super viewDidLoad];
-
+    
     kViewRadius(self.singOut, 4);
-
+    
     self.title = @"设置";
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     self.tableView.bounces = NO;
     _nameArr = @[
-        @"修改个人资料", @"更换手机号码", @"修改支付密码", @"修改登录密码", @"人脸识别",
-        @"声纹识别", @"清除缓存", @"语音设置", @"意见反馈", @"关于多吃菜"
-    ];
+                 @"修改个人资料", @"更换手机号码", @"修改支付密码", @"修改登录密码", @"人脸识别",
+                 @"声纹识别", @"清除缓存", @"语音设置", @"意见反馈", @"关于多吃菜"
+                 ];
     [_tableView registerNib:[UINib nibWithNibName:NSStringFromClass([SettingCell class]) bundle:nil]
-        forCellReuseIdentifier:@"SettingCellID"];
+     forCellReuseIdentifier:@"SettingCellID"];
     [XXHelper deleteExtraCellLine:_tableView];
     // Do any additional setup after loading the view from its nib.
 }
@@ -55,12 +55,12 @@
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-
+    
     return 1;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-
+    
     SettingCell *cell = [tableView dequeueReusableCellWithIdentifier:@"SettingCellID" forIndexPath:indexPath];
     cell.nameLabel.text = _nameArr[indexPath.row];
     cell.switchView.tag = indexPath.row;
@@ -77,44 +77,49 @@
         cell.cacheLabel.hidden = NO;
         cell.switchView.hidden = YES;
         cell.rightImg.hidden = YES;
- 
+        
         NSUInteger intg = [[SDImageCache sharedImageCache] getSize];
         //
         NSString * currentVolum = [NSString stringWithFormat:@"%@",[self fileSizeWithInterge:intg]];
         
         cell.cacheLabel.text = [NSString stringWithFormat:@"%@", currentVolum];
-
-
+        
+        
     }
-
+    
     return cell;
 }
 
 #pragma mark - UITableViewDelegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-
+    
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-
+    
     if (indexPath.row == 6) {
-
+        
         NSArray *items = @[
-            MMItemMake(@"确定", MMItemTypeNormal,
-                       ^(NSInteger index){
-                           
-                           [[SDImageCache sharedImageCache] clearDiskOnCompletion:^{
-                               [XXProgressHUD showSuccess:@"清除缓存成功"];
-                           }];
-                           
-                       }),
-            MMItemMake(@"取消", MMItemTypeHighlight,
-                       ^(NSInteger index){
-
-                       })
-        ];
-
+                           MMItemMake(@"确定", MMItemTypeNormal,
+                                      ^(NSInteger index){
+                                          
+                                          [[SDImageCache sharedImageCache] clearDiskOnCompletion:^{
+                                              
+                                              //定时器 2s 后显示提示语
+                                              [[RACScheduler mainThreadScheduler]afterDelay:2.f schedule:^{
+                                                  [XXProgressHUD showSuccess:@"清除缓存成功"];
+                                                  
+                                              }];
+                                          }];
+                                          
+                                      }),
+                           MMItemMake(@"取消", MMItemTypeHighlight,
+                                      ^(NSInteger index){
+                                          
+                                      })
+                           ];
+        
         MMAlertView *alertView = [[MMAlertView alloc] initWithTitle:@"清除缓存" detail:@"" items:items];
-
+        
         [alertView show];
     }
 }

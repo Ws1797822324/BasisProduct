@@ -14,7 +14,7 @@
 
 #import "MyViewController.h"
 
-
+#import "XXTwoViewController.h"
 @interface RootTabBarController () 
 
 @property (nonatomic ,copy) NSMutableArray *itemArr;
@@ -64,8 +64,8 @@
     controller1.tabBarItem.selectedImage = [UIImage imageNamed:@"tabbar_home_selected"];
     NavigationController *NaVC1 = [[NavigationController alloc]initWithRootViewController:controller1];
     
-    UIViewController *controller2 = [[UIViewController alloc] init];
-    controller2.view.backgroundColor = kRandomColor;
+    XXTwoViewController *controller2 = [[XXTwoViewController alloc] init];
+
     controller2.title = @"第二";
     controller2.tabBarItem.image = [UIImage imageNamed:@"tabbar_message_center"];
     controller2.tabBarItem.selectedImage = [UIImage imageNamed:@"tabbar_message_center_selected"];
