@@ -24,6 +24,8 @@
 
 #define kAllRGB kRGBColor (250, 103, 15, 1)
 
+#define kFont(n) [UIFont systemFontOfSize:(n)]
+
 
 #define kHexColor(colorStr) [UIColor colorWithHexString:colorStr]
 

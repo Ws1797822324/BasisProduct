@@ -136,6 +136,37 @@
 
     }
 
+//#pragma mark - 没有特殊的 item  用下面的布局
+//
+//- (void)layoutSubviews {
+//    
+//    [super layoutSubviews];
+//    // 标记按钮是否已经添加过监听器,避免循环添加事件
+//    static BOOL added = NO;
+//    
+//    CGFloat w = self.frame.size.width;
+//    CGFloat h = self.frame.size.height;
+//    
+//    int count = (int) self.tabBarItems.count;
+//    CGFloat itemY = 0;
+//    CGFloat itemW = w / self.subviews.count;
+//    CGFloat itemH = h;
+//    
+//    for (int index = 0; index < count; index++) {
+//        
+//        XXTabBarItem *tabBarItem = self.tabBarItems[index];
+//        tabBarItem.tag = index;
+//        CGFloat itemX = index * itemW;
+//        tabBarItem.frame = CGRectMake(itemX, itemY, itemW, itemH);
+//        if (added == NO) {
+//            // 监听按钮点击
+//            [tabBarItem addTarget:self action:@selector(buttonClick) forControlEvents:UIControlEventTouchUpInside];
+//        }
+//    }
+//    added = YES;
+//    
+//}
+//
 - (UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event {
     
    
