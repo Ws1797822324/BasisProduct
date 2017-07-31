@@ -179,7 +179,7 @@ static NSString *const cellId = @"myCollectionCellID";
                   cellForItemAtIndexPath:(NSIndexPath *)indexPath {
 
     MyCollectionCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cellId forIndexPath:indexPath];
-
+    kViewRadius(cell, 4);
     if (indexPath.row == _menuArray.count) {
         cell.imgView.image = kImageNamed(@"addMenu");
         cell.nameLabel.text = @"添加功能";

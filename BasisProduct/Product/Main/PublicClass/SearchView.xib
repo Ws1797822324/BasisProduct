@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="SearchView">
+            <rect key="frame" x="0.0" y="0.0" width="401" height="50"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NeG-T5-P91">
+                    <rect key="frame" x="198" y="0.0" width="5" height="50"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="5" id="DVe-4V-20l"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LVQ-qi-71y">
+                    <rect key="frame" x="58" y="8" width="285" height="34"/>
+                    <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="1" colorSpace="calibratedRGB"/>
+                    <connections>
+                        <action selector="searchBtnAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="wIG-eu-S7N"/>
+                    </connections>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="search_icon" translatesAutoresizingMaskIntoConstraints="NO" id="Rps-b4-l8V">
+                    <rect key="frame" x="177" y="15" width="21" height="21"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="搜索" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2yw-vp-DfA">
+                    <rect key="frame" x="203" y="16" width="31" height="18"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oFO-nR-odr">
+                    <rect key="frame" x="18" y="14" width="22" height="22"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="22" id="dAx-Z7-KKI"/>
+                        <constraint firstAttribute="width" constant="22" id="s4N-EO-cpl"/>
+                    </constraints>
+                    <state key="normal" backgroundImage="scan_icon"/>
+                    <connections>
+                        <action selector="scanBtnAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="7N1-P4-vhn"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p5e-J7-YHW">
+                    <rect key="frame" x="361" y="14" width="22" height="22"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="22" id="1sW-tc-JX5"/>
+                        <constraint firstAttribute="height" constant="22" id="I0i-K6-tCr"/>
+                    </constraints>
+                    <state key="normal" backgroundImage="voice_icon"/>
+                    <connections>
+                        <action selector="voiceBtnAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="Rjw-jp-V2q"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="oFO-nR-odr" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="14" id="292-ey-0l9"/>
+                <constraint firstAttribute="trailing" secondItem="p5e-J7-YHW" secondAttribute="trailing" constant="18" id="B7w-OZ-aNv"/>
+                <constraint firstItem="2yw-vp-DfA" firstAttribute="leading" secondItem="NeG-T5-P91" secondAttribute="trailing" id="Hbb-p6-Fif"/>
+                <constraint firstItem="Rps-b4-l8V" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="MBY-dD-Wqh"/>
+                <constraint firstItem="NeG-T5-P91" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="OUV-U6-t7p"/>
+                <constraint firstAttribute="bottom" secondItem="LVQ-qi-71y" secondAttribute="bottom" constant="8" id="Xez-JL-KX6"/>
+                <constraint firstItem="NeG-T5-P91" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="b1X-Td-m9a"/>
+                <constraint firstItem="p5e-J7-YHW" firstAttribute="leading" secondItem="LVQ-qi-71y" secondAttribute="trailing" constant="18" id="eHG-GW-d7g"/>
+                <constraint firstItem="oFO-nR-odr" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="18" id="hII-6r-9Zx"/>
+                <constraint firstItem="2yw-vp-DfA" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="hTv-hd-gXz"/>
+                <constraint firstItem="LVQ-qi-71y" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="kIA-OT-sxR"/>
+                <constraint firstItem="p5e-J7-YHW" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="lcE-e0-mHT"/>
+                <constraint firstAttribute="bottom" secondItem="NeG-T5-P91" secondAttribute="bottom" id="pVa-T9-hSJ"/>
+                <constraint firstItem="oFO-nR-odr" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="rgr-X9-CMa"/>
+                <constraint firstItem="NeG-T5-P91" firstAttribute="leading" secondItem="Rps-b4-l8V" secondAttribute="trailing" id="ugn-9e-zh9"/>
+                <constraint firstItem="LVQ-qi-71y" firstAttribute="leading" secondItem="oFO-nR-odr" secondAttribute="trailing" constant="18" id="vqw-tj-zbL"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="scanButton" destination="oFO-nR-odr" id="oXD-iI-Fwc"/>
+                <outlet property="searchButton" destination="LVQ-qi-71y" id="Vur-Bh-rp3"/>
+            </connections>
+            <point key="canvasLocation" x="17.5" y="-435"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="scan_icon" width="21" height="21"/>
+        <image name="search_icon" width="21" height="21"/>
+        <image name="voice_icon" width="21" height="21"/>
+    </resources>
+</document>

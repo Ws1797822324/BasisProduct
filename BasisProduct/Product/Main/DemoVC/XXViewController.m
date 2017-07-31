@@ -10,6 +10,7 @@
 #import "MMPopupViewDemoVC.h"
 #import "XXPaymentLoadingHUD.h"
 #import "XXPaymentSuccessHUD.h"
+#import "ShoppingOrderVC.h"
 
 @interface XXViewController () <UIImagePickerControllerDelegate,TZImagePickerControllerDelegate,UIAlertViewDelegate,UIActionSheetDelegate,UINavigationControllerDelegate> {
 
@@ -65,32 +66,23 @@
     
 
     
-//    [XXProgressHUD showSuccess:@"这是个测试 VC"];
+
+    self.navigationItem.title = @"首页";
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    // 监听tabbar点击的通知
-    [kNoteCenter addObserver:self selector:@selector(tabBarSelect) name:@"XXTabBarDidSelectNotification" object:nil];
+
+    [self.navigationController.tabBarItem setBadgeValue:@"3"];
     
 }
 -(void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     // 隐藏导航栏下那条线
-    [self.navigationController.navigationBar hiddenLine];
-    self.navigationController.navigationBar.barTintColor = [UIColor yellowColor];
+//    [self.navigationController.navigationBar hiddenLine];
+//    self.navigationController.navigationBar.barTintColor = [UIColor whiteColor];
 
 }
-/**
- *  点击tabBar
- */
-- (void)tabBarSelect
-{
 
-    if ( self.view.isShowingOnKeyWindow) {
-        
-        NSLog(@"你点击了当前的 tabBarItem");
-    }
-    
-}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -178,6 +170,8 @@
 }
 - (IBAction)cellAction:(UIButton *)sender {
 
+    ShoppingOrderVC *shoppingOrder = [ShoppingOrderVC new];
+    [self.navigationController pushViewController:shoppingOrder animated:YES];
     
 }
 

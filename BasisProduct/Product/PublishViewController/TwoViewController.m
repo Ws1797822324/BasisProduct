@@ -77,29 +77,13 @@
         int col = i % maxCols;
         CGFloat buttonX = buttonStartX + col * (xMargin + buttonW);
         CGFloat buttonEndY = buttonStartY + row * buttonH;
-        CGFloat buttonBeginY = buttonEndY + kScreenHeight;
+
         
         button.frame = CGRectMake(buttonX, buttonEndY, buttonW, buttonH);
         
         self.view.userInteractionEnabled = YES;
         
-        
-        // 按钮动画
-//        POPSpringAnimation *anim = [POPSpringAnimation animationWithPropertyNamed:kPOPViewFrame];
-//        
-//        
-//        anim.fromValue = [NSValue valueWithCGRect:CGRectMake(buttonX, buttonBeginY, buttonW, buttonH)];
-//        
-//        anim.toValue = [NSValue valueWithCGRect:CGRectMake(buttonX, buttonEndY, buttonW, buttonH)];
-//        
-//        
-//        anim.springBounciness = 4;
-//        
-//        anim.springSpeed = 12;
-//        
-//        // 开始时间 不同
-//        anim.beginTime = CACurrentMediaTime() + 0.05 * i;
-//        [button pop_addAnimation:anim forKey:nil];
+       
     }
     
     
@@ -113,7 +97,7 @@
 
     
     [_cancelButton mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.bottom.equalTo(self.view).offset(15);
+        make.bottom.equalTo(self.view).offset(-15);
         make.centerX.equalTo(self.view.mas_centerX);
         make.width.height.offset(40);
     }];

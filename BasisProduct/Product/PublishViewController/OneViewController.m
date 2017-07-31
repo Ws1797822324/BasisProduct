@@ -94,12 +94,12 @@
         anim.toValue = [NSValue valueWithCGRect:CGRectMake(buttonX, buttonEndY, buttonW, buttonH)];
 
         
-        anim.springBounciness = 4;
+        anim.springBounciness = 2;
         
-        anim.springSpeed = 12;
+        anim.springSpeed = 5;
         
         // 开始时间 不同
-        anim.beginTime = CACurrentMediaTime() + 0.05 * i;
+        anim.beginTime = CACurrentMediaTime() + 0.02 * i;
         [button pop_addAnimation:anim forKey:nil];
     }
  

@@ -1,35 +1,43 @@
 # Uncomment the next line to define a global platform for your project
-# platform :ios, '9.0'
+
+platform :ios, '8.0'
 
 target 'Product' do
   
-pod 'AFNetworking', '~> 3.1.0'
+  pod 'AFNetworking', '~> 3.1.0' # 网络请求
 
-pod 'MBProgressHUD', '~> 1.0.0'
+pod 'MBProgressHUD', '~> 1.0.0' # 提示
 
-pod 'SDWebImage','~> 4.0.0'
+pod 'SDWebImage','~> 4.0.0' #图片下载
 
-pod 'IQKeyboardManager','~> 4.0.9'
+pod 'IQKeyboardManager','~> 4.0.9' #键盘
 
-pod 'MJRefresh','~> 3.1.12'
+pod 'MJRefresh','~> 3.1.12' # 刷新控件
 
-pod 'YYModel','~> 1.0.4'
+pod 'YYModel','~> 1.0.4' # Dic 转 model
 
-pod 'KLCPopup','~> 1.0'
+pod 'KLCPopup','~> 1.0' #滑动动画
 
-pod 'TZImagePickerController','~> 1.7.9'
+pod 'TZImagePickerController','~> 1.7.9'  # 选择照片
 
-pod 'JQFMDB','~> 1.1.4'
+pod 'JQFMDB','~> 1.1.6' #封装的 FMDB
 
-pod 'MMPopupView','~> 1.7.2'
+pod 'MMPopupView','~> 1.7.2'  # 警示
 
-pod 'WMPageController','~> 2.2.1'
+pod 'WMPageController','~> 2.2.1' #左右侧滑换 Controller
 
-pod 'pop', '~> 1.0.9'
+pod 'pop', '~> 1.0.9' # 动画
 
 pod 'ReactiveObjC', '~> 2.1.2'
 
 pod 'UITableView+FDTemplateLayoutCell', '~> 1.5.beta'
+
+pod 'PYSearch', '~> 0.7.5'  # 搜索框
+
+pod 'CYLTabBarController', '~> 1.13.1'
+
+pod 'PYPhotoBrowser', '~> 1.5.1'  # 图片预览
+
 
 #---------------------------------------#
 
@@ -39,6 +47,5 @@ pod 'UITableView+FDTemplateLayoutCell', '~> 1.5.beta'
 #pod 'JHChart', '~> 1.1.0'
 
 #搜索页面
-# pod 'PYSearch', '~> 0.7.5'
 
 end

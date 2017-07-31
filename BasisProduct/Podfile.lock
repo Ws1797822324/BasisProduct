@@ -14,11 +14,14 @@ PODS:
   - AFNetworking/Serialization (3.1.0)
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
-  - FMDB (2.6.2):
-    - FMDB/standard (= 2.6.2)
-  - FMDB/standard (2.6.2)
-  - IQKeyboardManager (4.0.9)
-  - JQFMDB (1.1.4):
+  - CYLTabBarController (1.13.1)
+  - DACircularProgress (2.3.1)
+  - FLAnimatedImage (1.0.12)
+  - FMDB (2.7.2):
+    - FMDB/standard (= 2.7.2)
+  - FMDB/standard (2.7.2)
+  - IQKeyboardManager (4.0.10)
+  - JQFMDB (1.1.6):
     - FMDB
   - KLCPopup (1.0)
   - Masonry (1.0.2)
@@ -26,25 +29,36 @@ PODS:
   - MJRefresh (3.1.12)
   - MMPopupView (1.7.2):
     - Masonry
-  - pop (1.0.9)
+  - pop (1.0.10)
+  - PYPhotoBrowser (1.5.1):
+    - DACircularProgress
+    - MBProgressHUD
+    - SDWebImage/GIF (~> 4.0.0)
+  - PYSearch (0.7.6)
   - ReactiveObjC (2.1.2)
   - SDWebImage (4.0.0):
     - SDWebImage/Core (= 4.0.0)
   - SDWebImage/Core (4.0.0)
+  - SDWebImage/GIF (4.0.0):
+    - FLAnimatedImage (~> 1.0)
+    - SDWebImage/Core
   - TZImagePickerController (1.7.9)
-  - UITableView+FDTemplateLayoutCell (1.5.beta)
+  - UITableView+FDTemplateLayoutCell (1.6)
   - WMPageController (2.2.1)
   - YYModel (1.0.4)
 
 DEPENDENCIES:
   - AFNetworking (~> 3.1.0)
+  - CYLTabBarController (~> 1.13.1)
   - IQKeyboardManager (~> 4.0.9)
-  - JQFMDB (~> 1.1.4)
+  - JQFMDB (~> 1.1.6)
   - KLCPopup (~> 1.0)
   - MBProgressHUD (~> 1.0.0)
   - MJRefresh (~> 3.1.12)
   - MMPopupView (~> 1.7.2)
   - pop (~> 1.0.9)
+  - PYPhotoBrowser (~> 1.5.1)
+  - PYSearch (~> 0.7.5)
   - ReactiveObjC (~> 2.1.2)
   - SDWebImage (~> 4.0.0)
   - TZImagePickerController (~> 1.7.9)
@@ -54,22 +68,27 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
-  FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
-  IQKeyboardManager: 322c7405df3eb5f7e50dede32ea937bf3d4364e0
-  JQFMDB: dd62d2cafd075e6c9f952d0caaeffd6c18c8b16c
+  CYLTabBarController: 97f6b486f9e6c613d69e9c111cc9c2c5db7000ce
+  DACircularProgress: 4dd437c0fc3da5161cb289e07ac449493d41db71
+  FLAnimatedImage: 4a0b56255d9b05f18b6dd7ee06871be5d3b89e31
+  FMDB: 6198a90e7b6900cfc046e6bc0ef6ebb7be9236aa
+  IQKeyboardManager: 593ee99b88381f4b9ccb22bd680f22606351bd41
+  JQFMDB: 39ab0d6d7c26fd30e51c4dd92edcb27506a34c3a
   KLCPopup: 76c5a19227977f1e53d85236f9ef42257c168d98
   Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
   MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
   MMPopupView: fe1dd010824029dfb632fdf1a531db5dd5386020
-  pop: f667631a5108a2e60d9e8797c9b32ddaf2080bce
+  pop: 82ca6b068ce9278fd350fd9dd09482a0ce9492e6
+  PYPhotoBrowser: 5f741373409c232137f12694d1bb2bf1a85da70b
+  PYSearch: a285b588e766504e7d54006c2014018b8c4d2705
   ReactiveObjC: 7b6782ae39f9ac0f57205c3b0c0b69b9dd7048c0
   SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
   TZImagePickerController: 0a8ff228d287ebdd7d485e8c42a2a932894f1fba
-  UITableView+FDTemplateLayoutCell: 02b508ab1cb4cea16a8c17ac83d2cd1fd72124f9
+  UITableView+FDTemplateLayoutCell: 5c949b4a5059c404b442926c0e80f81d10a2d66f
   WMPageController: 181bcc9b1fb7c9c3466bff66012552953a547d28
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
 
-PODFILE CHECKSUM: 50453af774f689d42af6c5daa92c9ad42caca05b
+PODFILE CHECKSUM: 1149d8d8d39109aef2e7e99e65a777dd34a80f41
 
 COCOAPODS: 1.2.0

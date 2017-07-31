@@ -7,8 +7,9 @@
 //
 
 #import "AppDelegate.h"
+#import "CYLTabBarController.h"
 
-@interface AppDelegate (Extension)
+@interface AppDelegate (Extension) <UITabBarControllerDelegate, CYLTabBarControllerDelegate>
 
 /// 设置键盘
 -(void) settingIQKeyboard;

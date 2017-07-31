@@ -351,13 +351,11 @@ static CGRect oldframe;
  */
 + (void)setCornerRadiuswithView:(UIView *)view targetAngles:(UIRectCorner) targetAngles cornerRadii:(CGSize) size {
     
-    
     UIBezierPath *maskPath = [UIBezierPath bezierPathWithRoundedRect:view.bounds byRoundingCorners:targetAngles cornerRadii:size];
+    CAShapeLayer *maskLayer = [[CAShapeLayer alloc] init]; maskLayer.frame = view.bounds;
+    maskLayer.path = maskPath.CGPath; view.layer.mask = maskLayer;
     
-    CAShapeLayer *maskLayer = [[CAShapeLayer alloc] init];
-    maskLayer.frame = view.bounds;
-    maskLayer.path = maskPath.CGPath;
-    view.layer.mask = maskLayer;
+  
 }
 
 #pragma mark - 将数组中重复的对象去除，只保留一个

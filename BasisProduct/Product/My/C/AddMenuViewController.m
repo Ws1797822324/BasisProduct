@@ -169,7 +169,7 @@ static NSString *sectionHeaderID = @"sectionHeader";
     layout.itemSize = CGSizeMake(80, 80);
     layout.headerReferenceSize = CGSizeMake(kScreenWidth, 35);
     
-    CGRect rect = CGRectMake(0, 0, kScreenWidth, kScreenHeight );
+    CGRect rect = CGRectMake(0, 64, kScreenWidth, kScreenHeight - 64 );
     
     _collectionView = [[UICollectionView alloc] initWithFrame: rect collectionViewLayout:layout];
     
@@ -336,8 +336,9 @@ static NSString *sectionHeaderID = @"sectionHeader";
                         }
                     }
                    #pragma mark - 移动结束后数组
-                    [_menuNewArr removeAllObjects];
-                    [_menuNewArr addObjectsFromArray:array];
+
+                    _menuNewArr = [NSMutableArray arrayWithArray:array];
+                    
                     
                     [self.collectionView moveItemAtIndexPath:_originalIndexPath toIndexPath:_moveIndexPath];
                     _originalIndexPath = _moveIndexPath;
@@ -345,6 +346,8 @@ static NSString *sectionHeaderID = @"sectionHeader";
             }
         } break;
         case UIGestureRecognizerStateEnded: {
+            NSLog(@"上传换号位置之后的请求吧");
+
             ItemCell *cell = (ItemCell *) [self.collectionView cellForItemAtIndexPath:_originalIndexPath];
             cell.hidden = NO;
             [_snapshotView removeFromSuperview];

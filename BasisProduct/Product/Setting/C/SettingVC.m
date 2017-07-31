@@ -106,8 +106,10 @@
                                               
                                               //定时器 2s 后显示提示语
                                               [[RACScheduler mainThreadScheduler]afterDelay:2.f schedule:^{
-                                                  [XXProgressHUD showSuccess:@"清除缓存成功"];
                                                   
+                                                  NSIndexPath *indexPath=[NSIndexPath indexPathForRow:6 inSection:0];
+                                                  [_tableView reloadRowsAtIndexPaths:[NSArray arrayWithObjects:indexPath,nil] withRowAnimation:UITableViewRowAnimationNone];
+                                                  [XXProgressHUD showSuccess:@"清除缓存成功"];
                                               }];
                                           }];
                                           

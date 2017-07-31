@@ -9,6 +9,21 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>CYLTabBarController.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>DACircularProgress.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>FLAnimatedImage.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>FMDB.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -45,6 +60,16 @@
 			<false/>
 		</dict>
 		<key>Masonry.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>PYPhotoBrowser.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>PYSearch.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -97,17 +122,32 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>081660F360FFE9EC1E2781B51627F334</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>0AE01D8C7B8E8D51F62DA12F6E90AD87</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>46592CC8DFA81CAE46834E1670190170</key>
+		<key>0F51122B2CD66432BDCA940C9619C1EB</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>4B6A63331079BDB3A4A7FBEFF90DBD08</key>
+		<key>2431CAA5FB42E206241824905D0EF4E7</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>272B6902EC233437C8C814A53CD3E70D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>53F8571E2D572C4069860E38654A566A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -117,7 +157,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>5C3FD105B630E83D6B5B3F3FE944A79D</key>
+		<key>5B22D7B380A2BADFA7F1C7751BB0BD1B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -127,12 +167,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>873E4A188884F80B88C46E83D20A0AD8</key>
+		<key>8A36C0AEF63812A0F798388A987B68DC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9650B5ADCE86F1A055FAFC635284BDB5</key>
+		<key>904F4F27FD314010A3812EB2A9306183</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -152,7 +192,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B39DCE4D02A79B53BC285DFF26B4EEE5</key>
+		<key>ADF484E41A50EE32F5A767F5C3AC84F0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B879C47D8D14F7FC4959547E3004D6BB</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -162,17 +207,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E7EE21ADECFDD22150DDB751DE5CE209</key>
+		<key>BF679A41BA6A418D1D3C5A96A0774B9F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>ED7228A4002EECA2AE607758B5B8E224</key>
+		<key>C091A79572BEC62D22203B0913E68634</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>EDC57B7A9BFC957D5B50FD6B5160C23E</key>
+		<key>C791F0A928C1A8FE97074DFC9ACF4E75</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D45D2263471F531C9B55B33909733A21</key>
 		<dict>
 			<key>primary</key>
 			<true/>
