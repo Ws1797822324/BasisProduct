@@ -21,5 +21,6 @@
 - (BOOL)moneyValueChangeValueString:(NSString *)string shouldChangeCharactersInRange:(NSRange)range;
 
 ///任意限制输入内容的输入框(不在允许输入范围内的东西不显示)
+- (BOOL)randomValueChangeValueString:(NSString *)string shouldChangeCharactersInRange:(NSRange)range targetStr:(NSString *)str1 randomStr:(NSString *)str2;
 
 @end
