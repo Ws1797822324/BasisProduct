@@ -91,6 +91,12 @@
 		54FAB25F1F14C8200019DA31 /* SettingVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54FAB25D1F14C8200019DA31 /* SettingVC.xib */; };
 		54FAB2631F14D0F90019DA31 /* SettingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 54FAB2611F14D0F90019DA31 /* SettingCell.m */; };
 		54FAB2641F14D0F90019DA31 /* SettingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54FAB2621F14D0F90019DA31 /* SettingCell.xib */; };
+		54FD76891F4ADC7000CA13C5 /* ContactsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54FD767D1F4ADC7000CA13C5 /* ContactsViewController.m */; };
+		54FD768A1F4ADC7000CA13C5 /* GroupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54FD767F1F4ADC7000CA13C5 /* GroupViewController.m */; };
+		54FD768B1F4ADC7000CA13C5 /* contacts.json in Resources */ = {isa = PBXBuildFile; fileRef = 54FD76801F4ADC7000CA13C5 /* contacts.json */; };
+		54FD768C1F4ADC7000CA13C5 /* ContactsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 54FD76831F4ADC7000CA13C5 /* ContactsModel.m */; };
+		54FD768D1F4ADC7000CA13C5 /* GroupModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 54FD76851F4ADC7000CA13C5 /* GroupModel.m */; };
+		54FD768E1F4ADC7000CA13C5 /* ContactsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 54FD76881F4ADC7000CA13C5 /* ContactsCell.m */; };
 		78414B0BEFFBFCF30DDC872A /* libPods-Product.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D7588D42A2359605113B65F /* libPods-Product.a */; };
 /* End PBXBuildFile section */
 
@@ -272,6 +278,17 @@
 		54FAB2601F14D0F90019DA31 /* SettingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingCell.h; sourceTree = "<group>"; };
 		54FAB2611F14D0F90019DA31 /* SettingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingCell.m; sourceTree = "<group>"; };
 		54FAB2621F14D0F90019DA31 /* SettingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingCell.xib; sourceTree = "<group>"; };
+		54FD767C1F4ADC7000CA13C5 /* ContactsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactsViewController.h; sourceTree = "<group>"; };
+		54FD767D1F4ADC7000CA13C5 /* ContactsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactsViewController.m; sourceTree = "<group>"; };
+		54FD767E1F4ADC7000CA13C5 /* GroupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroupViewController.h; sourceTree = "<group>"; };
+		54FD767F1F4ADC7000CA13C5 /* GroupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupViewController.m; sourceTree = "<group>"; };
+		54FD76801F4ADC7000CA13C5 /* contacts.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = contacts.json; sourceTree = "<group>"; };
+		54FD76821F4ADC7000CA13C5 /* ContactsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactsModel.h; sourceTree = "<group>"; };
+		54FD76831F4ADC7000CA13C5 /* ContactsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactsModel.m; sourceTree = "<group>"; };
+		54FD76841F4ADC7000CA13C5 /* GroupModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroupModel.h; sourceTree = "<group>"; };
+		54FD76851F4ADC7000CA13C5 /* GroupModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupModel.m; sourceTree = "<group>"; };
+		54FD76871F4ADC7000CA13C5 /* ContactsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactsCell.h; sourceTree = "<group>"; };
+		54FD76881F4ADC7000CA13C5 /* ContactsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactsCell.m; sourceTree = "<group>"; };
 		6923A30AEE9690ABE86FAB57 /* Pods-Product.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Product.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Product/Pods-Product.debug.xcconfig"; sourceTree = "<group>"; };
 		B9F44DC4A0A59370117E8EE3 /* Pods-Product.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Product.release.xcconfig"; path = "Pods/Target Support Files/Pods-Product/Pods-Product.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -332,8 +349,8 @@
 				548680A71F28303F004B1AE8 /* Home(主页) */,
 				548680A61F282FEB004B1AE8 /* ERP */,
 				5444C2641EFBC6880044CC35 /* PublishViewController(加号) */,
-				548680A51F282FC8004B1AE8 /* Contact(聊一聊) */,
 				540367501F04E997001A2E1A /* My(我的) */,
+				54FD767A1F4ADC7000CA13C5 /* Contact(聊一聊) */,
 				54682AC71F2B253100C2C7FF /* NetworkRequestAll  */,
 				5440430C1F1C596C00AFA9A7 /* Login&Registered(登录注册) */,
 				54FAB2581F14C2710019DA31 /* Setting(设置) */,
@@ -720,17 +737,6 @@
 			path = "img+imgV";
 			sourceTree = "<group>";
 		};
-		548680A51F282FC8004B1AE8 /* Contact(聊一聊) */ = {
-			isa = PBXGroup;
-			children = (
-				548680AB1F2830DB004B1AE8 /* C */,
-				548680AC1F2830DB004B1AE8 /* M */,
-				548680AD1F2830DB004B1AE8 /* V */,
-			);
-			name = "Contact(聊一聊)";
-			path = Contact;
-			sourceTree = "<group>";
-		};
 		548680A61F282FEB004B1AE8 /* ERP */ = {
 			isa = PBXGroup;
 			children = (
@@ -767,27 +773,6 @@
 			sourceTree = "<group>";
 		};
 		548680AA1F2830BE004B1AE8 /* V */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = V;
-			sourceTree = "<group>";
-		};
-		548680AB1F2830DB004B1AE8 /* C */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = C;
-			sourceTree = "<group>";
-		};
-		548680AC1F2830DB004B1AE8 /* M */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = M;
-			sourceTree = "<group>";
-		};
-		548680AD1F2830DB004B1AE8 /* V */ = {
 			isa = PBXGroup;
 			children = (
 			);
@@ -903,6 +888,49 @@
 				54FAB2601F14D0F90019DA31 /* SettingCell.h */,
 				54FAB2611F14D0F90019DA31 /* SettingCell.m */,
 				54FAB2621F14D0F90019DA31 /* SettingCell.xib */,
+			);
+			path = V;
+			sourceTree = "<group>";
+		};
+		54FD767A1F4ADC7000CA13C5 /* Contact(聊一聊) */ = {
+			isa = PBXGroup;
+			children = (
+				54FD767B1F4ADC7000CA13C5 /* C */,
+				54FD76801F4ADC7000CA13C5 /* contacts.json */,
+				54FD76811F4ADC7000CA13C5 /* M */,
+				54FD76861F4ADC7000CA13C5 /* V */,
+			);
+			name = "Contact(聊一聊)";
+			path = Contact;
+			sourceTree = "<group>";
+		};
+		54FD767B1F4ADC7000CA13C5 /* C */ = {
+			isa = PBXGroup;
+			children = (
+				54FD767C1F4ADC7000CA13C5 /* ContactsViewController.h */,
+				54FD767D1F4ADC7000CA13C5 /* ContactsViewController.m */,
+				54FD767E1F4ADC7000CA13C5 /* GroupViewController.h */,
+				54FD767F1F4ADC7000CA13C5 /* GroupViewController.m */,
+			);
+			path = C;
+			sourceTree = "<group>";
+		};
+		54FD76811F4ADC7000CA13C5 /* M */ = {
+			isa = PBXGroup;
+			children = (
+				54FD76821F4ADC7000CA13C5 /* ContactsModel.h */,
+				54FD76831F4ADC7000CA13C5 /* ContactsModel.m */,
+				54FD76841F4ADC7000CA13C5 /* GroupModel.h */,
+				54FD76851F4ADC7000CA13C5 /* GroupModel.m */,
+			);
+			path = M;
+			sourceTree = "<group>";
+		};
+		54FD76861F4ADC7000CA13C5 /* V */ = {
+			isa = PBXGroup;
+			children = (
+				54FD76871F4ADC7000CA13C5 /* ContactsCell.h */,
+				54FD76881F4ADC7000CA13C5 /* ContactsCell.m */,
 			);
 			path = V;
 			sourceTree = "<group>";
@@ -1052,6 +1080,7 @@
 				54152B381F209CC200A35678 /* XXTwoViewController.xib in Resources */,
 				54C21EAF1EC2B22000D63166 /* infoPlist.strings in Resources */,
 				54682ADC1F2B253100C2C7FF /* zhan_wei.png in Resources */,
+				54FD768B1F4ADC7000CA13C5 /* contacts.json in Resources */,
 				54FAB2641F14D0F90019DA31 /* SettingCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1142,6 +1171,7 @@
 				548680B71F2864E7004B1AE8 /* ShoppingOrderVC.m in Sources */,
 				54682B801F2B2BB800C2C7FF /* XXVerticalButton.m in Sources */,
 				54682ADD1F2B253100C2C7FF /* SearchNetworkRequest.m in Sources */,
+				54FD76891F4ADC7000CA13C5 /* ContactsViewController.m in Sources */,
 				54D17DB81F00CBAC00878487 /* PublishViewController.m in Sources */,
 				54682B7A1F2B2BB800C2C7FF /* TAPageControl.m in Sources */,
 				5469A6891ED7C9510033AEA1 /* UINavigationController+FDFullscreenPopGesture.m in Sources */,
@@ -1152,7 +1182,9 @@
 				54C3ABBA1EE0152E00AC9375 /* XXHelper.m in Sources */,
 				540367691F04E997001A2E1A /* ItemCellHeaderView.m in Sources */,
 				545B412C1EFCDC390018F526 /* TwoViewController.m in Sources */,
+				54FD768E1F4ADC7000CA13C5 /* ContactsCell.m in Sources */,
 				540367651F04E997001A2E1A /* AddMenuViewController.m in Sources */,
+				54FD768D1F4ADC7000CA13C5 /* GroupModel.m in Sources */,
 				54B3E1311F298295007DF651 /* CommodityCell.m in Sources */,
 				54682B781F2B2BB800C2C7FF /* TAAnimatedDotView.m in Sources */,
 				18AEFC121E10C3CE00AFAF16 /* AppDelegate.m in Sources */,
@@ -1166,6 +1198,7 @@
 				5469A6951ED7C9610033AEA1 /* XXProgressHUD.m in Sources */,
 				54C29EA71F22048A00CFA646 /* XXThreeViewController.m in Sources */,
 				54682AF41F2B275C00C2C7FF /* ERPNetworkRequest.m in Sources */,
+				54FD768A1F4ADC7000CA13C5 /* GroupViewController.m in Sources */,
 				54AFE8D81ED7D66800258F58 /* Foundation+Log.m in Sources */,
 				540367661F04E997001A2E1A /* MyViewController.m in Sources */,
 				54682B731F2B2BB800C2C7FF /* NinaSelectionView.m in Sources */,
@@ -1185,6 +1218,7 @@
 				54682B791F2B2BB800C2C7FF /* TADotView.m in Sources */,
 				5403676A1F04E997001A2E1A /* ItemGroup.m in Sources */,
 				5413AB071F2730C000745264 /* CYLPlusButtonSubclass.m in Sources */,
+				54FD768C1F4ADC7000CA13C5 /* ContactsModel.m in Sources */,
 				5444C2631EFBAA890044CC35 /* UIColor+ColorChange.m in Sources */,
 				54682AE61F2B265000C2C7FF /* ZZZZ.m in Sources */,
 				549D49EB1EB99A4E0016A62E /* XXNetWorkManager.m in Sources */,

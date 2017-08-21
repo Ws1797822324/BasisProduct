@@ -82,6 +82,8 @@
 
 #import "MMPopupWindow.h"
 
+#import <MJExtension/MJExtension.h>
+
 #import "PTXDatePickerView.h"  
 
 #import "TZImagePickerController.h"

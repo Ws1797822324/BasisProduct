@@ -34,7 +34,7 @@ static CGFloat const CYLTabBarControllerHeight = 40.f;
 
 #import "XXTwoViewController.h"
 
-#import "XXThreeViewController.h"
+#import "ContactsViewController.h"
 
 
 //#import "CYLMessageViewController.h"
@@ -85,7 +85,7 @@ static CGFloat const CYLTabBarControllerHeight = 40.f;
     UIViewController *secondNavigationController = [[NavigationController alloc]
                                                     initWithRootViewController:secondViewController];
     
-    XXThreeViewController *thirdViewController = [[XXThreeViewController alloc] init];
+    ContactsViewController *thirdViewController = [[ContactsViewController alloc] init];
     UIViewController *thirdNavigationController = [[NavigationController alloc]
                                                    initWithRootViewController:thirdViewController];
     
