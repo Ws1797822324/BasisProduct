@@ -58,22 +58,11 @@
 }
 #pragma mark - 弹出一个 Action
 - (IBAction)action:(UIButton *)sender {
-    [MMPopupWindow sharedWindow].touchWildToHide = YES;
-
-    MMPopupItemHandler itemHander = ^(NSInteger index){
+    
+    [self showAlertTitle:@"测试" message:@"123456789" clickArr:@[@"YY",@"KK"] click:^(NSInteger index) {
         
-        NSLog(@"click -> NO:%ld",index);
-    };
+    }];
 
-    NSArray * items = @[MMItemMake(@"第一个", MMItemTypeNormal, ^(NSInteger index) {
-        NSLog(@"hahahh");
-    }), MMItemMake(@"第二", MMItemTypeNormal, ^(NSInteger index) {
-        NSLog(@"点了第二个");
-    }), MMItemMake(@"第三", MMItemTypeHighlight, itemHander)];
-    
-    MMAlertView *alertView = [[MMAlertView alloc]initWithTitle:@"title" detail:@"TEXT" items:items];
-    
-    [alertView show];
 
     
 }
@@ -81,25 +70,10 @@
 
 - (IBAction)sheet:(id)sender {
     
-    [MMPopupWindow sharedWindow].touchWildToHide = YES;   // 点击空余位置popView 消失
-    MMPopupItemHandler itemHander = ^(NSInteger index){
+    [self showSheetTitle:@"1234" clickArr:@[@"MM",@"CC",@"EE" ] click:^(NSInteger index) {
         
-        NSLog(@"click -> NO:%ld",index);
-    };
+    }];
     
-    NSArray * items = @[MMItemMake(@"第一个", MMItemTypeNormal, ^(NSInteger index) {
-        NSLog(@"我是第一个");
-    }), MMItemMake(@"第二", MMItemTypeNormal, ^(NSInteger index) {
-        NSLog(@"点了第二个");
-    }), MMItemMake(@"第三", MMItemTypeHighlight, itemHander)];
-    
-    MMSheetView *sheetView = [[MMSheetView alloc] initWithTitle:@"SheetView"
-                                                          items:items];
-//    sheetView.attachedView.mm_dimAnimationDuration = 3;  //动画时间
-    
-
-    [sheetView show];
-
 }
 
 - (IBAction)date:(UIButton *)sender {

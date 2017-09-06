@@ -19,15 +19,15 @@
 
 - (instancetype)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
-        self.backgroundColor = [UIColor whiteColor];
+        self.backgroundColor = kHexColor(@"#F7F7F7");
+        kViewRadius(self, 6);
         CGFloat containerX = 10;
         CGFloat containerY = 5;
         CGFloat containerW = self.bounds.size.width - 2 * containerX;
         CGFloat containerH = self.bounds.size.height - 2 * containerY;
         _container = [[UIView alloc] initWithFrame:CGRectMake(containerX, containerY, containerW, containerH)];
-        _container.backgroundColor = [UIColor whiteColor];
-        _container.layer.borderWidth = 1 / [UIScreen mainScreen].scale;
-        _container.layer.borderColor = [UIColor colorWithRed:232 / 255.0 green:232 / 255.0 blue:232 / 255.0 alpha:1.0].CGColor;
+        _container.backgroundColor = kHexColor(@"#F7F7F7");
+//        _container.backgroundColor = [UIColor redColor];
         
         _icon = [[UIImageView alloc] initWithFrame:CGRectMake((containerW - 40) / 2, 6, 40, 40)];
         
@@ -36,7 +36,8 @@
         _titleLabel.font = [UIFont systemFontOfSize:11];
         _titleLabel.textAlignment = NSTextAlignmentCenter;
         
-        _rightUpperButton = [[UIButton alloc] initWithFrame:CGRectMake(containerW - 40 / 2 - 11.5 / 2 - 2, -20 + 11.5 / 2 + 2, 40, 40)];
+        NSInteger wh = 30;
+        _rightUpperButton = [[UIButton alloc] initWithFrame:CGRectMake(_container.width - wh * 0.5 , _container.x - wh * 0.5 , wh, wh)];
         [_rightUpperButton addTarget:self action:@selector(rightUpperButtonAction) forControlEvents:UIControlEventTouchUpInside];
         
         [_container addSubview:_icon];
@@ -52,6 +53,7 @@
     _itemModel = itemModel;
     
     _icon.image = [UIImage imageNamed:itemModel.imageName];
+    
     _titleLabel.text = itemModel.itemTitle;
     switch (itemModel.status) {
         case StatusMinusSign:
@@ -71,11 +73,7 @@
 
 - (void)setIsEditing:(BOOL)isEditing {
     _rightUpperButton.hidden = !isEditing;
-    if (isEditing) {
-        _container.layer.borderWidth = 1 / [UIScreen mainScreen].scale;
-    }else {
-        _container.layer.borderWidth = 0.0;
-    }
+    
 }
 
 - (void)rightUpperButtonAction {

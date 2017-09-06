@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="NewFeatureCell">
+            <rect key="frame" x="0.0" y="0.0" width="438" height="649"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="438" height="649"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mgk-1e-Apj">
+                        <rect key="frame" x="0.0" y="0.0" width="438" height="649"/>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ygC-b7-uih">
+                        <rect key="frame" x="196" y="579" width="46" height="30"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <state key="normal" title="跳过吧">
+                            <color key="titleColor" red="0.98039215690000003" green="0.0" blue="0.058823529409999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        </state>
+                        <connections>
+                            <action selector="skipButtonAction:" destination="gTV-IL-0wX" eventType="touchUpInside" id="CJN-5e-qC3"/>
+                        </connections>
+                    </button>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="ygC-b7-uih" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="6T1-Ye-BEh"/>
+                <constraint firstAttribute="bottom" secondItem="ygC-b7-uih" secondAttribute="bottom" constant="40" id="9hf-kj-edh"/>
+                <constraint firstAttribute="bottom" secondItem="mgk-1e-Apj" secondAttribute="bottom" id="G2H-Jr-aYj"/>
+                <constraint firstItem="mgk-1e-Apj" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="jWc-Kl-SPL"/>
+                <constraint firstAttribute="trailing" secondItem="mgk-1e-Apj" secondAttribute="trailing" id="sjn-aq-Uyr"/>
+                <constraint firstItem="mgk-1e-Apj" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="zw3-42-eZR"/>
+            </constraints>
+            <size key="customSize" width="840" height="649"/>
+            <connections>
+                <outlet property="image_View" destination="mgk-1e-Apj" id="L3R-oB-8VJ"/>
+            </connections>
+            <point key="canvasLocation" x="-116" y="96.5"/>
+        </collectionViewCell>
+    </objects>
+</document>

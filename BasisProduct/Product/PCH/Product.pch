@@ -22,10 +22,23 @@
 
 #define kAllRGB kHexColor(@"#F5F5F5")
 
+/** 字体大小 */
 #define kFont(n) [UIFont systemFontOfSize:(n)]
+/** 字体大小（带粗） */
+#define kBoldFond(fond) [UIFont boldSystemFontOfSize:fond]
 
-///  16进制颜色  例如 kHexColor(@"#5E5E5E")
+
+/** 导航栏高度 */
+#define kNavHeight 64
+
+// **  例如 kHexColor(@"#5E5E5E") */
 #define kHexColor(colorStr) [UIColor colorWithHexString:colorStr]
+/** 16进制颜色 */
+#define kRGB_HEX(rgbValue)                                                                                             \
+    [UIColor colorWithRed:((CGFloat)((rgbValue & 0xFF0000) >> 16)) / 255.0                                             \
+                    green:((CGFloat)((rgbValue & 0xFF00) >> 8)) / 255.0                                                \
+                     blue:((CGFloat)(rgbValue & 0xFF)) / 255.0                                                         \
+                    alpha:1.0]
 
 #define kRandomColor kRGBColor(arc4random_uniform(255), arc4random_uniform(255), arc4random_uniform(255), 1)
 
@@ -35,20 +48,35 @@
 /// 通知
 #define kNoteCenter [NSNotificationCenter defaultCenter]
 
-#define kRGB_HEX(rgbValue)                                                                                             \
-    [UIColor colorWithRed:((CGFloat)((rgbValue & 0xFF0000) >> 16)) / 255.0                                             \
-                    green:((CGFloat)((rgbValue & 0xFF00) >> 8)) / 255.0                                                \
-                     blue:((CGFloat)(rgbValue & 0xFF)) / 255.0                                                         \
-                    alpha:1.0]
-
 /// 屏幕
 #define kScreenWidth [UIScreen mainScreen].bounds.size.width
+
 #define kScreenHeight [UIScreen mainScreen].bounds.size.height
+//* 国际化语言 */
+#define kLocalizedString(keyStr)  NSLocalizedString(keyStr, nil)
+
+#define iOS7Later ([UIDevice currentDevice].systemVersion.floatValue >= 7.0f)
+
+#define iOS8Later ([UIDevice currentDevice].systemVersion.floatValue >= 8.0f)
+
+#define iOS9Later ([UIDevice currentDevice].systemVersion.floatValue >= 9.0f)
+
+#define iOS10Later ([UIDevice currentDevice].systemVersion.floatValue >= 10f)
+
+#define kiPhone4s ((kScreenHeight == 480) ? YES : NO)
+
+#define kiPhone5s ((kScreenHeight == 568) ? YES : NO)
+
+#define kiPhone6s_7s ((kScreenHeight == 667) ? YES : NO)
+
+#define kiPhone6sP_7sP ((kScreenHeight == 736) ? YES : NO)
 
 /// 弱引用
 #define kWeakSelf __weak typeof(self) weakSelf = self
 /// 快速定义 image
 #define kImageNamed(name) [UIImage imageNamed:(name)]
+//frame
+#define kFrame(x,y,width,height)  CGRectMake(x, y, width, height)
 
 /// 添加圆角
 #define kViewRadius(View, Radius)                                                                                      \
@@ -94,6 +122,19 @@
 #else
 #define NSLog(...)
 #endif
+
+
+//字符串是否为空
+#define kStringIsEmpty(str) ([str isKindOfClass:[NSNull class]] || str == nil || [str length] < 1 ? YES : NO )
+//数组是否为空
+#define kArrayIsEmpty(array) (array == nil || [array isKindOfClass:[NSNull class]] || array.count == 0)
+//字典是否为空
+#define kDictIsEmpty(dic) (dic == nil || [dic isKindOfClass:[NSNull class]] || dic.allKeys == 0)
+//是否是空对象
+#define kObjectIsEmpty(_object) (_object == nil \
+|| [_object isKindOfClass:[NSNull class]] \
+|| ([_object respondsToSelector:@selector(length)] && [(NSData *)_object length] == 0) \
+|| ([_object respondsToSelector:@selector(count)] && [(NSArray *)_object count] == 0))
 
 
 #endif /* Product_pch */

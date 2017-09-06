@@ -43,7 +43,7 @@
     if (self) {
         
         self.shadowView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"zxcbsdhrtujdfnxgjdrt"]];
-        self.shadowView.frame = CGRectMake(0, 0, kScreenWidth, kScreenHeight * 0.14);
+        self.shadowView.frame = CGRectMake(0, 0, kScreenWidth, kScreenHeight * 0.15);
         [self addSubview:_shadowView];
         
         // 数据 View

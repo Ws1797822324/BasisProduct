@@ -66,22 +66,27 @@ static NSString *const cellId = @"myCollectionCellID";
 
     self.backgroundImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"myBackgroundImage"]];
 
-    self.backgroundImageView.frame = CGRectMake(0, 0, kScreenWidth, kScreenHeight * 0.35);
-
     [self.view addSubview:_backgroundImageView];
+    [self.backgroundImageView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.and.left.offset(0);
+        make.width.offset(kScreenWidth);
+        make.height.equalTo(self.view.mas_height).multipliedBy(0.35);
+    }];
 
     self.myToolView = [[MyToolView alloc] init];
-    self.myToolView.frame = CGRectMake(0, self.backgroundImageView.height * 0.5, kScreenWidth, kScreenHeight * 0.3);
     [self.view addSubview:_myToolView];
 
-    CGFloat fliatY = self.myToolView.buttonView.y + self.backgroundImageView.height - 40;
-    CGRect rect = CGRectMake(0, fliatY, kScreenWidth, kScreenHeight - fliatY - 49);
-
+    [_myToolView mas_makeConstraints:^(MASConstraintMaker *make) {
+    make.height.offset(kScreenHeight * 0.3);
+    make.left.and.right.offset(0);
+    make.centerY.equalTo(_backgroundImageView.mas_bottom);
+    }];
+    
     UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
 
     flowLayout.scrollDirection = UICollectionViewScrollDirectionVertical;
 
-    self.collectionView = [[UICollectionView alloc] initWithFrame:rect collectionViewLayout:flowLayout];
+    self.collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, 0, 0) collectionViewLayout:flowLayout];
     self.collectionView.backgroundColor = [UIColor whiteColor];
 
     _collectionView.delegate = self;
@@ -90,8 +95,13 @@ static NSString *const cellId = @"myCollectionCellID";
     [_collectionView registerNib:[UINib nibWithNibName:NSStringFromClass([MyCollectionCell class]) bundle:nil]
         forCellWithReuseIdentifier:cellId];
     
-//    [_collectionView registerClass:[MyCollectionCell class] forCellWithReuseIdentifier:cellId];
     [self.view addSubview:_collectionView];
+    
+    [_collectionView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(_myToolView.mas_bottom);
+        make.left.and.right.and.bottom.offset(0);
+
+    }];
     [super viewDidLoad];
 
 }

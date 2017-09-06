@@ -20,11 +20,11 @@ pod 'MJExtension', '~> 3.0.13'
 
 pod 'KLCPopup','~> 1.0' #滑动动画
 
-pod 'TZImagePickerController','~> 1.7.9'  # 选择照片
+pod 'TZImagePickerController', '~> 1.8.8'  # 选择照片
 
 pod 'JQFMDB','~> 1.1.6' #封装的 FMDB
 
-pod 'MMPopupView','~> 1.7.2'  # 警示
+pod 'Masonry', '~> 1.0.2'
 
 pod 'WMPageController','~> 2.2.1' #左右侧滑换 Controller
 
@@ -32,13 +32,23 @@ pod 'pop', '~> 1.0.9' # 动画
 
 pod 'ReactiveObjC', '~> 2.1.2'
 
-pod 'UITableView+FDTemplateLayoutCell', '~> 1.5.beta'
+pod 'UITableView+FDTemplateLayoutCell', '~> 1.6'
 
 pod 'PYSearch', '~> 0.7.5'  # 搜索框
 
 pod 'CYLTabBarController', '~> 1.13.1'
 
 pod 'PYPhotoBrowser', '~> 1.5.1'  # 图片预览
+
+pod 'ZXingObjC', '~> 3.2.1'    #QR code
+
+pod 'LBXAlertAction', '1.0.3'
+
+pod 'ZYCornerRadius', '~> 1.0.2'
+
+pod 'XHLaunchAd', '~> 3.5.6'
+
+pod 'RongCloudIM', '~> 2.8.16'
 
 
 #---------------------------------------#

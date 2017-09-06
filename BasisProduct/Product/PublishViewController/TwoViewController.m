@@ -49,10 +49,19 @@
     
     // 横排个数
     int maxCols = 4;
-    
-    CGFloat buttonW = 60;
-    CGFloat buttonH = buttonW + 40;
-    
+    CGFloat buttonW = 0;
+    CGFloat buttonH = 0;
+    if ( kiPhone6sP_7sP) {
+        buttonW = 60;
+        buttonH = buttonW + 40;
+    } else if (kiPhone6s_7s) {
+        buttonW = 50;
+        buttonH = buttonW + 35;
+    } else  if(kiPhone5s){
+        
+        buttonW = 44;
+        buttonH = buttonW + 30;
+    }
     CGFloat buttonStartY = (kScreenHeight - 6.5 * buttonH) * 0.5;
     
     CGFloat buttonStartX = 35;

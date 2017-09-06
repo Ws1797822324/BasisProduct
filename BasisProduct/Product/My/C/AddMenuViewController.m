@@ -39,15 +39,15 @@ static NSString *sectionHeaderID = @"sectionHeader";
 -(void)viewWillAppear:(BOOL)animated {
     
     [super viewWillAppear:animated];
-    
     /// 关闭 侧滑返回功能
     self.fd_interactivePopDisabled = YES;
     [self.navigationController.navigationBar lt_reset];
-   
-
     
 }
+-(void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
 
+}
 -(void)viewDidDisappear:(BOOL)animated {
     
     [super viewDidDisappear:animated];
@@ -69,40 +69,31 @@ static NSString *sectionHeaderID = @"sectionHeader";
 
 - (NSArray *)itemGroups {
     if (!_itemGroups) {
-        
-        NSMutableArray * dictArr = [NSMutableArray array];
-        
-        for (ItemModel *model in _menuNewArr) {
-            
-            NSDictionary * dict = [model yy_modelToJSONObject];
-            
-            [dictArr addObject:dict];
-        }
-        
-        
+
         NSArray *datas = @[
             @{
                 @"type" : @"已添加功能",
-                @"items" : dictArr
+                @"items" : [_menuNewArr yy_modelToJSONObject],
             },
             @{
                 @"type" : @"全部功能",
                 @"items" : @[
-
+                    @{@"imageName" : @"热门话题", @"itemTitle" : @"热门话题"},
+                    @{@"imageName" : @"热点资讯", @"itemTitle" : @"热点资讯"},
+                    @{@"imageName" : @"我不是头条", @"itemTitle" : @"我不是头条"},
+                    @{@"imageName" : @"焦点赛事", @"itemTitle" : @"焦点赛事"},
                     @{@"imageName" : @"我的订阅", @"itemTitle" : @"我的货车"},
                     @{@"imageName" : @"球爆", @"itemTitle" : @"我的店铺"},
                     @{@"imageName" : @"名人名单", @"itemTitle" : @"我的土地"},
                     @{@"imageName" : @"竞彩足球", @"itemTitle" : @"我的种植品"},
                     @{@"imageName" : @"竞彩篮球", @"itemTitle" : @"我的拼单"},
                     @{@"imageName" : @"足彩", @"itemTitle" : @"我的简历"},
-
                     @{@"imageName" : @"我的订阅", @"itemTitle" : @"我的购物车"},
                     @{@"imageName" : @"球爆", @"itemTitle" : @"我的时间"},
                     @{@"imageName" : @"名人名单", @"itemTitle" : @"我的冷库"},
                     @{@"imageName" : @"竞彩足球", @"itemTitle" : @"我的农机"},
                     @{@"imageName" : @"竞彩篮球", @"itemTitle" : @"我的档口"},
                     @{@"imageName" : @"足彩", @"itemTitle" : @"我的招聘"},
-
                     @{@"imageName" : @"我的订阅", @"itemTitle" : @"我的采购"},
                     @{@"imageName" : @"球爆", @"itemTitle" : @"我的求助"},
                     @{@"imageName" : @"名人名单", @"itemTitle" : @"我的代卖"},
@@ -112,7 +103,7 @@ static NSString *sectionHeaderID = @"sectionHeader";
 
                 ]
             },
-            
+
         ];
 
         NSMutableArray *array = [NSMutableArray arrayWithCapacity:datas.count];
@@ -242,6 +233,12 @@ static NSString *sectionHeaderID = @"sectionHeader";
     cell.isEditing = _isEditing;
     cell.itemModel = group.items[indexPath.row];
     cell.indexPath = indexPath;
+    
+    if(_isEditing == YES){
+        [self starLongPress:cell];
+    }
+    
+
     return cell;
 }
 
@@ -287,11 +284,13 @@ static NSString *sectionHeaderID = @"sectionHeader";
 
     switch (recognizer.state) {
         case UIGestureRecognizerStateBegan: {
+
             if (_isEditing == NO) {
                 self.isEditing = YES;
                 [self.collectionView reloadData];
                 [self.collectionView layoutIfNeeded];
             }
+        
             if (_moveIndexPath.section == 0) {
                 ItemCell *selectedItemCell = (ItemCell *) [self.collectionView cellForItemAtIndexPath:_moveIndexPath];
                 _originalIndexPath = [self.collectionView indexPathForItemAtPoint:touchPoint];
@@ -430,6 +429,44 @@ static NSString *sectionHeaderID = @"sectionHeader";
 }
 
 
+//开始抖动
+- (void)starLongPress:(ItemCell*)cell{
+    CABasicAnimation *animation = (CABasicAnimation *)[cell.layer animationForKey:@"rotation"];
+    if (animation == nil) {
+        [self shakeImage:cell];
+    }else {
+        [self resume:cell];
+    }
+}
 
+//这个参数的理解比较复杂，我的理解是所在layer的时间与父layer的时间的相对速度，为1时两者速度一样，为2那么父layer过了一秒，而所在layer过了两秒（进行两秒动画）,为0则静止。
+- (void)pause:(ItemCell*)cell {
+    cell.layer.speed = 0.0;
+}
+
+- (void)resume:(ItemCell *)cell {
+    cell.layer.speed = 1.0;
+}
+
+
+- (void)shakeImage:(ItemCell*)cell {
+    //创建动画对象,绕Z轴旋转
+    CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"transform.rotation.z"];
+    
+    //设置属性，周期时长
+    [animation setDuration:0.2];
+    
+    //抖动角度
+    animation.fromValue = @(-M_1_PI/4);
+    animation.toValue = @(M_1_PI/4);
+    //重复次数，无限大
+    animation.repeatCount = HUGE_VAL;
+    //恢复原样
+    animation.autoreverses = YES;
+    //锚点设置为图片中心，绕中心抖动
+    cell.layer.anchorPoint = CGPointMake(0.5, 0.5);
+    
+    [cell.layer addAnimation:animation forKey:@"rotation"];
+}
 
 @end

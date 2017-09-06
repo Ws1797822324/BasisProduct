@@ -9,7 +9,12 @@
 #ifndef Header_h
 #define Header_h
 
+#import <Foundation/Foundation.h>
+
+#import <UIKit/UIKit.h>
+
 #pragma mark - 分类扩展
+
 #import "UIView+Extension.h"
 
 #import "UIBarButtonItem+Item.h"
@@ -17,6 +22,10 @@
 #import "UIImage+Extension.h"
 
 #import "UIImageView+Extension.h"
+
+#import "UIImage+photoPicker.h"
+
+#import "NSDate+extension.h"
 
 #import "XXHelper.h"  //单例类
 
@@ -44,9 +53,21 @@
 
 #import "TopNewView.h"
 
-#import "NinaSelectionView.h"
-
 #import "SearchView.h"
+
+#import "XXTextView.h"
+
+#import "UIViewController+MAC.h"
+
+#import "XXRefreshGifHeader.h"
+
+#import "XXRefreshAutoGifFooter.h"
+
+
+
+
+
+
 
 
 
@@ -59,8 +80,6 @@
 #import <IQKeyboardManager/IQKeyboardManager.h>
 
 #import <MJRefresh/MJRefresh.h>
-
-#import <YYModel.h>
 
 #import <PYSearch.h>
 
@@ -82,20 +101,37 @@
 
 #import "MMPopupWindow.h"
 
-#import <MJExtension/MJExtension.h>
-
 #import "PTXDatePickerView.h"  
 
 #import "TZImagePickerController.h"
 
 #import <JQFMDB/JQFMDB.h>
 
+#import <MJExtension.h>
+
+#import <YYModel.h>
+
 #import <pop/POP.h>
+
+#import <UIImageView+CornerRadius.h>
 
 #import "SDCycleScrollView.h"
 
 #import <PYPhotoBrowser.h>
 
+#import "IMJIETagFrame.h"
+
+#import "IMJIETagView.h"
+
+#import <LBXAlertAction/LBXAlertAction.h>
+
+#import <RongIMKit/RongIMKit.h>
+
+#import <RongIMLib/RongIMLib.h>
+
+#import <RongCallKit/RongCallKit.h>
+
+#import <RongCallLib/RongCallLib.h>
 
 
 
@@ -104,8 +140,13 @@
 #import "SearchNetworkRequest.h"
 
 
-
-
+#pragma mark - 公用类
+/** 搜索 View */
+#import "SearchView.h"
+/** 搜索页面 */
+#import "SpeechViewController.h"
+/** 搜索结果页面 */
+#import "SearchResultVC.h"
 
 
 

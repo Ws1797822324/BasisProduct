@@ -23,6 +23,15 @@
 
 }
 
+-(void)  viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [XXProgressHUD hideHUD];
+}
+
+-(void) viewDidDisappear:(BOOL)animated  {
+    [super viewDidDisappear:animated];
+    [XXProgressHUD hideHUD];
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
