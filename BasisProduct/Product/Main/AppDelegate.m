@@ -24,11 +24,11 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
-    
+    PublicSection * hhh = [PublicSection shareInstance];
+    hhh.token = @"我是 token";
     [self setRootControllor];
     [self settingIQKeyboard];
 
-    
     [[RCIM sharedRCIM]initWithAppKey:RCAppKey];  //24
 
     

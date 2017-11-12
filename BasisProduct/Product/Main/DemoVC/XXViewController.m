@@ -8,14 +8,24 @@
 
 #import "XXViewController.h"
 #import "MMPopupViewDemoVC.h"
-#import "XXPaymentLoadingHUD.h"
-#import "XXPaymentSuccessHUD.h"
+
+
 #import "ShoppingOrderVC.h"
+
 #import "SpreadDropMenu.h"
 
-@interface XXViewController () <UIImagePickerControllerDelegate, TZImagePickerControllerDelegate, UIAlertViewDelegate,
-                                UIActionSheetDelegate, UINavigationControllerDelegate> {
+@interface XXViewController () <UIImagePickerControllerDelegate, TZImagePickerControllerDelegate, UIAlertViewDelegate,UIActionSheetDelegate, UINavigationControllerDelegate,DOPDropDownMenuDataSource,DOPDropDownMenuDelegate,LKNotificationDelegate> {
 }
+@property (nonatomic, strong) NSArray *classifys;
+@property (nonatomic, strong) NSArray *cates;
+@property (nonatomic, strong) NSArray *movices;
+@property (nonatomic, strong) NSArray *hostels;
+@property (nonatomic, strong) NSArray *areas;
+
+@property (nonatomic, strong) NSArray *sorts;
+@property (nonatomic, weak) DOPDropDownMenu *menu;
+
+
 
 @property (nonatomic, strong) UIImagePickerController *imagePickerVc;
 
@@ -25,6 +35,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *xxButton;
 
 @property (weak, nonatomic) IBOutlet UIView *xxView;
+    @property (weak, nonatomic) IBOutlet UIButton *sanfang;
 
 - (IBAction)tnchu:(UIButton *)sender;
 
@@ -60,14 +71,130 @@
 }
 
 - (void)viewDidLoad {
+    
+    self.classifys = @[@"美食",@"今日新单",@"电影",@"酒店"];
+    self.cates = @[@"自助餐",@"快餐",@"火锅",@"日韩料理",@"西餐",@"烧烤小吃"];
+    self.movices = @[@"内地剧",@"港台剧",@"英美剧"];
+    self.hostels = @[@"经济酒店",@"商务酒店",@"连锁酒店",@"度假酒店",@"公寓酒店"];
+    self.areas = @[@"全城",@"芙蓉区",@"雨花区",@"天心区",@"开福区",@"岳麓区"];
+    self.sorts = @[@"默认排序",@"离我最近",@"好评优先",@"人气优先",@"最新发布"];
+    
+    DOPDropDownMenu *menu = [[DOPDropDownMenu alloc] initWithOrigin:CGPointMake(0, 64) andHeight:44];
+    menu.delegate = self;
+    menu.dataSource = self;
+    [self.view addSubview:menu];
+    _menu = menu;
+
+    [menu selectIndexPath:[DOPIndexPath indexPathWithCol:0 row:0 item:0]];
+
 
     self.testLabel.text = kLocalizedString(@"abc");
     self.title = @"首页";
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 
+    
     [self.navigationController.tabBarItem setBadgeValue:@"3"];
 }
+
+
+- (NSInteger)numberOfColumnsInMenu:(DOPDropDownMenu *)menu
+{
+    return 3;
+}
+
+- (NSInteger)menu:(DOPDropDownMenu *)menu numberOfRowsInColumn:(NSInteger)column
+{
+    if (column == 0) {
+        return self.classifys.count;
+    }else if (column == 1){
+        return self.areas.count;
+    }else {
+        return self.sorts.count;
+    }
+}
+
+- (NSString *)menu:(DOPDropDownMenu *)menu titleForRowAtIndexPath:(DOPIndexPath *)indexPath
+{
+    if (indexPath.column == 0) {
+        return self.classifys[indexPath.row];
+    } else if (indexPath.column == 1){
+        return self.areas[indexPath.row];
+    } else {
+        return self.sorts[indexPath.row];
+    }
+}
+
+// new datasource
+
+- (NSString *)menu:(DOPDropDownMenu *)menu imageNameForRowAtIndexPath:(DOPIndexPath *)indexPath
+{
+    if (indexPath.column == 0 || indexPath.column == 1) {
+        return [NSString stringWithFormat:@"ic_filter_category_%ld",indexPath.row];
+    }
+    return nil;
+}
+
+- (NSString *)menu:(DOPDropDownMenu *)menu imageNameForItemsInRowAtIndexPath:(DOPIndexPath *)indexPath
+{
+    if (indexPath.column == 0 && indexPath.item >= 0) {
+        return [NSString stringWithFormat:@"ic_filter_category_%ld",indexPath.item];
+    }
+    return nil;
+}
+
+// new datasource
+
+- (NSString *)menu:(DOPDropDownMenu *)menu detailTextForRowAtIndexPath:(DOPIndexPath *)indexPath
+{
+    if (indexPath.column < 2) {
+        return [@(arc4random()%1000) stringValue];
+    }
+    return nil;
+}
+
+- (NSString *)menu:(DOPDropDownMenu *)menu detailTextForItemsInRowAtIndexPath:(DOPIndexPath *)indexPath
+{
+    return [@(arc4random()%1000) stringValue];
+}
+
+- (NSInteger)menu:(DOPDropDownMenu *)menu numberOfItemsInRow:(NSInteger)row column:(NSInteger)column
+{
+    if (column == 0) {
+        if (row == 0) {
+            return self.cates.count;
+        } else if (row == 2){
+            return self.movices.count;
+        } else if (row == 3){
+            return self.hostels.count;
+        }
+    }
+    return 0;
+}
+
+- (NSString *)menu:(DOPDropDownMenu *)menu titleForItemsInRowAtIndexPath:(DOPIndexPath *)indexPath
+{
+    if (indexPath.column == 0) {
+        if (indexPath.row == 0) {
+            return self.cates[indexPath.item];
+        } else if (indexPath.row == 2){
+            return self.movices[indexPath.item];
+        } else if (indexPath.row == 3){
+            return self.hostels[indexPath.item];
+        }
+    }
+    return nil;
+}
+
+- (void)menu:(DOPDropDownMenu *)menu didSelectRowAtIndexPath:(DOPIndexPath *)indexPath
+{
+    if (indexPath.item >= 0) {
+        NSLog(@"点击了 %ld - %ld - %ld 项目",indexPath.column,indexPath.row,indexPath.item);
+    }else {
+        NSLog(@"点击了 %ld - %ld 项目",indexPath.column,indexPath.row);
+    }
+}
+
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     // 隐藏导航栏下那条线
@@ -162,13 +289,16 @@
 }
 
 - (IBAction)push:(UIButton *)sender {
+    
     MMPopupViewDemoVC *vc = [MMPopupViewDemoVC new];
     vc.view.backgroundColor = [UIColor whiteColor];
 
     [self.navigationController pushViewController:vc animated:YES];
 }
 - (IBAction)afnclick:(UIButton *)sender {
+    [XXProgressHUD showSuccess:@"哈哈哈哈H"];
 
+    [self showNotification];
 //    [LBXAlertAction
 //        showAlertWithTitle:@"标题"
 //                       msg:@"提示消息内容"
@@ -183,12 +313,23 @@
 //
 //                           }];
     
-//    [XXProgressHUD showLoading:@"你大爷的"];
-//        [XXPaymentLoadingHUD showWithDynamicImageStatus:@"快跑"];
-    //
-    //    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-    //        [XXPaymentLoadingHUD dismissDynamicImageStatus];
-    //    });
+
+    
+ 
+}
+
+- (void)showNotification{
+    [self getLKNotificationManager].default_style = LK_NOTIFICATION_BAR_STYLE_DARK;
+    LKNotificationBar *notificationBar = [[self getLKNotificationManager] createWithTitle: @"意见反馈" content:@"您的反馈提交成功!感谢您的反馈" icon: [UIImage imageNamed: @"TSYicon"]];
+    notificationBar.delegate = self;
+    [notificationBar showWithAnimated: YES];
+    
+    UIViewController *two = [UIViewController new];
+    [self.navigationController pushViewController:two animated:YES];
+}
+
+- (void)onNavigationBarTouchUpInside:(LKNotificationBar *)navigationBar{
+    [navigationBar hideWithAnimated: YES];
 }
 - (IBAction)cellAction:(UIButton *)sender {
 
@@ -209,4 +350,10 @@
     [self presentViewController:menu animated:YES completion:nil];
 
 }
+- (IBAction)tishi:(UIButton *)sender {
+
+}
+
+
+
 @end

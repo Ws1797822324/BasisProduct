@@ -77,7 +77,7 @@ static NSString *const cellId = @"myCollectionCellID";
     [self.view addSubview:_myToolView];
 
     [_myToolView mas_makeConstraints:^(MASConstraintMaker *make) {
-    make.height.offset(kScreenHeight * 0.3);
+    make.height.offset(kScreenHeight * 0.22);
     make.left.and.right.offset(0);
     make.centerY.equalTo(_backgroundImageView.mas_bottom);
     }];
@@ -96,7 +96,7 @@ static NSString *const cellId = @"myCollectionCellID";
         forCellWithReuseIdentifier:cellId];
     
     [self.view addSubview:_collectionView];
-    
+
     [_collectionView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(_myToolView.mas_bottom);
         make.left.and.right.and.bottom.offset(0);

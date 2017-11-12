@@ -16,6 +16,7 @@ PODS:
     - AFNetworking/NSURLSession
   - CYLTabBarController (1.13.1)
   - DACircularProgress (2.3.1)
+  - DOPDropDownMenu-Enhanced (1.0.0)
   - FLAnimatedImage (1.0.12)
   - FMDB (2.7.2):
     - FMDB/standard (= 2.7.2)
@@ -74,6 +75,7 @@ PODS:
 DEPENDENCIES:
   - AFNetworking (~> 3.1.0)
   - CYLTabBarController (~> 1.13.1)
+  - DOPDropDownMenu-Enhanced
   - IQKeyboardManager (~> 4.0.9)
   - JQFMDB (~> 1.1.6)
   - KLCPopup (~> 1.0)
@@ -100,6 +102,7 @@ SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   CYLTabBarController: 97f6b486f9e6c613d69e9c111cc9c2c5db7000ce
   DACircularProgress: 4dd437c0fc3da5161cb289e07ac449493d41db71
+  DOPDropDownMenu-Enhanced: 9ec473b16351b5b0b2d6ef87e7f666fe5ff54ad5
   FLAnimatedImage: 4a0b56255d9b05f18b6dd7ee06871be5d3b89e31
   FMDB: 6198a90e7b6900cfc046e6bc0ef6ebb7be9236aa
   IQKeyboardManager: 593ee99b88381f4b9ccb22bd680f22606351bd41
@@ -124,6 +127,6 @@ SPEC CHECKSUMS:
   ZXingObjC: bbf7b8f0cf8933fdd33eb4f9f46e22308552869b
   ZYCornerRadius: f0af817be7805b5c63d793042ca7a03f81e14069
 
-PODFILE CHECKSUM: 16e6afc4841ed87ce4729a8cf98f82dfd550519a
+PODFILE CHECKSUM: 0037cb11a0e22377d3100cc87dd75c394d2fdc02
 
 COCOAPODS: 1.2.0

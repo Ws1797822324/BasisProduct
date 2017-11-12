@@ -56,6 +56,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
     self.navigationItem.title = @"采购开单";
     SearchView *searchView = [SearchView viewFromXib];
     searchView.frame = CGRectMake(0, 64, kScreenWidth, 50);
@@ -141,6 +142,7 @@
     [super viewWillAppear:animated];
 
 }
+
 
 
 #pragma mark - UITableViewDelegate & UITableViewDataSource
@@ -246,9 +248,6 @@
         self.cellSelected = YES;
     }
     self.selectedCell = indexPath.section + 1;
-
-   
-    
 
     for (int k = 1; k< _personArr.count + 1; k++ ) {
         NSIndexSet *indexSet2=[[NSIndexSet alloc]initWithIndex:k];

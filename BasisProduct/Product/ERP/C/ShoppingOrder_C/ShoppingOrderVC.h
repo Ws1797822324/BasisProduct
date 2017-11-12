@@ -8,6 +8,6 @@
 
 #import "RootViewController.h"
 
-@interface ShoppingOrderVC : RootViewController
+@interface ShoppingOrderVC : UIViewController
 
 @end

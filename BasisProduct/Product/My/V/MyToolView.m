@@ -14,8 +14,12 @@
 
 #define kScreenWidth [UIScreen mainScreen].bounds.size.width
 #define kScreenHeight [UIScreen mainScreen].bounds.size.height
-#define kRGBColor(r, g, b, a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:a]
-
+#define Start_X          10.0f      // 第一个按钮的X坐标
+#define Start_Y          0.0f     // 第一个按钮的Y坐标
+#define Width_Space      10.0f      // 2个按钮之间的横间距
+#define Height_Space     0.0f     // 竖间距
+#define Button_Height   (kScreenHeight * 0.3)    // 高
+#define Button_Width    kScreenWidth /6    // 宽
 @interface MyToolView ()
 
 
@@ -43,7 +47,7 @@
     if (self) {
         
         self.shadowView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"zxcbsdhrtujdfnxgjdrt"]];
-        self.shadowView.frame = CGRectMake(0, 0, kScreenWidth, kScreenHeight * 0.15);
+        self.shadowView.frame = CGRectMake(0, 0, kScreenWidth, kScreenHeight * 0.11);
         [self addSubview:_shadowView];
         
         // 数据 View
@@ -59,49 +63,29 @@
         [self addSubview: _buttonView];
         
         
-        // 数据
-        NSArray *images = @[@"publish-video", @"publish-video", @"publish-video", @"publish-video", @"publish-video"];
+        NSArray *titles1 = @[@"我的邀请", @"我的分红", @"我的钱包", @"我的评价", @"我的认证"];
         
-        NSArray *titles = @[@"我的邀请", @"我的分红", @"我的钱包", @"我的评价", @"我的认证"];
-        // 横排个数
-        int maxCols = 5;
-        
-        CGFloat buttonW = 50;
-        CGFloat buttonH = buttonW + 40;
-        CGFloat buttonStartX = 15;
-        
-        CGFloat xMargin = (kScreenWidth - 2 * buttonStartX - maxCols * buttonW) / (maxCols - 1);
-        
-        for (int i = 0; i < maxCols; i++) {
+        for (int a = 0 ; a < titles1.count; a++) {
+            NSInteger index = a % 5;
+            NSInteger page = a / 5;
             
-            UIButton *button = [[XXVerticalButton alloc] init];
             
-            button.tag = i;
-            [button addTarget:self action:@selector(buttonClick:) forControlEvents:UIControlEventTouchUpInside];
-            [self.buttonView addSubview:button];
-            
-            // 设置内容
-            button.titleLabel.font = [UIFont systemFontOfSize:12];
-            [button setTitle:titles[i] forState:UIControlStateNormal];
-            [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-            [button setImage:[UIImage imageNamed:images[i]] forState:UIControlStateNormal];
-            
-            // 计算X
-            int col = i % maxCols;
-            CGFloat buttonX = buttonStartX + col * (xMargin + buttonW);
-
-            button.height =  buttonH;
-            button.width = buttonW;
-            button.x = buttonX;
-            button.centerY = self.buttonView.height * 0.5;
-            
+            XXVerticalButton *mapBtn = [[XXVerticalButton alloc] init];
+            mapBtn.icon.image = [UIImage imageNamed:[NSString stringWithFormat:@"aa%d", a]];
+            mapBtn.title.text = titles1[a];
+            mapBtn.titleLabel.font = [UIFont systemFontOfSize:kFountSize(13)];
+            mapBtn.frame = CGRectMake(index * (Button_Width + Width_Space) + Start_X, page  * (Button_Height + Height_Space)+Start_Y, Button_Width, Button_Height);
+            mapBtn.tag = a;
+            self.mapBtn = mapBtn;
+            [_buttonView addSubview:self.mapBtn];
+            //按钮点击方法
+            [self.mapBtn addTarget:self action:@selector(mapBtnClick:) forControlEvents:UIControlEventTouchUpInside];
         }
-        
     
     }
     return self;
 }
-- (void)buttonClick:(XXVerticalButton *)button
+- (void)mapBtnClick:(XXVerticalButton *)button
 {
     
     NSLog(@"点的第几个按钮  -- %ld",(long)button.tag);

@@ -7,6 +7,7 @@
 //
 
 #import "MMPopupViewDemoVC.h"
+#import "ButtonMenuView.h"
 
 @interface MMPopupViewDemoVC () <PTXDatePickerViewDelegate> 
 
@@ -14,7 +15,10 @@
 
 @property (nonatomic, strong) NSDate *selectedDate; //代表dateButton上显示的时间。
 
+    @property (weak, nonatomic) IBOutlet UIButton *button;
 
+- (IBAction)click:(UIButton *)sender;
+    
 @end
 
 @implementation MMPopupViewDemoVC
@@ -25,8 +29,16 @@
     _datePickerView = [[PTXDatePickerView alloc]initWithFrame:CGRectMake(0, kScreenHeight, kScreenWidth, 246.0)];
     _datePickerView.delegate = self;
     
+    PublicSection * kk = [PublicSection shareInstance];
+    NSLog(@"token = %@" ,kk.token);
+    
+    ButtonMenuView * buttonMenuView = [[ButtonMenuView alloc]initWithFrame:CGRectMake(0, 400, kScreenWidth, 180)];
+    buttonMenuView.backgroundColor = [UIColor yellowColor];
+    [self.view addSubview:buttonMenuView];
     // Do any additional setup after loading the view from its nib.
 }
+
+
 
 -(void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
@@ -106,4 +118,8 @@
     NSLog(@"你的选择没有错 %@",[dateFormatter stringFromDate:date]);
 }
 
+- (IBAction)click:(UIButton *)sender {
+    
+    
+}
 @end

@@ -262,11 +262,6 @@
  */
 + (NSString *)localIPAddress;
 
-#pragma mark - 获取设备的Mac地址
-/**
- *  获取设备的Mac地址
- */
-+ (NSString *)macAddress;
 
 
 #pragma mark - 删除多余的cell、 分割线
@@ -286,21 +281,14 @@
  */
 + (void)startWithTime:(NSInteger)timeLine title:(NSString *)title countDownTitle:(NSString *)subTitle mainColor:(UIColor *)mColor countColor:(UIColor *)color disposeButton:(UIButton *)button;
 
-
 #pragma mark -  倒计时按钮 返回页面不重置时间
-
-/**
- *  倒计时按钮 不重置时间
- *
- *  @param timeLine 倒计时总时间
- *  @param title    还没倒计时的title 结束时的
- *  @param subTitle 倒计时中的子名字，如时、分
- *  @param mColor   还没倒计时的颜色
- *  @param color    倒计时中的颜色
- *  @param button   要操作的按钮
- */
-
-+ (void)startSeniorWithTime:(NSInteger)timeLine title:(NSString *)title countDownTitle:(NSString *)subTitle mainColor:(UIColor *)mColor countColor:(UIColor *)color disposeButton:(UIButton *)button;
+    
++ (void)startSeniorWithTime:(NSInteger)timeLine
+                      title:(NSString *)title
+             countDownTitle:(NSString *)subTitle
+                  mainColor:(UIColor *)mColor
+                 countColor:(UIColor *)color
+              disposeButton:(UIButton *)button;
 
 #pragma mark -  图片转成base64编码
 /**

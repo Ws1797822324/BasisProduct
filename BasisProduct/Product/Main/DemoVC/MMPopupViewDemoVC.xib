@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16D30" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MMPopupViewDemoVC">
             <connections>
+                <outlet property="button" destination="q1f-dG-ULe" id="SOj-Hz-dib"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -49,9 +50,8 @@
                         <action selector="sheet:" destination="-1" eventType="touchUpInside" id="jHd-nD-L3Y"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="73o-wW-0eJ">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="73o-wW-0eJ">
                     <rect key="frame" x="149" y="243" width="77" height="30"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <state key="normal" title="时间选择器">
                         <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
@@ -59,8 +59,26 @@
                         <action selector="date:" destination="-1" eventType="touchUpInside" id="YGM-2F-e8l"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q1f-dG-ULe">
+                    <rect key="frame" x="160" y="300" width="54" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="may-c3-vGw"/>
+                    </constraints>
+                    <state key="normal" title="Button">
+                        <color key="titleColor" red="0.98039215690000003" green="0.4039215686" blue="0.058823529409999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </state>
+                    <connections>
+                        <action selector="click:" destination="-1" eventType="touchUpInside" id="5zm-qH-Nfv"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="q1f-dG-ULe" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="300" id="Fn4-ww-HWN"/>
+                <constraint firstItem="q1f-dG-ULe" firstAttribute="centerX" secondItem="73o-wW-0eJ" secondAttribute="centerX" id="Ihf-pb-lal"/>
+                <constraint firstItem="q1f-dG-ULe" firstAttribute="top" secondItem="73o-wW-0eJ" secondAttribute="bottom" constant="27" id="PIF-2Q-3Kb"/>
+                <constraint firstItem="q1f-dG-ULe" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="pOz-2D-MUh"/>
+            </constraints>
             <point key="canvasLocation" x="-68" y="47"/>
         </view>
     </objects>

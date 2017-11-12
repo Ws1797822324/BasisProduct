@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "XXVerticalButton.h"
 @interface MyToolView : UIView
 
 ///  头像那排灰色的 View
@@ -17,5 +17,6 @@
 ///  下面那五个按钮
 @property (nonatomic ,strong) UIView *buttonView;
 
+@property (nonatomic,strong)XXVerticalButton *mapBtn;
 
 @end

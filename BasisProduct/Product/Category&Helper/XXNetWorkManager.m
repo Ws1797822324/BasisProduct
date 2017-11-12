@@ -95,7 +95,7 @@
 
 + (void) requestWithMethod:(HTTPMethod)method withParams:(id)params withUrlString:(NSString *)urlStr withHud:(BOOL)hud withProgressBlock:(requestProgress)progress withSuccessBlock:(successBlock)success withFailuerBlock:(failuerBlock)failuer {
     
-    
+    [self printUrlForPath:nil andBaseUrl:urlStr andParaDic:params];
     if (hud) {
         [XXProgressHUD showLoading:@"请稍后..."];
     }
@@ -305,5 +305,28 @@
         
     }
 }
+    
+    /**
+     *  打印请求完整url
+     */
++ (void)printUrlForPath:(NSString *)path
+             andBaseUrl:(NSString *)baseUrl
+             andParaDic:(NSDictionary *)paramDic
+    {
+        if (path == nil) {
+            path = @"";
+        }
+        NSString *param = @"";
+        for (int i=0; i<paramDic.count; i++) {
+            NSString *key = [paramDic.allKeys objectAtIndex:i];
+            param = [NSString stringWithFormat:@"%@&%@=%@", param, key, [paramDic objectForKey:key]];
+        }
+        if (param.length > 1) {
+            NSLog(@"request url = %@?%@", [baseUrl stringByAppendingString:path], [param substringFromIndex:1]);
+        }
+        else {
+            NSLog(@"request url = %@", [baseUrl stringByAppendingString:path]);
+        }
+    }
 
 @end

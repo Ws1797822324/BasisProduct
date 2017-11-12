@@ -12,4 +12,7 @@
 
 + (PublicSection *)shareInstance;
 
+@property (nonatomic ,strong) NSString *token;
+
+
 @end

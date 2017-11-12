@@ -71,6 +71,22 @@
 
 #define kiPhone6sP_7sP ((kScreenHeight == 736) ? YES : NO)
 
+
+#define isPad (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+#define isPhone (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
+#define isRetina ([[UIScreen mainScreen] scale] >= 2.0)
+#define SCREEN_MAX_LENGTH (MAX(kScreenWidth, kScreenHeight))
+#define SCREEN_MIN_LENGTH (MIN(kScreenWidth, kScreenHeight))
+
+#define IS_IPHONE_4_OR_LESS (isPhone && SCREEN_MAX_LENGTH < 568.0)
+#define IS_IPHONE_5 (isPhone && (SCREEN_MAX_LENGTH) == 568.0)
+#define IS_IPHONE_6 (isPhone && (SCREEN_MAX_LENGTH) == 667.0)
+#define IS_IPHONE_6P (isPhone && (SCREEN_MAX_LENGTH) == 736.0)
+
+#define kFountSize(fountSize) (IS_IPHONE_6P ? fountSize : (fountSize / 1.2))
+
+#define iOS11 @available(iOS 11.0, *)
+
 /// 弱引用
 #define kWeakSelf __weak typeof(self) weakSelf = self
 /// 快速定义 image

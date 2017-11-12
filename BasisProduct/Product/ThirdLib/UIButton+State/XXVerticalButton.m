@@ -11,42 +11,46 @@
 @implementation XXVerticalButton
 
 
-- (instancetype)initWithFrame:(CGRect)frame
-{
-    self = [super initWithFrame:frame];
-    if (self) {
-        self.titleLabel.textAlignment = NSTextAlignmentCenter;
+- (instancetype)initWithFrame:(CGRect)frame {
+    
+    if (self = [super initWithFrame:frame]) {
+        
+        [self createView];
+        [self setViewLayout];
     }
+    
     return self;
 }
 
-
--(void)awakeFromNib
-{
-    [super awakeFromNib];
-    self.titleLabel.textAlignment = NSTextAlignmentCenter;
-}
-
-
-
--(void)layoutSubviews
-{
-    [super layoutSubviews];
+- (void)createView {
     
-    self.imageView.x = 0;
-    self.imageView.y = 0;
-    self.imageView.width = self.width;
-    self.imageView.height = self.imageView.width;
+    UIImageView *icon = [[UIImageView alloc] init];
+    self.icon = icon;
+    [self addSubview:self.icon];
     
-    
-    self.titleLabel.x = 0;
-    self.titleLabel.y = CGRectGetMaxY(self.imageView.frame);
-    self.titleLabel.width = self.width;
-    self.titleLabel.height = self.height - self.imageView.height;
-    
+    UILabel *title = [[UILabel alloc] init];
+    title.textColor = kRGB_HEX(0x292d33);
+    title.font = [UIFont systemFontOfSize:kFountSize(13)];
+    self.title = title;
+    [self addSubview:self.title];
     
 }
 
+- (void)setViewLayout {
+    
+    [self.icon mas_makeConstraints:^(MASConstraintMaker *make) {
+        
+        make.centerX.mas_equalTo(self);
+        make.top.mas_equalTo(self).offset(7);
+        make.width.and.height.offset(45);
+    }];
+    
+    [self.title mas_makeConstraints:^(MASConstraintMaker *make) {
+        
+        make.top.mas_equalTo(self.icon.mas_bottom).offset(2);
+        make.centerX.mas_equalTo(self.icon);
+    }];
+}
 
 
 @end

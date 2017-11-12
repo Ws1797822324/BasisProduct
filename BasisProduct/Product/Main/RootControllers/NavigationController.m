@@ -8,7 +8,6 @@
 
 #import "NavigationController.h"
 
-#import "XXPaymentLoadingHUD.h"
 
 
 @interface NavigationController () <UINavigationControllerDelegate>
@@ -33,13 +32,18 @@
     
 }
 
+
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     _popDelegate = self.interactivePopGestureRecognizer.delegate;
     self.delegate = self;
     self.navigationBar.barTintColor = [UIColor whiteColor];
-
+    if (iOS11) {
+        
+    }
 
 }
 
@@ -62,8 +66,8 @@
 {
     [self popViewControllerAnimated:YES];
     [XXProgressHUD hideHUD];
-    [XXPaymentLoadingHUD dismissDynamicImageStatus];
 
+    
 }
 
 

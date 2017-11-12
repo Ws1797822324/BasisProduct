@@ -10,4 +10,8 @@
 
 @interface XXVerticalButton : UIButton
 
+@property (nonatomic,strong)UIImageView *icon;
+
+@property (nonatomic,strong)UILabel *title;
+
 @end

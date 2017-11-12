@@ -38,8 +38,7 @@
 
 - (instancetype)initWithShowFrame:(CGRect)showFrame ShowStyle:(MYPresentedViewShowStyle)showStyle callback:(handleBack)callback
 {
-    //断言
-//    NSParameterAssert(![@(showStyle)isKindOfClass:[NSNumber class]]||![@(isBottomMenu)isKindOfClass:[NSNumber class]]);
+
     if (self = [super init]) {
         
         //设置管理

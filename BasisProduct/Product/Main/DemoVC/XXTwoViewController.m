@@ -105,6 +105,8 @@
     NSLog(@"我是第%ld张",index);
 }
 
+
+
 - (IBAction)searchAction:(UIButton *)sender {
     NSArray *hotSeaches = @[@"Java", @"Python", @"Objective-C", @"Swift", @"C", @"C++", @"PHP", @"C#", @"Perl", @"Go", @"JavaScript", @"R", @"Ruby", @"MATLAB"];
     // 2. Create a search view controller
@@ -128,4 +130,7 @@
     
     NSLog(@"pp  %@",searchViewController.cancelButton.title);
 }
+
+
+
 @end

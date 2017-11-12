@@ -17,9 +17,11 @@
     [button setTitle:title forState:UIControlStateNormal];
     [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     [button setTitleColor:[UIColor colorWithRed:0.253 green:0.699 blue:0.463 alpha:1.000] forState:UIControlStateHighlighted];
-    button.titleEdgeInsets  = UIEdgeInsetsMake(0, 0, 0, 0);
-    button.contentEdgeInsets = UIEdgeInsetsMake(0, 0, 0, 0);
-    button.imageEdgeInsets = UIEdgeInsetsMake(0, -10, 0, 0);
+    
+    button.contentEdgeInsets = UIEdgeInsetsMake(0, -5, 0, 0);
+
+    
+    
     [button setImage:norImage forState:UIControlStateNormal];
     [button setImage:highImage forState:UIControlStateHighlighted];
     [button setImage:highImage forState:UIControlStateSelected];

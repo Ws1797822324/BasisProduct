@@ -10,7 +10,7 @@
 
 #import "PublishViewController.h"
 
-@interface CYLPlusButtonSubclass ()<UIActionSheetDelegate> {
+@interface CYLPlusButtonSubclass (){
     CGFloat _buttonImageHeight;
 }
 
@@ -105,11 +105,7 @@
    
 }
 
-#pragma mark - UIActionSheetDelegate
 
-- (void)actionSheet:(UIActionSheet *)actionSheet didDismissWithButtonIndex:(NSInteger)buttonIndex {
-    NSLog(@"buttonIndex = %@", @(buttonIndex));
-}
 
 
 + (CGFloat)multiplierOfTabBarHeight:(CGFloat)tabBarHeight {

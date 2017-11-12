@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="XXViewController">
             <connections>
+                <outlet property="sanfang" destination="qyy-x9-Prc" id="lVM-my-Eao"/>
                 <outlet property="testLabel" destination="JEn-bZ-dab" id="5Oh-Rq-LtQ"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="xxButton" destination="XbM-T9-XeK" id="oNY-wz-1yv"/>
@@ -68,20 +69,33 @@
                         <action selector="cellAction:" destination="-1" eventType="touchUpInside" id="eV0-KP-Q5T"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PFN-Rb-i3v">
-                    <rect key="frame" x="62" y="290" width="31" height="30"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JEn-bZ-dab">
+                    <rect key="frame" x="97" y="266" width="208" height="21"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal" title="弹出"/>
-                    <connections>
-                        <action selector="tnchu:" destination="-1" eventType="touchUpInside" id="XqL-4F-U34"/>
-                    </connections>
-                </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JEn-bZ-dab">
-                    <rect key="frame" x="166" y="70" width="42" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mU6-Sc-5aZ">
+                    <rect key="frame" x="159" y="502" width="46" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="提示">
+                        <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="tishi:" destination="-1" eventType="touchUpInside" id="8hM-ck-fMr"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PFN-Rb-i3v">
+                    <rect key="frame" x="139" y="440" width="90" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="弹出控件">
+                        <color key="titleColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="tnchu:" destination="-1" eventType="touchUpInside" id="XqL-4F-U34"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
@@ -89,17 +103,15 @@
                 <constraint firstItem="6C6-1B-9ny" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="42x-RJ-Bal"/>
                 <constraint firstItem="qyy-x9-Prc" firstAttribute="top" secondItem="XbM-T9-XeK" secondAttribute="bottom" constant="57" id="B9J-jj-C48"/>
                 <constraint firstItem="Tez-23-xgD" firstAttribute="top" secondItem="qyy-x9-Prc" secondAttribute="bottom" constant="16" id="Fof-lJ-BOl"/>
-                <constraint firstItem="JEn-bZ-dab" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="IGu-M1-awk"/>
                 <constraint firstItem="GWp-wf-TQM" firstAttribute="centerX" secondItem="XbM-T9-XeK" secondAttribute="centerX" id="Jta-x9-8QT"/>
                 <constraint firstItem="XbM-T9-XeK" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="96" id="MMI-AP-xPc"/>
                 <constraint firstItem="XbM-T9-XeK" firstAttribute="centerY" secondItem="GWp-wf-TQM" secondAttribute="centerY" id="RON-LF-gmk"/>
                 <constraint firstItem="Tez-23-xgD" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="U6W-4v-tOn"/>
-                <constraint firstItem="XbM-T9-XeK" firstAttribute="top" secondItem="JEn-bZ-dab" secondAttribute="bottom" constant="5" id="VqM-Nn-s2f"/>
                 <constraint firstItem="qyy-x9-Prc" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="WgI-bD-ZJg"/>
                 <constraint firstItem="6C6-1B-9ny" firstAttribute="top" secondItem="Tez-23-xgD" secondAttribute="bottom" constant="10" id="si8-jf-zpk"/>
                 <constraint firstItem="XbM-T9-XeK" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="tdu-eB-xL6"/>
             </constraints>
-            <point key="canvasLocation" x="25.5" y="51.5"/>
+            <point key="canvasLocation" x="-76.5" y="-59.5"/>
         </view>
     </objects>
 </document>
